@@ -2618,6 +2618,42 @@
                     }
                     document.getElementById('addToHomeModal').style.display = 'none';
                 });
+
+                // iOS PWA Audio Context Resumption Handler
+                // On iOS, audio context is suspended in standalone PWA mode and needs user gesture to resume
+                let audioContextResumed = false;
+                function resumeAudioContext() {
+                    if (audioContextResumed) return;
+                    
+                    if (window.generator && window.generator.audioContext && window.generator.audioContext.state === 'suspended') {
+                        window.generator.audioContext.resume().then(() => {
+                            console.log('Audio context resumed on user interaction');
+                            audioContextResumed = true;
+                        }).catch(err => {
+                            console.log('Failed to resume audio context:', err);
+                        });
+                    }
+                }
+
+                // Add one-time user interaction listeners for audio context resumption
+                function addAudioContextResumptionHandlers() {
+                    const resumeHandler = () => {
+                        resumeAudioContext();
+                        // Remove listeners after first interaction
+                        document.removeEventListener('click', resumeHandler);
+                        document.removeEventListener('touchstart', resumeHandler);
+                        document.removeEventListener('touchend', resumeHandler);
+                    };
+                    
+                    document.addEventListener('click', resumeHandler, { once: true });
+                    document.addEventListener('touchstart', resumeHandler, { once: true });
+                    document.addEventListener('touchend', resumeHandler, { once: true });
+                }
+
+                // Initialize audio context resumption handlers when DOM is ready
+                document.addEventListener('DOMContentLoaded', function() {
+                    addAudioContextResumptionHandlers();
+                });
         // Modal flow functions for first-time users
         function showFrequencyBenefits() {
             document.getElementById('immersiveWelcome').classList.remove('active');
