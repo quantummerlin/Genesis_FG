@@ -305,6 +305,8 @@
                 gap: 0px;
                 width: 100%;
                 max-width: 100%;
+                overflow-x: hidden;
+                box-sizing: border-box;
             }
 
             .control-group {
@@ -312,6 +314,7 @@
                 width: 100%;
                 max-width: 100%;
                 box-sizing: border-box;
+                overflow-x: hidden;
             }
 
             .control-group > div {
@@ -5699,13 +5702,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     const onboardingComplete = localStorage.getItem('onboardingComplete') === 'true';
+    const forceShowWelcome = new URLSearchParams(window.location.search).get('showWelcome') === 'true';
     console.log('Modal initialization - onboardingComplete:', onboardingComplete);
+    console.log('Force show welcome:', forceShowWelcome);
     
     // Debug: Check if modal element exists
     const welcomeModal = document.getElementById('immersiveWelcome');
     console.log('Welcome modal element:', welcomeModal);
     
-    if (!onboardingComplete) {
+    if (!onboardingComplete || forceShowWelcome) {
         // First time user - show welcome sequence
         console.log('New user - showing welcome modal');
         document.getElementById('upgradeBenefitsModal').classList.remove('active'); // Ensure upgrade modal is hidden
