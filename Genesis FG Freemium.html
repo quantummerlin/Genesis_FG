@@ -310,11 +310,12 @@
             }
 
             .control-group {
-                padding: 0px;
-                width: 100%;
-                max-width: 100%;
-                box-sizing: border-box;
-                overflow-x: hidden;
+                padding: 8px !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+                overflow-x: hidden !important;
+                overflow-y: visible !important;
             }
 
             .control-group > div {
@@ -337,16 +338,17 @@
             input[type="number"],
             input[type="text"],
             input[type="range"] {
-                width: 100%;
-                max-width: 100%;
-                box-sizing: border-box;
-                margin: 0;
-                padding: 0;
+                width: calc(100% - 4px) !important;
+                max-width: calc(100% - 4px) !important;
+                box-sizing: border-box !important;
+                margin: 0 !important;
+                padding: 0 !important;
             }
 
             input[type="range"] {
-                padding: 0;
-                margin: 0;
+                padding: 0 !important;
+                margin: 0 2px !important;
+                width: calc(100% - 4px) !important;
             }
 
             .button-group {
@@ -897,6 +899,9 @@
         input[type="range"] {
             padding: 5px;
             height: 40px;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
         }
 
         #duration {
