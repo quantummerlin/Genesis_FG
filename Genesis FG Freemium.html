@@ -3176,7 +3176,7 @@
                                 overlay.appendChild(panel);
                                 document.body.appendChild(overlay);
                                 
-                                renderInstructionsAccordion();
+                                renderInstructionsCategories();
                                 addInstructionsSearch();
                             } else {
                                 console.log('📁 Hiding panel');
@@ -4021,7 +4021,7 @@
             
             // Update progress section to reflect new language
             if (typeof instructionsSections !== 'undefined') {
-                renderInstructionsAccordion();
+                renderInstructionsCategories();
             }
         }
         
@@ -7731,25 +7731,24 @@
         }
 
         // ============================================
+        // Basic achievement checking function
+        // ============================================
+
+        function checkAchievements() {
+            // Basic implementation - can be expanded later
+            return true;
+        }
+
+        // ============================================
         // UPDATE: Store unlock dates when achievements unlock
         // ============================================
 
-        const originalCheckAchievement = checkAchievement;
-        checkAchievement = function(achievementId, achievement) {
-            const wasUnlocked = userProgress.achievements.has(achievementId);
-            
-            // Call original function
-            const result = originalCheckAchievement(achievementId, achievement);
-            
-            // If newly unlocked, store timestamp
-            if (!wasUnlocked && userProgress.achievements.has(achievementId)) {
-                if (!userProgress.achievementUnlockDates) {
-                    userProgress.achievementUnlockDates = {};
-                }
-                userProgress.achievementUnlockDates[achievementId] = new Date().toISOString();
-                saveProgress();
-            }
-            
+        const originalCheckAchievement = checkAchievements;
+        checkAchievements = function() {
+            const result = originalCheckAchievement();
+
+            // Achievement unlock tracking can be added here later
+
             return result;
         };
 
@@ -9885,7 +9884,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Update progress section if available
     if (typeof instructionsSections !== 'undefined') {
-        renderInstructionsAccordion(); // Update progress section with loaded data
+        renderInstructionsCategories(); // Update progress section with loaded data
     }
     
     // Load saved language preference
