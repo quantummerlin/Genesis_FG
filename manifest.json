@@ -2,7 +2,7 @@
   "name": "Genesis Frequency Generator",
   "short_name": "Genesis FG",
   "start_url": "/Frequency-Generator/Genesis%20FG%20Freemium.html",
-  "display": "fullscreen",
+  "display": "standalone",
   "background_color": "#1a0033",
   "theme_color": "#6B46C1",
   "description": "Experience the sacred frequencies of Genesis 1:1. Generate healing frequencies, track your journey, and unlock spiritual awakening.",
@@ -10,6 +10,7 @@
   "categories": ["health", "lifestyle", "music", "productivity"],
   "lang": "en",
   "scope": "/Frequency-Generator/",
+  "id": "/Frequency-Generator/",
   "icons": [
     {
       "src": "/Frequency-Generator/Genesis.png",
