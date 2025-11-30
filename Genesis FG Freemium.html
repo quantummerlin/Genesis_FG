@@ -9479,9 +9479,11 @@
             const existingModal = document.getElementById('achievementsFullModal');
             if (existingModal) existingModal.remove();
             
-            // Close companion panel first
-            const panel = document.getElementById('instructionsPanel');
-            if (panel) panel.style.display = 'none';
+            // Close companion panel properly (including its overlay)
+            const overlay = document.getElementById('instructionsOverlay');
+            if (overlay) {
+                window.toggleInstructions();
+            }
             
             // Navigate to achievements page or show modal
             const modal = document.createElement('div');
@@ -9504,10 +9506,15 @@
                 const m = document.getElementById('achievementsFullModal');
                 if (m) {
                     m.remove();
-                    // Ensure page is scrollable and visible
-                    document.body.style.overflow = '';
-                    window.scrollTo(0, 0);
                 }
+                // Also remove companion overlay if it exists
+                const overlay = document.getElementById('instructionsOverlay');
+                if (overlay) {
+                    overlay.remove();
+                }
+                // Ensure page is scrollable and visible
+                document.body.style.overflow = '';
+                window.scrollTo(0, 0);
             }
             
             // Store close function globally
@@ -10211,9 +10218,11 @@
             const existingModal = document.getElementById('dailyChallengeModal');
             if (existingModal) existingModal.remove();
             
-            // Close companion panel first
-            const panel = document.getElementById('instructionsPanel');
-            if (panel) panel.style.display = 'none';
+            // Close companion panel properly (including its overlay)
+            const overlay = document.getElementById('instructionsOverlay');
+            if (overlay) {
+                window.toggleInstructions();
+            }
             
             let challenge;
             try {
@@ -10244,10 +10253,15 @@
                 const m = document.getElementById('dailyChallengeModal');
                 if (m) {
                     m.remove();
-                    // Ensure page is scrollable and visible
-                    document.body.style.overflow = '';
-                    window.scrollTo(0, 0);
                 }
+                // Also remove companion overlay if it exists
+                const overlay = document.getElementById('instructionsOverlay');
+                if (overlay) {
+                    overlay.remove();
+                }
+                // Ensure page is scrollable and visible
+                document.body.style.overflow = '';
+                window.scrollTo(0, 0);
             }
             
             // Store close function globally
