@@ -1832,7 +1832,7 @@
             color: #fff;
             font-size: 14px;
             box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
-            z-index: 1000;
+            z-index: 2000040;
             animation: slideUpBanner 0.5s ease-out;
         }
         
@@ -2615,7 +2615,7 @@
 </head>
 <body>
     <!-- Immersive Welcome Modal -->
-    <div id="immersiveWelcome" class="info-modal" style="z-index:5000;">
+    <div id="immersiveWelcome" class="info-modal" style="z-index:9999999; display:none;">
         <div class="info-modal-content" style="max-width: 500px; text-align: center; background: linear-gradient(135deg, rgba(26,0,51,0.98), rgba(139,92,246,0.95)); border: 2px solid rgba(251,191,36,0.6); box-shadow: 0 0 60px rgba(251,191,36,0.3);">
             <!-- Language Selector at top -->
             <div class="welcome-language-selector">
@@ -2660,7 +2660,7 @@
     </div>
 
     <!-- Frequency Benefits Modal -->
-    <div id="frequencyBenefitsModal" class="info-modal" style="z-index:4500;">
+    <div id="frequencyBenefitsModal" class="info-modal" style="z-index:9999998; display:none;">
         <div class="info-modal-content" style="max-width: 600px; text-align: center; background: linear-gradient(135deg, rgba(26,0,51,0.98), rgba(139,92,246,0.95)); border: 2px solid rgba(251,191,36,0.6); box-shadow: 0 0 60px rgba(251,191,36,0.3);">
             <div class="welcome-header">🎵 What Can These Frequencies Do? 🎵</div>
             <div class="info-modal-body" style="color: #fff; font-size: 16px; line-height: 1.6; text-align: left;">
@@ -2710,7 +2710,7 @@
     </div>
 
     <!-- How to Use Modal -->
-    <div id="howToUseModal" class="info-modal" style="z-index:4000;">
+    <div id="howToUseModal" class="info-modal" style="z-index:9999997; display:none;">
         <div class="info-modal-content" style="max-width: 600px; text-align: center; background: linear-gradient(135deg, rgba(26,0,51,0.98), rgba(139,92,246,0.95)); border: 2px solid rgba(251,191,36,0.6); box-shadow: 0 0 60px rgba(251,191,36,0.3);">
             <div class="welcome-header">🎯 Your First Session in 3 Steps 🎯</div>
             <div class="info-modal-body" style="color: #fff; font-size: 16px; line-height: 1.6; text-align: left;">
@@ -2766,7 +2766,7 @@
     </div>
 
     <!-- PWA Tip Modal -->
-    <div id="pwaTipModal" class="info-modal" style="z-index:3500;">
+    <div id="pwaTipModal" class="info-modal" style="z-index:9999996; display:none;">
         <div class="info-modal-content" style="max-width: 500px; text-align: center; background: linear-gradient(135deg, rgba(26,0,51,0.98), rgba(139,92,246,0.95)); border: 2px solid rgba(251,191,36,0.6); box-shadow: 0 0 60px rgba(251,191,36,0.3);">
             <div class="welcome-header">📱 Add to Home Screen 📱</div>
             <div class="info-modal-body" style="color: #fff; font-size: 18px; line-height: 1.6;">
@@ -2800,7 +2800,7 @@
             </div>
         </div>
     </div>
-    <div id="upgradeBenefitsModal" class="info-modal" style="z-index:3000;">
+    <div id="upgradeBenefitsModal" class="info-modal" style="z-index:9999995; display:none;">
         <div class="info-modal-content" style="max-width:450px; text-align: center; background: linear-gradient(135deg, rgba(26,0,51,0.98), rgba(139,92,246,0.95)); border: 2px solid rgba(251,191,36,0.6); box-shadow: 0 0 60px rgba(251,191,36,0.3);">
             <div class="welcome-header">✨ Unlock Premium ✨</div>
             <div class="info-modal-body" style="color: #fff; font-size: 16px; line-height: 1.6;">
@@ -3165,7 +3165,7 @@
             <span class="add-to-home-text" style="font-weight:700;">Click here to add to home screen</span>
         </div>
         <!-- Add to Home Screen Popup Modal -->
-        <div id="addToHomeModal" class="info-modal" style="z-index:2000;">
+        <div id="addToHomeModal" class="info-modal" style="z-index:2000050;">
             <div class="info-modal-content" style="max-width:420px;">
                 <button class="info-modal-close" onclick="closeAddToHomePopup()">×</button>
                 <div class="info-modal-header" style="color:#6B46C1;">🌟 📱 Add Genesis Frequency Generator to your Home Screen 📱 🌟</div>
@@ -3256,26 +3256,48 @@
                     }
                     document.getElementById('addToHomeModal').style.display = 'none';
                 });
-        // Modal flow functions for first-time users
+        // Modal flow functions for first-time users - with Safari/WebKit compatibility
         function showFrequencyBenefits() {
-            document.getElementById('immersiveWelcome').classList.remove('active');
-            document.getElementById('frequencyBenefitsModal').classList.add('active');
+            const welcome = document.getElementById('immersiveWelcome');
+            const benefits = document.getElementById('frequencyBenefitsModal');
+            welcome.classList.remove('active');
+            welcome.style.display = 'none';
+            benefits.classList.add('active');
+            benefits.style.display = 'flex';
+            benefits.style.visibility = 'visible';
+            benefits.style.opacity = '1';
         }
 
         function showHowToUse() {
-            document.getElementById('frequencyBenefitsModal').classList.remove('active');
-            document.getElementById('howToUseModal').classList.add('active');
+            const benefits = document.getElementById('frequencyBenefitsModal');
+            const howTo = document.getElementById('howToUseModal');
+            benefits.classList.remove('active');
+            benefits.style.display = 'none';
+            howTo.classList.add('active');
+            howTo.style.display = 'flex';
+            howTo.style.visibility = 'visible';
+            howTo.style.opacity = '1';
         }
 
         function showPWATip() {
-            document.getElementById('howToUseModal').classList.remove('active');
-            document.getElementById('pwaTipModal').classList.add('active');
+            const howTo = document.getElementById('howToUseModal');
+            const pwa = document.getElementById('pwaTipModal');
+            howTo.classList.remove('active');
+            howTo.style.display = 'none';
+            pwa.classList.add('active');
+            pwa.style.display = 'flex';
+            pwa.style.visibility = 'visible';
+            pwa.style.opacity = '1';
         }
 
         function showUpgradeBenefits() {
             console.log('showUpgradeBenefits() called - adding active class to upgrade modal');
             // Hide any current modal
-            document.getElementById('pwaTipModal')?.classList.remove('active');
+            const pwa = document.getElementById('pwaTipModal');
+            if (pwa) {
+                pwa.classList.remove('active');
+                pwa.style.display = 'none';
+            }
             
             // Mark onboarding as complete
             localStorage.setItem('onboardingComplete', 'true');
@@ -3284,18 +3306,30 @@
             const benefits = document.getElementById('upgradeBenefitsModal');
             if (benefits) {
                 // ensure no other info-modals are open
-                document.querySelectorAll('.info-modal.active').forEach(m => m.classList.remove('active'));
+                document.querySelectorAll('.info-modal.active').forEach(m => {
+                    m.classList.remove('active');
+                    m.style.display = 'none';
+                });
                 benefits.classList.add('active');
+                benefits.style.display = 'flex';
+                benefits.style.visibility = 'visible';
+                benefits.style.opacity = '1';
             }
         }
 
         function skipToApp() {
-            // Hide all modals
-            document.getElementById('immersiveWelcome').classList.remove('active');
-            document.getElementById('frequencyBenefitsModal').classList.remove('active');
-            document.getElementById('howToUseModal').classList.remove('active');
-            document.getElementById('pwaTipModal').classList.remove('active');
-            document.getElementById('upgradeBenefitsModal').classList.remove('active');
+            // Hide all modals with explicit display setting for Safari
+            const modals = ['immersiveWelcome', 'frequencyBenefitsModal', 'howToUseModal', 'pwaTipModal', 'upgradeBenefitsModal'];
+            modals.forEach(id => {
+                const modal = document.getElementById(id);
+                if (modal) {
+                    modal.classList.remove('active');
+                    modal.style.display = 'none';
+                }
+            });
+            
+            // Restore body scroll
+            document.body.style.overflow = '';
             
             // Mark onboarding as complete
             localStorage.setItem('onboardingComplete', 'true');
@@ -11629,6 +11663,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize the frequency generator first
     window.generator = new FrequencyGenerator();
     
+    // Set Genesis Creation (37 + 73 Hz) as the default track - the beginning of the journey
+    setTimeout(() => {
+        const biblicalCategory = trinityRecipes['Biblical & Original'];
+        const genesisRecipe = biblicalCategory ? biblicalCategory.find(r => r.name.includes('Genesis Creation')) : null;
+        if (genesisRecipe && window.generator) {
+            window.generator.selectRecipe(genesisRecipe);
+        }
+    }, 100);
+    
     // Cleanup on page unload to prevent memory leaks
     window.addEventListener('beforeunload', function() {
         if (window.generator && window.generator.isPlaying) {
@@ -11708,8 +11751,12 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('New user - showing welcome modal');
         document.getElementById('upgradeBenefitsModal').classList.remove('active'); // Ensure upgrade modal is hidden
         
-        // Add active class and verify
+        // Add active class AND set display explicitly for Safari/WebKit compatibility
         welcomeModal.classList.add('active');
+        welcomeModal.style.display = 'flex';  // Explicit display for Safari
+        welcomeModal.style.visibility = 'visible';  // Force visibility
+        welcomeModal.style.opacity = '1';  // Force opacity
+        document.body.style.overflow = 'hidden';  // Prevent scrolling behind modal
         console.log('Added active class, modal classes:', welcomeModal.className);
         console.log('Modal computed style display:', window.getComputedStyle(welcomeModal).display);
     } else {
