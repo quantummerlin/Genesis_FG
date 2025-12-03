@@ -3352,7 +3352,7 @@
                 </p>
                 
                 <div style="display: flex; justify-content: center; gap: 5px; margin-bottom: 15px;">
-                    <span style="background: rgba(139,92,246,0.3); padding: 10px 12px; border-radius: 8px; color: #fbbf24; font-weight: 700;">GFGN</span>
+                    <span style="background: rgba(139,92,246,0.3); padding: 10px 12px; border-radius: 8px; color: #fbbf24; font-weight: 700;">QMFG</span>
                     <span style="color: #6b7280; padding: 10px 0;">-</span>
                     <input type="text" id="licenseKey1" maxlength="4" placeholder="XXXX" 
                         style="width: 60px; padding: 10px; text-align: center; background: rgba(139,92,246,0.2); border: 2px solid rgba(139,92,246,0.4); border-radius: 8px; color: #fff; font-size: 16px; font-weight: 600; text-transform: uppercase;"
@@ -11073,7 +11073,7 @@ async function activateLicense() {
         return;
     }
     
-    const fullLicenseKey = `GFGN-${key1}-${key2}-${key3}`;
+    const fullLicenseKey = `QMFG-${key1}-${key2}-${key3}`;
     
     // Check if already ultimate
     if (hasUltimateAccess()) {
@@ -11146,8 +11146,8 @@ async function activateLicense() {
         console.error('License validation error:', error);
         
         // Fallback: Check format only (offline mode)
-        if (fullLicenseKey.match(/^GFGN-(PREM|ULT1)-[A-Z0-9]{4}-[A-Z0-9]{4}$/)) {
-            const tier = key1.startsWith('ULT') ? 'ultimate' : 'premium';
+        if (fullLicenseKey.match(/^QMFG-(PREM|ULTI)-[A-Z0-9]{4}-[A-Z0-9]{4}$/)) {
+            const tier = key1.startsWith('ULTI') ? 'ultimate' : 'premium';
             
             errorEl.innerHTML = `
                 ⚠️ Server unavailable. Using offline mode.<br>

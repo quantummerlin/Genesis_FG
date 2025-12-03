@@ -127,13 +127,13 @@ def validate_license():
                 'error': 'Please enter a license key'
             }), 400
         
-        # Check format: GFGN-XXXX-XXXX-XXXX
+        # Check format: QMFG-XXXX-XXXX-XXXX
         parts = license_key.split('-')
-        if len(parts) != 4 or parts[0] != 'GFGN':
+        if len(parts) != 4 or parts[0] != 'QMFG':
             log_validation(license_key, device_fingerprint, False, 'Invalid format', ip_address)
             return jsonify({
                 'valid': False,
-                'error': 'Invalid license key format. Use: GFGN-XXXX-XXXX-XXXX'
+                'error': 'Invalid license key format. Use: QMFG-XXXX-XXXX-XXXX'
             }), 400
         
         conn = get_db()
@@ -448,11 +448,11 @@ def generate_key():
         
         # Generate key with tier prefix
         if tier == 'ultimate':
-            prefix = 'ULT1'
+            prefix = 'ULTI'
         else:
             prefix = 'PREM'
         
-        license_key = f"GFGN-{prefix}-{random_segment()}-{random_segment()}"
+        license_key = f"QMFG-{prefix}-{random_segment()}-{random_segment()}"
         
         return jsonify({
             'license_key': license_key,
