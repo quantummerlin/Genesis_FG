@@ -10985,7 +10985,7 @@
 // LICENSE VALIDATION SYSTEM
 // ═══════════════════════════════════════════════════════════════
 
-const LICENSE_API_URL = 'https://majesticmerlin.pythonanywhere.com';
+const LICENSE_API_URL = 'https://quantummerlin.com/genesis';
 
 // Generate device fingerprint for device limiting
 function generateDeviceFingerprint() {
@@ -11811,7 +11811,7 @@ async function submitAffiliateInterest() {
     
     // Try to send to backend
     try {
-        await fetch('https://majesticmerlin.pythonanywhere.com/api/affiliate-interest', {
+        await fetch('https://quantummerlin.com/genesis/api/affiliate-interest', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email })

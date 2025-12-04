@@ -2,7 +2,8 @@
 Genesis Frequency Generator - License Validation API
 Deploy this to PythonAnywhere
 
-Your API URL: https://majesticmerlin.pythonanywhere.com
+Your API URL: https://QuantumMerlin.com/Genesis
+(Proxied from: https://majesticmerlin.pythonanywhere.com)
 """
 
 from flask import Flask, request, jsonify
