@@ -9,7 +9,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#6B46C1">
     <meta name="format-detection" content="telephone=no">
-    <title>Genesis Frequency Generator (Free)</title>
+    <title>Genesis Frequency Generator</title>
 
     <link rel="manifest" href="/Frequency-Generator/manifest.json">
     <link rel="icon" type="image/png" sizes="192x192" href="/Frequency-Generator/Genesis.png">
@@ -3235,7 +3235,7 @@
     <!-- PWA Tip Modal -->
     <div id="pwaTipModal" class="info-modal" style="z-index:9999996;">
         <div class="info-modal-content" style="max-width: 500px; text-align: center; background: linear-gradient(135deg, rgba(26,0,51,0.98), rgba(139,92,246,0.95)); border: 2px solid rgba(251,191,36,0.6); box-shadow: 0 0 60px rgba(251,191,36,0.3);">
-            <div class="welcome-header">📱 Add to Home Screen 📱</div>
+            <div class="welcome-header" id="pwaModalHeader">✨ Install Genesis Frequencies ✨</div>
             <div class="info-modal-body" style="color: #fff; font-size: 18px; line-height: 1.6;">
                 <div style="text-align:center;line-height:1.8;padding:10px 20px 20px 20px;">
                     <p style="font-size:17px;color:#ffd700;margin-bottom:15px;font-weight:600;">
@@ -3249,9 +3249,9 @@
                             <li>📊 <b style="color:#ffd700;">Track progress</b> — Streaks & achievements</li>
                         </ul>
                     </div>
-                    <div style="background:rgba(139,92,246,0.12);border-radius:10px;padding:12px;margin:15px 0;">
+                    <div id="pwaInstructions" style="background:rgba(139,92,246,0.12);border-radius:10px;padding:12px;margin:15px 0;">
                         <p style="color:#e9d5ff;font-weight:600;margin-bottom:6px;font-size:14px;">How to install:</p>
-                        <p style="color:#ffffff;font-size:13px;margin:0;">
+                        <p id="pwaInstallText" style="color:#ffffff;font-size:13px;margin:0;">
                             Tap <b>Share</b> (iOS) or <b>Menu ⋮</b> (Android)<br>
                             → Select <b>"Add to Home Screen"</b>
                         </p>
@@ -3751,8 +3751,8 @@
     <div class="add-to-home" id="addToHome">
         <button class="add-to-home-close" onclick="closeAddToHome()">×</button>
         <div class="add-to-home-content">
-            <span class="add-to-home-icon">📱</span>
-            <span class="add-to-home-text" style="font-weight:700;" data-translate="addToHomeText">ADD to Home Screen NOW for best experience!</span>
+            <span class="add-to-home-icon" id="pwaIcon">✨</span>
+            <span class="add-to-home-text" id="pwaBannerText" style="font-weight:700;" data-translate="addToHomeText">INSTALL Genesis Frequencies for the best experience!</span>
         </div>
     </div>
 
@@ -3819,12 +3819,52 @@
                             window.toggleInstructions();
                         }
                         
+                // Detect device type and update PWA text
+                function updatePWAText() {
+                    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+                    
+                    if (!isMobile) {
+                        // Desktop
+                        const header = document.getElementById('pwaModalHeader');
+                        const icon = document.getElementById('pwaIcon');
+                        const bannerText = document.getElementById('pwaBannerText');
+                        const installText = document.getElementById('pwaInstallText');
+                        
+                        if (header) header.textContent = '💻 Install on Desktop 💻';
+                        if (icon) icon.textContent = '💻';
+                        if (bannerText) bannerText.textContent = 'INSTALL Genesis Frequencies for the best experience!';
+                        if (installText) installText.innerHTML = 'Click the <b style="color:#fbbf24;">install button</b> in your browser address bar or use the menu to install';
+                    } else if (isIOS) {
+                        // iOS devices
+                        const header = document.getElementById('pwaModalHeader');
+                        const icon = document.getElementById('pwaIcon');
+                        const bannerText = document.getElementById('pwaBannerText');
+                        const installText = document.getElementById('pwaInstallText');
+                        
+                        if (header) header.textContent = '📱 Add to Home Screen 📱';
+                        if (icon) icon.textContent = '📱';
+                        if (bannerText) bannerText.textContent = 'ADD to Home Screen for the best experience!';
+                        if (installText) installText.innerHTML = 'Tap the <b style="color:#fbbf24;">Share</b> button, then <b style="color:#fbbf24;">"Add to Home Screen"</b>';
+                    } else {
+                        // Android
+                        const header = document.getElementById('pwaModalHeader');
+                        const icon = document.getElementById('pwaIcon');
+                        const installText = document.getElementById('pwaInstallText');
+                        
+                        if (header) header.textContent = '📱 Install App 📱';
+                        if (icon) icon.textContent = '📱';
+                        if (installText) installText.innerHTML = 'Tap the <b style="color:#fbbf24;">menu</b> (⋮) and select <b style="color:#fbbf24;">"Install app"</b> or <b style="color:#fbbf24;">"Add to Home screen"</b>';
+                    }
+                }
+                
                 // Add to Home Screen banner logic (just close, no popup)
                 function closeAddToHome() {
                     document.getElementById('addToHome').style.display = 'none';
                     try { localStorage.setItem('hideAddToHome', 'true'); } catch(e) {}
                 }
                 document.addEventListener('DOMContentLoaded', function() {
+                    updatePWAText();
                     try {
                         if (localStorage.getItem('hideAddToHome') === 'true') {
                             document.getElementById('addToHome').style.display = 'none';
