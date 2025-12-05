@@ -13,19 +13,19 @@
   "id": "/Frequency-Generator/",
   "icons": [
     {
-      "src": "/Frequency-Generator/genesis/Genesis.png",
+      "src": "/Frequency-Generator/Genesis.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/Frequency-Generator/genesis/Genesis.png",
+      "src": "/Frequency-Generator/Genesis.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/Frequency-Generator/genesis/Genesis.png",
+      "src": "/Frequency-Generator/Genesis.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
