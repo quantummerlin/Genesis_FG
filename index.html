@@ -11903,27 +11903,71 @@ const iconMap = {
 // Function to replace emojis with Lucide icon tags
 function replaceEmojisWithIcons() {
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+    const nodesToReplace = [];
     let node;
+    
+    // Collect nodes first to avoid mutation during traversal
     while (node = walker.nextNode()) {
         if (node.parentElement && !node.parentElement.closest('script, style, [data-no-emojis]')) {
-            let text = node.textContent;
-            let replaced = false;
-            for (const [emoji, iconHtml] of Object.entries(iconMap)) {
-                if (text.includes(emoji)) {
-                    text = text.replace(new RegExp(emoji.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), iconHtml);
-                    replaced = true;
+            for (const emoji in iconMap) {
+                if (node.textContent.includes(emoji)) {
+                    nodesToReplace.push(node);
+                    break;
                 }
-            }
-            if (replaced) {
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = text;
-                while (tempDiv.firstChild) {
-                    node.parentNode.insertBefore(tempDiv.firstChild, node);
-                }
-                node.parentNode.removeChild(node);
             }
         }
     }
+    
+    // Now replace the nodes
+    nodesToReplace.forEach(textNode => {
+        let text = textNode.textContent;
+        const fragments = [];
+        let lastIndex = 0;
+        
+        // Find all emojis and their positions
+        const matches = [];
+        for (const [emoji, iconHtml] of Object.entries(iconMap)) {
+            const regex = new RegExp(emoji.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+            let match;
+            while ((match = regex.exec(text)) !== null) {
+                matches.push({ index: match.index, emoji, iconHtml, length: emoji.length });
+            }
+        }
+        
+        // Sort by position
+        matches.sort((a, b) => a.index - b.index);
+        
+        // Build the replacement
+        const parent = textNode.parentNode;
+        const tempContainer = document.createElement('span');
+        
+        matches.forEach(match => {
+            // Add text before emoji
+            if (match.index > lastIndex) {
+                tempContainer.appendChild(document.createTextNode(text.substring(lastIndex, match.index)));
+            }
+            // Add icon element
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = match.iconHtml;
+            if (tempDiv.firstChild) {
+                tempContainer.appendChild(tempDiv.firstChild);
+            }
+            lastIndex = match.index + match.length;
+        });
+        
+        // Add remaining text
+        if (lastIndex < text.length) {
+            tempContainer.appendChild(document.createTextNode(text.substring(lastIndex)));
+        }
+        
+        // Replace the text node with new content
+        if (matches.length > 0) {
+            while (tempContainer.firstChild) {
+                parent.insertBefore(tempContainer.firstChild, textNode);
+            }
+            parent.removeChild(textNode);
+        }
+    });
 }
 
 // Initialize everything when DOM is ready
@@ -11934,8 +11978,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Replace emojis with icon tags first
     replaceEmojisWithIcons();
     
-    // Initialize Lucide icons with a small delay to ensure library is loaded
-    setTimeout(initLucideIcons, 100);
+    // Initialize Lucide icons immediately after replacement
+    setTimeout(() => {
+        initLucideIcons();
+        console.log('✨ Icons replaced and initialized');
+    }, 200);
     
     // Re-initialize icons when dynamic content is added
     const observer = new MutationObserver(function(mutations) {
