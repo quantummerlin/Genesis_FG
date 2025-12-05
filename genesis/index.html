@@ -1346,13 +1346,41 @@
             }
         }
 
-        .track-btn.info-btn:hover {
-            background: rgba(251, 191, 36, 0.3), url('Genesis.png') center center/cover;
-            border-color: #fbbf24;
+        .track-btn.info-btn {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.25), rgba(251, 191, 36, 0.15)), url('Genesis.png') center center/cover;
+            border-color: rgba(251, 191, 36, 0.6);
             color: #fbbf24;
             box-shadow: 
-                0 4px 16px rgba(251, 191, 36, 0.4),
+                0 0 15px rgba(251, 191, 36, 0.3),
+                0 2px 8px rgba(0, 0, 0, 0.25),
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            animation: infoGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes infoGlow {
+            0%, 100% {
+                box-shadow: 
+                    0 0 15px rgba(251, 191, 36, 0.3),
+                    0 2px 8px rgba(0, 0, 0, 0.25),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            }
+            50% {
+                box-shadow: 
+                    0 0 25px rgba(251, 191, 36, 0.5),
+                    0 2px 12px rgba(251, 191, 36, 0.3),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+            }
+        }
+
+        .track-btn.info-btn:hover {
+            background: rgba(251, 191, 36, 0.4), url('Genesis.png') center center/cover;
+            border-color: #fbbf24;
+            color: #ffffff;
+            box-shadow: 
+                0 0 30px rgba(251, 191, 36, 0.6),
+                0 4px 16px rgba(251, 191, 36, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            animation: none;
         }
 
         .info-modal {
@@ -1373,6 +1401,7 @@
             -webkit-transform: translateZ(0);
             transform: translateZ(0);
             -webkit-overflow-scrolling: touch;
+            overflow-y: auto;
         }
 
         .info-modal.active {
@@ -1458,8 +1487,8 @@
             border-radius: 20px;
             padding: 30px;
             width: 90%;
-            max-width: 500px;
-            max-height: 80vh;
+            max-width: 600px;
+            max-height: 85vh;
             overflow-y: auto;
             box-shadow:
                 0 25px 80px rgba(0, 0, 0, 0.6),
@@ -1469,6 +1498,14 @@
             position: relative;
             border: 2px solid rgba(251, 191, 36, 0.5);
             margin: auto;
+        }
+
+        @media (min-width: 768px) {
+            .info-modal-content {
+                width: 80%;
+                max-width: 650px;
+                padding: 40px;
+            }
         }
 
         @keyframes slideUpModal {
