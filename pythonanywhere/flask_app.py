@@ -531,5 +531,68 @@ def generate_key():
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
+@app.route('/admin/toggle-license', methods=['POST'])
+def toggle_license():
+    """Activate or deactivate a license"""
+    try:
+        data = request.get_json()
+        admin_key = data.get('admin_key', '')
+        
+        if admin_key != 'QuantumMerlin119':
+            return jsonify({'error': 'Unauthorized'}), 401
+        
+        license_key = data.get('license_key', '').strip().upper()
+        is_active = data.get('is_active', True)
+        
+        conn = get_db()
+        cursor = conn.cursor()
+        
+        cursor.execute('''
+            UPDATE licenses SET is_active = ? WHERE license_key = ?
+        ''', (1 if is_active else 0, license_key))
+        
+        conn.commit()
+        conn.close()
+        
+        return jsonify({
+            'success': True,
+            'message': f'License {"activated" if is_active else "deactivated"}'
+        })
+        
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+@app.route('/admin/delete-license', methods=['POST'])
+def delete_license():
+    """Permanently delete a license and all its activations"""
+    try:
+        data = request.get_json()
+        admin_key = data.get('admin_key', '')
+        
+        if admin_key != 'QuantumMerlin119':
+            return jsonify({'error': 'Unauthorized'}), 401
+        
+        license_key = data.get('license_key', '').strip().upper()
+        
+        conn = get_db()
+        cursor = conn.cursor()
+        
+        # Delete activations first
+        cursor.execute('DELETE FROM activations WHERE license_key = ?', (license_key,))
+        
+        # Delete the license
+        cursor.execute('DELETE FROM licenses WHERE license_key = ?', (license_key,))
+        
+        conn.commit()
+        conn.close()
+        
+        return jsonify({
+            'success': True,
+            'message': 'License deleted permanently'
+        })
+        
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
 if __name__ == '__main__':
     app.run(debug=True)

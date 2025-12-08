@@ -326,22 +326,96 @@ Enjoy your frequency journey ✨
                 }
 
                 listEl.innerHTML = licenses.map(l => `
-                    <div class="license-item">
-                        <div>
+                    <div class="license-item" id="license-${l.license_key.replace(/[^a-zA-Z0-9]/g, '')}">
+                        <div style="flex: 1;">
                             <div class="license-key">${l.license_key}</div>
                             <div class="license-meta">
                                 ${l.email || 'No email'} • ${l.etsy_order_id || 'No order ID'} • 
                                 Devices: ${l.devices_used}/${l.max_devices}
                             </div>
                         </div>
-                        <div>
+                        <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
                             <span class="badge badge-premium">${l.tier}</span>
-                            ${l.is_active ? '<span class="badge badge-active">Active</span>' : ''}
+                            ${l.is_active ? '<span class="badge badge-active">Active</span>' : '<span class="badge" style="background:#ef4444;">Inactive</span>'}
+                            <button onclick="resetDevices('${l.license_key}')" style="padding: 5px 10px; font-size: 11px; background: rgba(139,92,246,0.3); border: 1px solid #8b5cf6; border-radius: 6px; color: #e9d5ff; cursor: pointer;" title="Reset all device activations">🔄 Reset</button>
+                            ${l.is_active ? 
+                                `<button onclick="toggleLicense('${l.license_key}', false)" style="padding: 5px 10px; font-size: 11px; background: rgba(251,191,36,0.2); border: 1px solid #fbbf24; border-radius: 6px; color: #fbbf24; cursor: pointer;" title="Deactivate license">⏸ Deactivate</button>` :
+                                `<button onclick="toggleLicense('${l.license_key}', true)" style="padding: 5px 10px; font-size: 11px; background: rgba(16,185,129,0.2); border: 1px solid #10b981; border-radius: 6px; color: #10b981; cursor: pointer;" title="Reactivate license">▶ Activate</button>`
+                            }
+                            <button onclick="deleteLicense('${l.license_key}')" style="padding: 5px 10px; font-size: 11px; background: rgba(239,68,68,0.2); border: 1px solid #ef4444; border-radius: 6px; color: #ef4444; cursor: pointer;" title="Permanently delete">🗑 Delete</button>
                         </div>
                     </div>
                 `).join('');
             } catch (err) {
                 listEl.innerHTML = `<p style="color: #ef4444;">Error: ${err.message}</p>`;
+            }
+        }
+
+        async function resetDevices(licenseKey) {
+            if (!confirm(`Reset all device activations for ${licenseKey}?`)) return;
+            
+            const adminKey = getAdminKey();
+            try {
+                const response = await fetch(`${API_URL}/api/deactivate`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ admin_key: adminKey, license_key: licenseKey })
+                });
+                const data = await response.json();
+                if (data.success) {
+                    alert('Devices reset successfully');
+                    listLicenses();
+                } else {
+                    alert('Error: ' + (data.error || 'Unknown error'));
+                }
+            } catch (err) {
+                alert('Error: ' + err.message);
+            }
+        }
+
+        async function toggleLicense(licenseKey, activate) {
+            const action = activate ? 'activate' : 'deactivate';
+            if (!confirm(`${activate ? 'Activate' : 'Deactivate'} license ${licenseKey}?`)) return;
+            
+            const adminKey = getAdminKey();
+            try {
+                const response = await fetch(`${API_URL}/admin/toggle-license`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ admin_key: adminKey, license_key: licenseKey, is_active: activate })
+                });
+                const data = await response.json();
+                if (data.success) {
+                    alert(`License ${activate ? 'activated' : 'deactivated'} successfully`);
+                    listLicenses();
+                } else {
+                    alert('Error: ' + (data.error || 'Unknown error'));
+                }
+            } catch (err) {
+                alert('Error: ' + err.message);
+            }
+        }
+
+        async function deleteLicense(licenseKey) {
+            if (!confirm(`PERMANENTLY DELETE license ${licenseKey}? This cannot be undone!`)) return;
+            if (!confirm(`Are you SURE? Type the last 4 characters to confirm.`)) return;
+            
+            const adminKey = getAdminKey();
+            try {
+                const response = await fetch(`${API_URL}/admin/delete-license`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ admin_key: adminKey, license_key: licenseKey })
+                });
+                const data = await response.json();
+                if (data.success) {
+                    alert('License deleted');
+                    listLicenses();
+                } else {
+                    alert('Error: ' + (data.error || 'Unknown error'));
+                }
+            } catch (err) {
+                alert('Error: ' + err.message);
             }
         }
 
