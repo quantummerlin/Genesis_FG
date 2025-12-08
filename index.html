@@ -1413,7 +1413,6 @@
 
         .info-modal.active {
             display: block !important;
-        }
             animation: fadeInModal 0.3s ease;
         }
         
@@ -3442,7 +3441,7 @@
                 <div style="margin-bottom: 15px;">
                     <input type="text" id="licenseKeyFull" placeholder="QMFG-XXXX-XXXX-XXXX" 
                         style="width: 100%; max-width: 280px; padding: 14px; text-align: center; background: rgba(139,92,246,0.2); border: 2px solid rgba(139,92,246,0.4); border-radius: 10px; color: #fff; font-size: 18px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;"
-                        oninput="this.value = this.value.toUpperCase();">
+                        oninput="formatLicenseKey(this)" maxlength="19">
                 </div>
                 
                 <div id="licenseError" style="color: #ef4444; font-size: 14px; margin-bottom: 15px; display: none;"></div>
@@ -11328,7 +11327,7 @@
                 toast.style.transition = 'opacity 0.5s';
                 toast.style.opacity = '0';
                 setTimeout(() => toast.remove(), 500);
-            }, 3000);
+            }, 4000);
         }
 
         // Make functions globally available
@@ -11379,16 +11378,32 @@ function hasPremiumAccess() {
     return tier === 'premium' || tier === 'ultimate';
 }
 
+// Format license key with auto-dashes after every 4 characters
+function formatLicenseKey(input) {
+    // Remove all non-alphanumeric characters and convert to uppercase
+    let value = input.value.replace(/[^A-Za-z0-9]/g, '').toUpperCase();
+    
+    // Add dashes after every 4 characters
+    let formatted = '';
+    for (let i = 0; i < value.length && i < 16; i++) {
+        if (i > 0 && i % 4 === 0) {
+            formatted += '-';
+        }
+        formatted += value[i];
+    }
+    
+    input.value = formatted;
+}
+
 // Show license modal
 function showLicenseModal() {
     const modal = document.getElementById('licenseModal');
     if (modal) {
         modal.style.display = 'flex';
         
-        // Clear previous inputs
-        document.getElementById('licenseKey1').value = '';
-        document.getElementById('licenseKey2').value = '';
-        document.getElementById('licenseKey3').value = '';
+        // Clear previous input
+        const keyInput = document.getElementById('licenseKeyFull');
+        if (keyInput) keyInput.value = '';
         document.getElementById('licenseError').style.display = 'none';
         document.getElementById('licenseSuccess').style.display = 'none';
         
@@ -11404,9 +11419,9 @@ function showLicenseModal() {
             tierDisplay.style.display = 'none';
         }
         
-        // Focus first input
+        // Focus input
         setTimeout(() => {
-            document.getElementById('licenseKey1').focus();
+            if (keyInput) keyInput.focus();
         }, 100);
     }
 }
