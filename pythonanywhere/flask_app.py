@@ -38,7 +38,7 @@ def init_db():
             tier TEXT NOT NULL,
             email TEXT,
             etsy_order_id TEXT,
-            max_devices INTEGER DEFAULT 3,
+            max_devices INTEGER DEFAULT 5,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             is_active INTEGER DEFAULT 1
         )
@@ -431,7 +431,7 @@ def add_license():
         tier = data.get('tier', 'premium').lower()
         email = data.get('email', '')
         etsy_order_id = data.get('etsy_order_id', '')
-        max_devices = data.get('max_devices', 3)
+        max_devices = data.get('max_devices', 5)
         
         if tier not in ['premium', 'ultimate']:
             return jsonify({'error': 'Tier must be "premium" or "ultimate"'}), 400
