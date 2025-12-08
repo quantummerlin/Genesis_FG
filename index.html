@@ -10190,11 +10190,17 @@
             return keyMap[recipeName] || null;
         }
 
+        // Store scroll position for modal restore
+        let savedScrollPosition = 0;
+        
         function showInfoModal(recipe) {
             const modal = document.getElementById('infoModal');
             const title = document.getElementById('modalTitle');
             const freqs = document.getElementById('modalFreqs');
             const body = document.getElementById('modalBody');
+            
+            // Save current scroll position
+            savedScrollPosition = window.scrollY || window.pageYOffset;
             
             title.textContent = recipe.name;
             freqs.textContent = `${recipe.frequencies.join(' Hz + ')} Hz`;
@@ -10235,12 +10241,11 @@
             
             modal.classList.add('active');
             
-            // Scroll modal content to top and ensure visibility
+            // Scroll modal content to top
             const modalContent = modal.querySelector('.info-modal-content');
             if (modalContent) {
                 modalContent.scrollTop = 0;
             }
-            window.scrollTo(0, 0);
         }
         
         function closeInfoModal() {
@@ -10248,6 +10253,8 @@
             modal.classList.remove('active');
             // Restore body scroll
             document.body.style.overflow = '';
+            // Restore scroll position
+            window.scrollTo(0, savedScrollPosition);
         }
         
         // Close modal when clicking outside
