@@ -3429,22 +3429,12 @@
             </div>
             <div class="upgrade-modal-body">
                 <p style="margin-bottom: 20px; font-size: 15px; color: #c4b5fd;">
-                    Enter your Premium license key:
+                    Paste your Premium license key:
                 </p>
                 
-                <div style="display: flex; justify-content: center; gap: 5px; margin-bottom: 15px;">
-                    <span style="background: rgba(139,92,246,0.3); padding: 10px 12px; border-radius: 8px; color: #fbbf24; font-weight: 700;">QMFG</span>
-                    <span style="color: #6b7280; padding: 10px 0;">-</span>
-                    <input type="text" id="licenseKey1" maxlength="4" placeholder="XXXX" 
-                        style="width: 60px; padding: 10px; text-align: center; background: rgba(139,92,246,0.2); border: 2px solid rgba(139,92,246,0.4); border-radius: 8px; color: #fff; font-size: 16px; font-weight: 600; text-transform: uppercase;"
-                        oninput="this.value = this.value.toUpperCase(); if(this.value.length === 4) document.getElementById('licenseKey2').focus();">
-                    <span style="color: #6b7280; padding: 10px 0;">-</span>
-                    <input type="text" id="licenseKey2" maxlength="4" placeholder="XXXX"
-                        style="width: 60px; padding: 10px; text-align: center; background: rgba(139,92,246,0.2); border: 2px solid rgba(139,92,246,0.4); border-radius: 8px; color: #fff; font-size: 16px; font-weight: 600; text-transform: uppercase;"
-                        oninput="this.value = this.value.toUpperCase(); if(this.value.length === 4) document.getElementById('licenseKey3').focus();">
-                    <span style="color: #6b7280; padding: 10px 0;">-</span>
-                    <input type="text" id="licenseKey3" maxlength="4" placeholder="XXXX"
-                        style="width: 60px; padding: 10px; text-align: center; background: rgba(139,92,246,0.2); border: 2px solid rgba(139,92,246,0.4); border-radius: 8px; color: #fff; font-size: 16px; font-weight: 600; text-transform: uppercase;"
+                <div style="margin-bottom: 15px;">
+                    <input type="text" id="licenseKeyFull" placeholder="QMFG-XXXX-XXXX-XXXX" 
+                        style="width: 100%; max-width: 280px; padding: 14px; text-align: center; background: rgba(139,92,246,0.2); border: 2px solid rgba(139,92,246,0.4); border-radius: 10px; color: #fff; font-size: 18px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;"
                         oninput="this.value = this.value.toUpperCase();">
                 </div>
                 
@@ -11395,9 +11385,7 @@ function closeLicenseModal() {
 
 // Activate license
 async function activateLicense() {
-    const key1 = document.getElementById('licenseKey1').value.trim().toUpperCase();
-    const key2 = document.getElementById('licenseKey2').value.trim().toUpperCase();
-    const key3 = document.getElementById('licenseKey3').value.trim().toUpperCase();
+    const rawInput = document.getElementById('licenseKeyFull').value.trim().toUpperCase();
     
     const errorEl = document.getElementById('licenseError');
     const successEl = document.getElementById('licenseSuccess');
@@ -11408,19 +11396,27 @@ async function activateLicense() {
     successEl.style.display = 'none';
     
     // Validate input
-    if (!key1 || !key2 || !key3) {
-        errorEl.textContent = 'Please fill in all license key fields';
+    if (!rawInput) {
+        errorEl.textContent = 'Please paste your license key';
         errorEl.style.display = 'block';
         return;
     }
     
-    if (key1.length !== 4 || key2.length !== 4 || key3.length !== 4) {
-        errorEl.textContent = 'Each segment must be 4 characters';
+    // Parse the key - accept with or without QMFG prefix
+    let fullLicenseKey = rawInput;
+    
+    // If they pasted just the last 3 segments, add QMFG
+    if (!rawInput.startsWith('QMFG-') && rawInput.split('-').length === 3) {
+        fullLicenseKey = 'QMFG-' + rawInput;
+    }
+    
+    // Validate format: QMFG-XXXX-XXXX-XXXX
+    const parts = fullLicenseKey.split('-');
+    if (parts.length !== 4 || parts[0] !== 'QMFG' || parts[1].length !== 4 || parts[2].length !== 4 || parts[3].length !== 4) {
+        errorEl.textContent = 'Invalid key format. Expected: QMFG-XXXX-XXXX-XXXX';
         errorEl.style.display = 'block';
         return;
     }
-    
-    const fullLicenseKey = `QMFG-${key1}-${key2}-${key3}`;
     
     // Check if already has premium
     if (hasPremiumAccess()) {
