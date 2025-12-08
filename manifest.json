@@ -1,6 +1,6 @@
 {
-  "name": "Genesis Frequency Generator",
-  "short_name": "Genesis FG",
+  "name": "Genesis Frequencies",
+  "short_name": "Genesis Frequencies",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#1a0033",
