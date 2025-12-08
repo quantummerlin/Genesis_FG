@@ -3607,7 +3607,7 @@
                 <div class="frequency-controls">
                     <div class="control-group premium-lock" onclick="showUpgradeModal()">
                         <div>
-                            <input type="number" id="freq1" min="0.1" max="100000" step="0.1" value="37">
+                            <input type="number" id="freq1" min="0.1" max="100000" step="0.1" value="37" readonly style="pointer-events: none;">
                             <span>Hz</span>
                         </div>
                         <input type="range" id="volume1" min="0" max="100" value="50">
@@ -3616,7 +3616,7 @@
                     
                     <div class="control-group premium-lock" onclick="showUpgradeModal()">
                         <div>
-                            <input type="number" id="freq2" min="0.1" max="100000" step="0.1" value="73">
+                            <input type="number" id="freq2" min="0.1" max="100000" step="0.1" value="73" readonly style="pointer-events: none;">
                             <span>Hz</span>
                         </div>
                         <input type="range" id="volume2" min="0" max="100" value="50">
@@ -3625,7 +3625,7 @@
                     
                     <div class="control-group premium-lock" onclick="showUpgradeModal()">
                         <div>
-                            <input type="number" id="freq3" min="0.1" max="100000" step="0.1" value="0">
+                            <input type="number" id="freq3" min="0.1" max="100000" step="0.1" value="0" readonly style="pointer-events: none;">
                             <span>Hz</span>
                         </div>
                         <input type="range" id="volume3" min="0" max="100" value="50">
@@ -3636,15 +3636,17 @@
                 <div class="control-group duration-control">
                     <label for="duration" data-translate="duration">⏱️ Duration</label>
                     <div class="duration-input-wrapper">
-                        <div class="duration-input-container premium-lock" onclick="showUpgradeModal()">
-                            <input type="text" id="duration" placeholder="05:00" value="05:00" pattern="[0-9]{1,2}:[0-9]{2}" maxlength="5" readonly>
-                        </div>
-                        <div class="duration-buttons">
-                            <button type="button" class="duration-btn" data-time="01:00">1m</button>
-                            <button type="button" class="duration-btn" data-time="05:00">5m</button>
-                            <button type="button" class="duration-btn" data-time="10:00">10m</button>
-                            <button type="button" class="duration-btn" data-time="30:00">30m</button>
-                        </div>
+                        <select id="durationSelect" style="padding: 12px 15px; background: rgba(139,92,246,0.2); border: 2px solid rgba(139,92,246,0.4); border-radius: 10px; color: #fff; font-size: 16px; font-weight: 600; cursor: pointer; width: 100%; max-width: 200px;">
+                            <option value="01:00">1 minute</option>
+                            <option value="05:00" selected>5 minutes</option>
+                            <option value="10:00">10 minutes</option>
+                            <option value="15:00">15 minutes</option>
+                            <option value="30:00">30 minutes</option>
+                            <option value="60:00" class="premium-option" disabled>1 hour ⭐</option>
+                            <option value="120:00" class="premium-option" disabled>2 hours ⭐</option>
+                            <option value="custom" class="premium-option" disabled>Custom ⭐</option>
+                        </select>
+                        <input type="hidden" id="duration" value="05:00">
                     </div>
                 </div>
 
@@ -10506,7 +10508,37 @@
                     this.validateTimeFormat(e.target);
                 });
 
-                // Duration quick buttons
+                // Duration dropdown handler
+                const durationSelect = document.getElementById('durationSelect');
+                if (durationSelect) {
+                    durationSelect.addEventListener('change', (e) => {
+                        const value = e.target.value;
+                        const hasPremium = typeof hasPremiumAccess === 'function' ? hasPremiumAccess() : 
+                                           localStorage.getItem('gfgn_license_tier') === 'premium' || 
+                                           localStorage.getItem('gfgn_license_tier') === 'ultimate';
+                        
+                        if (value === 'custom') {
+                            if (!hasPremium) {
+                                showUpgradeModal();
+                                e.target.value = '05:00';
+                                return;
+                            }
+                            // Prompt for custom duration
+                            const custom = prompt('Enter duration (MM:SS or HH:MM:SS):', '15:00');
+                            if (custom && /^(\d{1,2}:)?\d{1,2}:\d{2}$/.test(custom)) {
+                                this.elements.duration.value = custom;
+                                this.updateStatus(`⏱️ Duration set to ${custom}`);
+                            } else {
+                                e.target.value = '05:00';
+                            }
+                        } else {
+                            this.elements.duration.value = value;
+                            this.updateStatus(`⏱️ Duration set to ${value}`);
+                        }
+                    });
+                }
+
+                // Duration quick buttons (legacy support)
                 document.querySelectorAll('.duration-btn').forEach(btn => {
                     btn.addEventListener('click', (e) => {
                         const time = e.target.dataset.time;
@@ -11553,15 +11585,16 @@ function updateUIForLicenseTier() {
         // Unlock all premium features
         unlockPremiumControls();
         
-        // Trigger achievement
-        if (typeof window.awardAchievement === 'function') {
+        // Trigger achievement only once
+        if (typeof window.awardAchievement === 'function' && !localStorage.getItem('gfgn_premium_achievement_awarded')) {
             window.awardAchievement('premium_unlock');
+            localStorage.setItem('gfgn_premium_achievement_awarded', 'true');
         }
     }
     // Free users see default locked UI
 }
 
-// Unlock Premium controls (frequency inputs, volume sliders, duration, and export)
+// Unlock Premium controls (volume sliders, duration, and export - NOT frequency inputs)
 function unlockPremiumControls() {
     document.querySelectorAll('.premium-lock').forEach(el => {
         // Remove the lock overlay and enable interaction
@@ -11571,17 +11604,25 @@ function unlockPremiumControls() {
         el.style.opacity = '1';
         el.style.pointerEvents = 'auto';
         
-        // Enable all inputs and buttons inside
-        el.querySelectorAll('input, button').forEach(input => {
+        // Enable volume sliders and buttons, but NOT frequency number inputs
+        el.querySelectorAll('input[type="range"], button').forEach(input => {
             input.disabled = false;
-            input.removeAttribute('readonly');
+        });
+        
+        // Keep frequency inputs readonly - users select from presets only
+        el.querySelectorAll('input[type="number"]').forEach(input => {
+            input.readOnly = true;
+            input.style.pointerEvents = 'none';
         });
     });
     
-    // Make duration input editable
-    const durationInput = document.getElementById('duration');
-    if (durationInput) {
-        durationInput.removeAttribute('readonly');
+    // Unlock premium duration options in dropdown
+    const durationSelect = document.getElementById('durationSelect');
+    if (durationSelect) {
+        durationSelect.querySelectorAll('.premium-option').forEach(opt => {
+            opt.disabled = false;
+            opt.textContent = opt.textContent.replace(' ⭐', '');
+        });
     }
     
     // Unlock export button
