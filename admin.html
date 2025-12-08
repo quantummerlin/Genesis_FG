@@ -157,7 +157,14 @@
             
             <div id="generateResult" class="result">
                 <div class="key-display" id="generatedKey" onclick="copyKey()"></div>
-                <p class="copy-hint">👆 Click to copy</p>
+                <p class="copy-hint">👆 Click to copy key</p>
+                
+                <!-- Quick Message Section -->
+                <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(139,92,246,0.3);">
+                    <p style="color: #e9d5ff; font-size: 14px; margin-bottom: 10px; font-weight: 600;">📨 Quick Message for Customer:</p>
+                    <textarea id="customerMessage" readonly style="width: 100%; height: 180px; padding: 12px; background: rgba(26,0,51,0.6); border: 1px solid rgba(139,92,246,0.4); border-radius: 10px; color: #fff; font-size: 13px; line-height: 1.5; resize: none;"></textarea>
+                    <button onclick="copyMessage()" style="margin-top: 10px; background: linear-gradient(90deg, #8b5cf6, #a78bfa);">📋 Copy Message</button>
+                </div>
             </div>
         </div>
 
@@ -226,6 +233,9 @@
                     resultEl.style.display = 'block';
                     keyEl.textContent = licenseKey;
                     
+                    // Generate customer message
+                    generateCustomerMessage(licenseKey, tier);
+                    
                     // Clear form
                     document.getElementById('customerEmail').value = '';
                     document.getElementById('etsyOrderId').value = '';
@@ -248,6 +258,35 @@
             const key = document.getElementById('generatedKey').textContent;
             navigator.clipboard.writeText(key).then(() => {
                 alert('Copied: ' + key);
+            });
+        }
+
+        function generateCustomerMessage(licenseKey, tier) {
+            const tierName = tier === 'ultimate' ? 'Ultimate' : 'Premium';
+            const message = `Thank you for your purchase! 🌟
+
+Your Genesis Frequencies ${tierName} License Key:
+
+${licenseKey}
+
+To activate:
+1. Go to genesis.quantummerlin.com
+2. Tap Settings (⚙️) at the bottom
+3. Tap "Enter License Key"
+4. Paste your key above and tap Activate
+
+Works on up to 3 devices!
+
+Enjoy your frequency journey ✨
+- Quantum Merlin`;
+            
+            document.getElementById('customerMessage').value = message;
+        }
+
+        function copyMessage() {
+            const message = document.getElementById('customerMessage').value;
+            navigator.clipboard.writeText(message).then(() => {
+                alert('Message copied! Ready to paste in Etsy.');
             });
         }
 
