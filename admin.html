@@ -174,6 +174,19 @@
             <button onclick="listLicenses()">🔄 Refresh List</button>
             <div id="licenseList" class="license-list" style="margin-top: 20px;"></div>
         </div>
+
+        <!-- Affiliate Interests -->
+        <div class="card">
+            <h2>🤝 Affiliate Interest Signups</h2>
+            <button onclick="listAffiliates()">🔄 Load Affiliates</button>
+            <div id="affiliateStats" style="margin-top: 15px; display: none;">
+                <span style="background: rgba(16,185,129,0.2); padding: 8px 15px; border-radius: 8px; color: #10b981; font-weight: 600;">
+                    <span id="affiliateCount">0</span> interested
+                </span>
+            </div>
+            <div id="affiliateList" style="margin-top: 15px; max-height: 300px; overflow-y: auto;"></div>
+            <button id="exportAffiliatesBtn" onclick="exportAffiliates()" style="display: none; margin-top: 15px; background: rgba(139,92,246,0.3); border: 1px solid #8b5cf6;">📧 Copy All Emails</button>
+        </div>
     </div>
 
     <script>
@@ -417,6 +430,68 @@ Enjoy your frequency journey ✨
             } catch (err) {
                 alert('Error: ' + err.message);
             }
+        }
+
+        let affiliateEmails = [];
+
+        async function listAffiliates() {
+            const adminKey = getAdminKey();
+            if (!adminKey) {
+                alert('Please enter admin key');
+                return;
+            }
+
+            const listEl = document.getElementById('affiliateList');
+            listEl.innerHTML = '<p style="color: #a78bfa;">Loading...</p>';
+
+            try {
+                const response = await fetch(`${API_URL}/admin/list-affiliates`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ admin_key: adminKey })
+                });
+                const data = await response.json();
+
+                if (data.error) {
+                    listEl.innerHTML = `<p style="color: #ef4444;">${data.error}</p>`;
+                    return;
+                }
+
+                const affiliates = data.affiliates || [];
+                affiliateEmails = affiliates.map(a => a.email);
+                
+                // Update stats
+                document.getElementById('affiliateStats').style.display = 'block';
+                document.getElementById('affiliateCount').textContent = affiliates.length;
+
+                if (affiliates.length === 0) {
+                    listEl.innerHTML = '<p style="color: #a78bfa;">No affiliate signups yet</p>';
+                    document.getElementById('exportAffiliatesBtn').style.display = 'none';
+                    return;
+                }
+
+                document.getElementById('exportAffiliatesBtn').style.display = 'block';
+
+                listEl.innerHTML = affiliates.map(a => `
+                    <div style="background: rgba(26,0,51,0.4); border-radius: 8px; padding: 10px 15px; margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: #fbbf24; font-weight: 500;">${a.email}</span>
+                        <span style="color: #a78bfa; font-size: 11px;">${new Date(a.created_at).toLocaleDateString()}</span>
+                    </div>
+                `).join('');
+            } catch (err) {
+                listEl.innerHTML = `<p style="color: #ef4444;">Error: ${err.message}</p>`;
+            }
+        }
+
+        function exportAffiliates() {
+            if (affiliateEmails.length === 0) {
+                alert('No emails to export');
+                return;
+            }
+            const emailList = affiliateEmails.join(', ');
+            navigator.clipboard.writeText(emailList).then(() => {
+                alert(`Copied ${affiliateEmails.length} emails to clipboard!`);
+            });
         }
 
         // Auto-load licenses if admin key is saved
