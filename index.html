@@ -3542,7 +3542,7 @@
         <div id="premiumCtaTop" class="section premium-cta-section" style="text-align: center; margin: 30px 0; padding: 25px; background: linear-gradient(135deg, rgba(26,0,51,0.8), rgba(139,92,246,0.6)); border-radius: 15px; border: 2px solid rgba(251,191,36,0.3); position: relative; z-index: 1100;">
             <h3 id="premiumCtaTopTitle" style="color: #fbbf24; font-size: 22px; font-weight: 700; margin-bottom: 15px;" data-translate="readyToUnlock">🚀 Ready to Unlock Premium Features?</h3>
             <p style="color: #c4b5fd; font-size: 16px; margin-bottom: 20px; line-height: 1.5;" data-translate="premiumCtaDesc">
-                Get lifetime access to individual volume controls, custom durations, WAV export, silent mode bypass, achievement system, plus free upgrade when we launch on App Store!
+                Get lifetime access to individual volume controls, custom durations, WAV export, achievement system, plus free upgrade when we launch on App Store!
             </p>
             <button onclick="showUpgradeModal()" style="background: linear-gradient(90deg, #fbbf24, #f59e0b); color: #1a0033; border: none; border-radius: 25px; padding: 15px 30px; font-size: 18px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 15px rgba(251,191,36,0.3);" data-translate="upgradeToPremium">
                 Upgrade to Premium
@@ -3686,7 +3686,7 @@
                     <div style="display: flex; align-items: flex-start; gap: 10px;">
                         <span style="font-size: 16px;">💡</span>
                         <div style="color: #9ca3af; font-size: 12px; line-height: 1.4;">
-                            <b style="color: #10b981;">Pro tip:</b> Export your frequency track to listen in your pocket! Exported files play in your Music app with full background audio.
+                            <b style="color: #10b981;">Pro tip:</b> Export your frequency track as a WAV file to save and share!
                         </div>
                     </div>
                 </div>
@@ -3749,7 +3749,7 @@
         <div id="premiumCtaBottom" style="text-align: center; margin: 40px 0; padding: 30px; background: linear-gradient(135deg, rgba(26,0,51,0.8), rgba(139,92,246,0.6)); border-radius: 20px; border: 2px solid rgba(251,191,36,0.3); position: relative; z-index: 1100;">
             <h3 id="premiumCtaBottomTitle" style="color: #fbbf24; font-size: 24px; margin-bottom: 15px;" data-translate="readyToUnlock">🚀 Ready to Unlock Premium Features?</h3>
             <p style="color: #c4b5fd; font-size: 16px; margin-bottom: 20px; line-height: 1.6;" data-translate="premiumCtaDesc">
-                Get lifetime access to individual volume controls, custom durations, WAV export, silent mode bypass, achievement system, plus free upgrade when we launch on App Store!
+                Get lifetime access to individual volume controls, custom durations, WAV export, achievement system, plus free upgrade when we launch on App Store!
             </p>
             <button onclick="showUpgradeModal()" style="background: linear-gradient(90deg, #fbbf24, #f59e0b); color: #1a0033; border: none; border-radius: 25px; padding: 15px 30px; font-size: 18px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 15px rgba(251,191,36,0.3);" data-translate="upgradeToPremium">
                 Upgrade to Premium
@@ -4339,12 +4339,10 @@
                 upgradeToPremium: "Upgrade to Premium",
                 unlockFullPower: "Unlock the full power of sacred frequencies with lifetime access!",
                 premiumFeatures: "Premium Features Include:",
-                silentMode: "Silent Mode Bypass",
-                silentModeDesc: "Play frequencies even when phone is silenced",
                 customDurations: "Custom Durations",
                 customDurationsDesc: "Set any length from seconds to hours",
                 wavExport: "WAV Export",
-                wavExportDesc: "Save tracks for offline use anywhere",
+                wavExportDesc: "Save tracks to share with others",
                 allAchievements: "All Achievements",
                 allAchievementsDesc: "Unlock the complete achievement system",
                 unlimitedListening: "Unlimited Listening",
@@ -4358,7 +4356,7 @@
                 maybeLater: "Maybe Later",
                 noDataCollected: "💎 One-time payment • Lifetime access • No subscriptions • No data collected",
                 readyToUnlock: "🚀 Ready to Unlock Premium Features?",
-                premiumCtaDesc: "Get lifetime access to individual volume controls, custom durations, WAV export, silent mode bypass, achievement system, plus free upgrade when we launch on App Store!",
+                premiumCtaDesc: "Get lifetime access to individual volume controls, custom durations, WAV export, achievement system, plus free upgrade when we launch on App Store!",
                 achievementSystem: "Achievement System",
                 achievementSystemDesc: "Track your progress, unlock achievements, and log your sacred sessions.",
                 // Daily Challenge
@@ -11135,33 +11133,33 @@
             const prompt = document.createElement('div');
             prompt.id = 'pwaPrompt';
             prompt.innerHTML = `
-                <div style="position: fixed; bottom: 20px; left: 20px; right: 20px; 
+                <div style="position: fixed; bottom: 15px; left: 15px; right: 15px; 
                            background: linear-gradient(135deg, rgba(251,191,36,0.95), rgba(139,92,246,0.9)); 
-                           border: 2px solid rgba(251,191,36,0.5); border-radius: 15px; 
-                           padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
-                           z-index: 1000; text-align: center; backdrop-filter: blur(10px); display: flex; align-items: center; gap: 15px;">
-                    <div style="flex-shrink: 0; font-size: 50px;">
-                        📱
+                           border: 2px solid rgba(251,191,36,0.5); border-radius: 12px; 
+                           padding: 12px 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.3); 
+                           z-index: 1000; backdrop-filter: blur(10px); display: flex; align-items: center; gap: 12px;">
+                    <div style="flex-shrink: 0; font-size: 32px;">
+                        📲
                     </div>
-                    <div style="flex: 1; text-align: left;">
-                        <div style="color: #1a0033; font-size: 18px; font-weight: 700; margin-bottom: 5px;">
+                    <div style="flex: 1;">
+                        <div style="color: #1a0033; font-size: 15px; font-weight: 700;">
                             Add to Home Screen
                         </div>
-                        <div style="color: #1a0033; font-size: 13px; margin-bottom: 10px; line-height: 1.3;">
-                            Get instant access & track your progress offline
+                        <div style="color: #1a0033; font-size: 12px; opacity: 0.8;">
+                            Quick access from your home screen
                         </div>
-                        <div style="display: flex; gap: 10px; justify-content: flex-start;">
-                            <button onclick="installPWA()" style="background: #1a0033; color: #fbbf24; 
-                                     border: none; border-radius: 20px; padding: 8px 16px; 
-                                     font-weight: 600; cursor: pointer; font-size: 14px;">
-                                🚀 Install
-                            </button>
-                            <button onclick="hidePWAPrompt()" style="background: rgba(26,0,51,0.7); 
-                                     color: #c4b5fd; border: none; border-radius: 20px; 
-                                     padding: 8px 16px; font-weight: 600; cursor: pointer; font-size: 14px;">
-                                Later
-                            </button>
-                        </div>
+                    </div>
+                    <div style="display: flex; gap: 8px; flex-shrink: 0;">
+                        <button onclick="installPWA()" style="background: #1a0033; color: #fbbf24; 
+                                 border: none; border-radius: 16px; padding: 8px 14px; 
+                                 font-weight: 600; cursor: pointer; font-size: 13px;">
+                            Install
+                        </button>
+                        <button onclick="hidePWAPrompt()" style="background: rgba(26,0,51,0.5); 
+                                 color: #1a0033; border: none; border-radius: 16px; 
+                                 padding: 8px 12px; font-weight: 600; cursor: pointer; font-size: 13px;">
+                            ✕
+                        </button>
                     </div>
                 </div>
             `;
