@@ -1403,7 +1403,7 @@
             align-items: flex-start;
             justify-content: center;
             z-index: 9999;
-            padding: 20px;
+            padding: 10px;
             box-sizing: border-box;
             -webkit-transform: translateZ(0);
             transform: translateZ(0);
@@ -1504,11 +1504,7 @@
             animation: slideUpModal 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
             position: relative;
             border: 2px solid rgba(251, 191, 36, 0.5);
-            margin: auto;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            position: absolute;
+            margin: 20px auto;
         }
 
         @media (min-width: 768px) {
@@ -3137,7 +3133,7 @@
             // Create a style to force the welcome modal visible immediately
             var style = document.createElement('style');
             style.id = 'safari-welcome-fix';
-            style.textContent = '#immersiveWelcome { display: flex !important; visibility: visible !important; opacity: 1 !important; position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; z-index: 9999999 !important; background: rgba(0,0,0,0.95) !important; align-items: flex-start !important; justify-content: center !important; }';
+            style.textContent = '#immersiveWelcome { display: flex !important; visibility: visible !important; opacity: 1 !important; position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; z-index: 9999999 !important; background: rgba(0,0,0,0.95) !important; align-items: flex-start !important; justify-content: center !important; padding: 10px !important; overflow-y: auto !important; }';
             document.head.appendChild(style);
             document.body.style.overflow = 'hidden';
         }
@@ -3146,7 +3142,7 @@
     
     <!-- Immersive Welcome Modal - starts hidden, shown via JavaScript for first-time users -->
     <div id="immersiveWelcome" class="info-modal" style="z-index:9999999;">
-        <div class="info-modal-content" style="max-width: 500px; width: calc(100% - 40px); max-height: 90vh; overflow-y: auto; margin: 10px auto; text-align: center; background: linear-gradient(135deg, rgba(26,0,51,0.98), rgba(139,92,246,0.95)); border: 2px solid rgba(251,191,36,0.6); box-shadow: 0 0 60px rgba(251,191,36,0.3);">
+        <div class="info-modal-content" style="max-width: 500px; text-align: center;">
             <div class="welcome-header">✨ Welcome to Genesis Frequencies ✨</div>
             <div class="info-modal-body" style="color: #ffffff; font-size: 18px; line-height: 1.6;">
                 <div style="text-align:center;line-height:1.8;padding:10px 20px 20px 20px;">
@@ -3184,7 +3180,7 @@
 
     <!-- Frequency Benefits Modal -->
     <div id="frequencyBenefitsModal" class="info-modal" style="z-index:9999998;">
-        <div class="info-modal-content" style="max-width: 600px; width: calc(100% - 40px); max-height: 90vh; overflow-y: auto; margin: 10px auto; text-align: center; background: linear-gradient(135deg, rgba(26,0,51,0.98), rgba(139,92,246,0.95)); border: 2px solid rgba(251,191,36,0.6); box-shadow: 0 0 60px rgba(251,191,36,0.3);">
+        <div class="info-modal-content" style="max-width: 600px; text-align: center;">
             <div class="welcome-header">🎵 What Can These Frequencies Do? 🎵</div>
             <div class="info-modal-body" style="color: #fff; font-size: 16px; line-height: 1.6; text-align: left;">
                 <div style="line-height:1.8;padding:10px 20px 20px 20px;">
@@ -3234,7 +3230,7 @@
 
     <!-- How to Use Modal -->
     <div id="howToUseModal" class="info-modal" style="z-index:9999997;">
-        <div class="info-modal-content" style="max-width: 600px; width: calc(100% - 40px); max-height: 90vh; overflow-y: auto; margin: 10px auto; text-align: center; background: linear-gradient(135deg, rgba(26,0,51,0.98), rgba(139,92,246,0.95)); border: 2px solid rgba(251,191,36,0.6); box-shadow: 0 0 60px rgba(251,191,36,0.3);">
+        <div class="info-modal-content" style="max-width: 600px; text-align: center;">
             <div class="welcome-header">🎯 Your First Session in 3 Steps 🎯</div>
             <div class="info-modal-body" style="color: #fff; font-size: 16px; line-height: 1.6; text-align: left;">
                 <div style="line-height:1.8;padding:10px 20px 20px 20px;">
@@ -3290,7 +3286,7 @@
 
     <!-- PWA Tip Modal -->
     <div id="pwaTipModal" class="info-modal" style="z-index:9999996;">
-        <div class="info-modal-content" style="max-width: 500px; width: calc(100% - 40px); max-height: 90vh; overflow-y: auto; margin: 10px auto; text-align: center; background: linear-gradient(135deg, rgba(26,0,51,0.98), rgba(139,92,246,0.95)); border: 2px solid rgba(251,191,36,0.6); box-shadow: 0 0 60px rgba(251,191,36,0.3);">
+        <div class="info-modal-content" style="max-width: 500px; text-align: center;">
             <div class="welcome-header" id="pwaModalHeader">✨ Install Genesis Frequencies ✨</div>
             <div class="info-modal-body" style="color: #fff; font-size: 18px; line-height: 1.6;">
                 <div style="text-align:center;line-height:1.8;padding:10px 20px 20px 20px;">
@@ -3324,7 +3320,7 @@
         </div>
     </div>
     <div id="upgradeBenefitsModal" class="info-modal" style="z-index:9999995;">
-        <div class="info-modal-content" style="max-width:450px; width: calc(100% - 40px); max-height: 90vh; overflow-y: auto; margin: 10px auto; text-align: center; background: linear-gradient(135deg, rgba(26,0,51,0.98), rgba(139,92,246,0.95)); border: 2px solid rgba(251,191,36,0.6); box-shadow: 0 0 60px rgba(251,191,36,0.3);">
+        <div class="info-modal-content" style="max-width: 450px; text-align: center;">
             <div class="welcome-header">✨ Unlock Premium ✨</div>
             <div class="info-modal-body" style="color: #fff; font-size: 16px; line-height: 1.6;">
                 <div style="line-height:1.8;padding:10px 20px 20px 20px;">
@@ -11801,7 +11797,7 @@ document.addEventListener('DOMContentLoaded', function() {
             welcomeModal.classList.add('active');
             
             // Method 2: Set inline styles directly (Safari fallback)
-            welcomeModal.style.cssText = 'display: flex !important; visibility: visible !important; opacity: 1 !important; position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; z-index: 9999999 !important; background: rgba(0,0,0,0.95) !important; align-items: flex-start !important; justify-content: center !important;';
+            welcomeModal.style.cssText = 'display: flex !important; visibility: visible !important; opacity: 1 !important; position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; bottom: 0 !important; z-index: 9999999 !important; background: rgba(0,0,0,0.95) !important; align-items: flex-start !important; justify-content: center !important; padding: 10px !important; overflow-y: auto !important;';
             
             // Method 3: Force reflow/repaint for Safari
             welcomeModal.offsetHeight;
