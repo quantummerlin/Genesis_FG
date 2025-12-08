@@ -12269,7 +12269,7 @@ async function submitAffiliateInterest() {
     
     // Try to send to backend
     try {
-        await fetch('https://genesis.quantummerlin.com/api/affiliate-interest', {
+        await fetch('https://api.quantummerlin.com/api/affiliate-interest', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email })
