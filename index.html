@@ -10789,6 +10789,14 @@
                         console.log('AudioContext state:', this.audioContext.state, '- attempting to resume...');
                         await this.audioContext.resume();
                         console.log('AudioContext resumed. New state:', this.audioContext.state);
+                        
+                        // If still not running after resume attempt, show helpful message
+                        if (this.audioContext.state !== 'running') {
+                            const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+                            if (isIOS) {
+                                showToast('📱 If you can\'t hear audio, please turn off Silent Mode or plug in headphones. iOS blocks audio when Silent Mode is on.', 6000);
+                            }
+                        }
                     }
 
                     // Enable background audio for premium users (use new tier system)
