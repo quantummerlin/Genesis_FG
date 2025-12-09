@@ -3137,6 +3137,16 @@
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
+    <!-- Info Modal - must be direct child of body for proper fixed positioning -->
+    <div id="infoModal" style="position:fixed;top:0;left:0;width:100vw;height:100vh;display:none;align-items:center;justify-content:center;z-index:2147483647;background:rgba(0,0,0,0.92);">
+        <div style="background:linear-gradient(135deg, rgba(26,0,51,0.98), rgba(139,92,246,0.95));border-radius:20px;padding:25px;width:90%;max-width:500px;max-height:80vh;overflow-y:auto;border:2px solid rgba(251,191,36,0.5);box-shadow:0 25px 80px rgba(0,0,0,0.6),0 0 30px rgba(139,92,246,0.3);position:relative;">
+            <button onclick="closeInfoModal()" style="position:absolute;top:15px;right:15px;width:32px;height:32px;border-radius:50%;border:none;background:rgba(251,191,36,0.3);color:#fbbf24;font-size:20px;cursor:pointer;z-index:10;">×</button>
+            <div id="modalTitle" style="color:#fbbf24;font-size:24px;font-weight:800;margin-bottom:15px;text-align:center;"></div>
+            <div id="modalFreqs" style="color:#c4b5fd;font-size:16px;margin-bottom:20px;text-align:center;padding:10px;background:rgba(139,92,246,0.2);border-radius:10px;"></div>
+            <div id="modalBody" style="color:#e9d5ff;font-size:15px;line-height:1.6;"></div>
+        </div>
+    </div>
+    
     <!-- Floating Particles Container -->
     <div id="particles-container"></div>
     
@@ -3644,16 +3654,6 @@
             <div class="section-title" data-translate="recipesTitle">Trinity Frequency Recipes</div>
             <div class="recipes" id="recipes">
                 <!-- Recipes will be populated by JavaScript -->
-            </div>
-        </div>
-
-        <!-- Info Modal -->
-        <div id="infoModal" style="position:fixed !important;top:0 !important;left:0 !important;right:0 !important;bottom:0 !important;width:100vw !important;height:100vh !important;display:flex !important;align-items:center !important;justify-content:center !important;z-index:2147483647 !important;background:red !important;visibility:hidden;opacity:0;transition:opacity 0.3s,visibility 0.3s;">
-            <div style="background:white !important;border-radius:20px;padding:25px;width:90%;max-width:500px;max-height:80vh;overflow-y:auto;border:5px solid blue !important;position:relative;color:black !important;">
-                <button onclick="closeInfoModal()" style="position:absolute;top:15px;right:15px;width:32px;height:32px;border-radius:50%;border:none;background:yellow !important;color:black !important;font-size:20px;cursor:pointer;z-index:10;">×</button>
-                <div id="modalTitle" style="color:black !important;font-size:24px;font-weight:800;margin-bottom:15px;text-align:center;">TEST TITLE</div>
-                <div id="modalFreqs" style="color:black !important;font-size:16px;margin-bottom:20px;text-align:center;padding:10px;background:lightgray !important;border-radius:10px;">TEST FREQS</div>
-                <div id="modalBody" style="color:black !important;font-size:15px;line-height:1.6;">TEST BODY CONTENT</div>
             </div>
         </div>
 
@@ -10379,20 +10379,9 @@
                 body.innerHTML = `<p>${recipe.description}</p>`;
             }
             
-            modal.style.setProperty('visibility', 'visible', 'important');
-            modal.style.setProperty('opacity', '1', 'important');
-            modal.style.setProperty('top', '0', 'important');
-            modal.style.setProperty('left', '0', 'important');
-            modal.style.setProperty('position', 'fixed', 'important');
-            console.log('Modal classList after adding active:', Array.from(modal.classList));
+            modal.style.display = 'flex';
+            console.log('Modal set to display flex');
             console.log('Modal computed display:', window.getComputedStyle(modal).display);
-            console.log('Modal computed z-index:', window.getComputedStyle(modal).zIndex);
-            console.log('Modal computed visibility:', window.getComputedStyle(modal).visibility);
-            console.log('Modal computed opacity:', window.getComputedStyle(modal).opacity);
-            console.log('Modal style.visibility:', modal.style.visibility);
-            console.log('Modal style.opacity:', modal.style.opacity);
-            console.log('Modal offsetWidth:', modal.offsetWidth);
-            console.log('Modal offsetHeight:', modal.offsetHeight);
             console.log('Modal getBoundingClientRect:', JSON.stringify(modal.getBoundingClientRect()));
             
             // Scroll modal content to top
@@ -10404,8 +10393,7 @@
         
         function closeInfoModal() {
             const modal = document.getElementById('infoModal');
-            modal.style.visibility = 'hidden';
-            modal.style.opacity = '0';
+            modal.style.display = 'none';
             // Restore body scroll
             document.body.style.overflow = '';
             // Restore scroll position
