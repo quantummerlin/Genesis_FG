@@ -10759,9 +10759,11 @@
                         });
                     }
                     
-                    // Resume if suspended (required for iOS after user interaction)
-                    if (this.audioContext.state === 'suspended') {
+                    // Always resume audio context if not running (required for iOS/Safari)
+                    if (this.audioContext.state !== 'running') {
+                        console.log('AudioContext state:', this.audioContext.state, '- attempting to resume...');
                         await this.audioContext.resume();
+                        console.log('AudioContext resumed. New state:', this.audioContext.state);
                     }
 
                     // Enable background audio for premium users (use new tier system)
@@ -10793,6 +10795,12 @@
                         parseFloat(this.elements.volume3.value) / 100
                     ];
                     
+                    console.log('Volume levels:', volumes, 'from sliders:', [
+                        this.elements.volume1.value,
+                        this.elements.volume2.value,
+                        this.elements.volume3.value
+                    ]);
+                    
                     const currentTime = this.audioContext.currentTime;
                     const fadeInDuration = 0.5;  // 0.5 second fade in
                     const fadeOutDuration = 0.1; // 0.1 second fade out
@@ -10804,6 +10812,8 @@
                         
                         oscillator.type = 'sine';
                         oscillator.frequency.setValueAtTime(freq, currentTime);
+                        
+                        console.log(`Creating oscillator ${index + 1}: ${freq} Hz, volume: ${volumes[index]}`);
                         
                         // Start at 0 volume and fade in
                         gainNode.gain.setValueAtTime(0, currentTime);
