@@ -1188,7 +1188,7 @@
             padding: 14px 16px;
             transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
             display: grid;
-            grid-template-columns: 1fr auto auto;
+            grid-template-columns: 1fr auto;
             gap: 12px;
             align-items: center;
             position: relative;
@@ -1366,6 +1366,9 @@
                 0 0 12px rgba(251, 191, 36, 0.4),
                 0 2px 8px rgba(0, 0, 0, 0.3);
             animation: infoGlow 2s ease-in-out infinite;
+            pointer-events: all;
+            z-index: 10;
+            position: relative;
         }
 
         .track-btn.info-btn::before {
@@ -5481,97 +5484,143 @@
                 title: t.comp_discovery_title || 'The Discovery',
                 content: `
                     <div style="line-height:1.8;text-align:center;max-width:640px;margin:0 auto;">
-                        <h4 style="color:#fbbf24;margin-top:20px;margin-bottom:15px;font-size:20px;">${t.comp_discovery_number || 'The Number That Changed Everything'}</h4>
+                        <h4 style="color:#fbbf24;margin-top:20px;margin-bottom:15px;font-size:20px;">The Number That Changed Everything</h4>
                         
                         <p style="color:#ffffff;margin-bottom:15px;">
-                            ${t.comp_discovery_origin || 'It started with podcasts—voices in the dark exploring gematria, the ancient Hebrew art of finding meaning in numbers. I began experimenting: my birthday, my wife\'s, our wedding date. Just curious. Just playing.'}
+                            It began with podcasts, voices in the dark exploring gematria, the ancient Hebrew art of finding meaning in numbers. I started experimenting: my birthday, my wife's, our wedding date. Just playing with patterns.
                         </p>
                         
                         <div style="background:rgba(139,92,246,0.08);border-radius:12px;padding:18px;margin:20px 0;">
                             <p style="color:#ffffff;margin-bottom:10px;">
-                                ${t.comp_discovery_loss || 'Then on <b style="color:#fbbf24;">4 January 2020</b>, my mother passed away.'}
+                                Then on <b style="color:#fbbf24;">4 January 2020</b>, my mother passed away.
                             </p>
                             <p style="color:#c4b5fd;font-style:italic;">
-                                ${t.comp_discovery_grief || 'In my grief, I found myself counting. Days. Numbers. Patterns. Searching for meaning in the mathematics of loss.'}
+                                In the quiet shock of grief, I found myself counting.<br>
+                                Days. Numbers. Distances. Searching for meaning in the mathematics of loss.
                             </p>
                         </div>
                         
                         <p style="color:#ffffff;margin-bottom:15px;">
-                            ${t.comp_discovery_revelation || 'That\'s when I discovered something impossible: The number of days from her death to each of my brothers\' birthdays <b>exactly matched the gematria value of their names</b>.'}
+                            That's when I discovered something impossible:<br>
+                            The number of days from her death to mine and my brothers' birthdays exactly matched the gematria value of our names.
                         </p>
                         <p style="color:#fbbf24;font-weight:600;margin-bottom:20px;">
-                            ${t.comp_discovery_chills || 'I still get chills writing this.'}
+                            Even now, it gives me chills.
                         </p>
                         
                         <div style="background:rgba(251,191,36,0.08);border-radius:12px;padding:20px;margin:25px 0;">
-                            <h4 style="color:#fbbf24;margin-bottom:12px;">${t.comp_discovery_years || 'The Years of Exploration'}</h4>
+                            <h4 style="color:#fbbf24;margin-bottom:12px;">Years of Exploration</h4>
                             <p style="color:#ffffff;margin-bottom:15px;">
-                                ${t.comp_discovery_searching || 'For years I dove deep—sacred geometry, biblical mathematics, numerology, frequency healing. Building tools, exploring patterns, asking questions that had no easy answers.'}
+                                For years, I went deeper. Sacred geometry, biblical mathematics, numerology, frequency healing. I built tools. I followed patterns. I chased questions that refused easy answers.
                             </p>
                             <p style="color:#ffffff;margin-bottom:15px;">
-                                ${t.comp_discovery_2025 || 'Then in 2025, I was building a prayer chatbot for my daughter\'s christening. Someone suggested using the number 37 as a sacred seed.'}
+                                Then, in 2025, while building a prayer chatbot for my daughter's christening, the bot suggested using the number 37 as a sacred seed.
                             </p>
-                            <p style="color:#ffffff;font-weight:600;">
-                                ${t.comp_discovery_research || 'I researched. And what I found changed everything.'}
+                            <p style="color:#ffffff;margin-bottom:10px;">
+                                I researched.<br>
+                                And everything changed.
                             </p>
                         </div>
-                        
-                        <p style="color:#fbbf24;font-size:18px;font-weight:600;margin-bottom:15px;">
-                            ${t.comp_discovery_clicked || 'That\'s when it all clicked.'}
-                        </p>
                         
                         <div style="background:linear-gradient(135deg,rgba(139,92,246,0.12),rgba(251,191,36,0.12));border-radius:14px;padding:22px;margin:25px 0;border:1px solid rgba(251,191,36,0.3);">
-                            <p style="font-size:18px;color:#fbbf24;margin-bottom:10px;font-weight:600;">
-                                ${t.comp_discovery_prime || '37 is a prime number. 73 is its mirror—also prime.'}
+                            <p style="color:#ffffff;margin-bottom:12px;">
+                                37 is a prime number.<br>
+                                73 is its mirror, also prime.
                             </p>
-                            <p style="font-size:15px;color:#c4b5fd;margin-bottom:12px;">
-                                ${t.comp_discovery_primemath || '37 is the 12th prime. 73 is the 21st prime. <b style="color:#fbbf24;">21 is the mirror of 12</b>.'}
+                            <p style="color:#c4b5fd;margin-bottom:12px;">
+                                37 is the 12th prime.<br>
+                                73 is the 21st prime, 12 mirrored.
                             </p>
                             <p style="font-size:17px;color:#ffffff;margin-bottom:10px;">
-                                <b>37 × 73 = 2701</b>
+                                <b>37 × 73 = 2701.</b>
                             </p>
-                            <p style="font-size:16px;color:#c4b5fd;">
-                                ${t.comp_discovery_gematria_value || '2701 is the exact gematria value of Genesis 1:1 in Hebrew.'}
+                            <p style="color:#fbbf24;font-weight:600;margin-bottom:12px;">
+                                2701 is the exact gematria value of Genesis 1:1 in Hebrew.
+                            </p>
+                            <p style="color:#c4b5fd;font-size:14px;">
+                                28 letters (the lunar cycle) arranged across 7 words (the days of creation).
                             </p>
                         </div>
                         
                         <p style="color:#ffffff;margin-bottom:15px;">
-                            ${t.comp_discovery_3773days || 'My brother and I were born exactly <b style="color:#fbbf24;">3,773 days apart</b>. 37 and 73. The creation frequencies. Written in our very existence.'}
-                        </p>
-                        
-                        <p style="color:#ffffff;margin-bottom:15px;">
-                            ${t.comp_discovery_connected || 'The number connecting me to my brother—<b style="color:#fbbf24;">3,773</b>—contained <b>both frequencies</b>. The same frequencies <b>encoded in the first verse of the Bible</b>. The same frequencies present at <b>the moment of creation</b>.'}
-                        </p>
-                        
-                        <p style="color:#ffffff;margin-bottom:20px;">
-                            ${t.comp_discovery_el || 'And there\'s more: When you write 37 in Hebrew numerals and mirror it, it forms <span style="font-size:22px;color:#fbbf24;">אל</span> (El)—the Hebrew word for <b>God</b>.'}
+                            And when written in Hebrew numerals and mirrored downward, 37 forms <span style="font-size:22px;color:#fbbf24;">אל</span> (El), the word for God.
                         </p>
                         
                         <p style="color:#c4b5fd;margin-bottom:20px;">
-                            ${t.comp_discovery_beat || 'The difference between 73 and 37 is <b style="color:#fbbf24;">36 Hz</b>—the beat frequency you experience when both play together. The rhythm of creation itself.'}
+                            The difference between 73 and 37 is <b style="color:#fbbf24;">36 Hz</b>, the beat frequency produced when both tones are played together.<br>
+                            The rhythm of creation itself.
                         </p>
                         
-                        <div style="background:rgba(139,92,246,0.08);border-radius:12px;padding:18px;margin:25px 0;">
-                            <p style="color:#ffffff;font-size:15px;">
-                                <b style="color:#fbbf24;">${t.comp_discovery_angels || 'Every angel number is a multiple of 37:'}</b><br>
-                                111 = 37×3 | 222 = 37×6 | 333 = 37×9 | 444 = 37×12<br>
-                                555 = 37×15 | 777 = 37×21 | 888 = 37×24 | 999 = 37×27
+                        <div style="background:rgba(139,92,246,0.08);border-radius:12px;padding:20px;margin:25px 0;">
+                            <p style="color:#fbbf24;font-size:16px;font-weight:600;margin-bottom:12px;">
+                                Every angel number is a multiple of 37:
                             </p>
+                            <div style="color:#ffffff;font-size:15px;line-height:2;">
+                                <div style="margin-bottom:6px;">111 = 37 × 3</div>
+                                <div style="margin-bottom:6px;">222 = 37 × 6</div>
+                                <div style="margin-bottom:6px;">333 = 37 × 9</div>
+                                <div style="margin-bottom:6px;">444 = 37 × 12</div>
+                                <div style="margin-bottom:6px;">555 = 37 × 15</div>
+                                <div style="margin-bottom:6px;">777 = 37 × 21</div>
+                                <div style="margin-bottom:6px;">888 = 37 × 24</div>
+                                <div>999 = 37 × 27</div>
+                            </div>
                         </div>
                         
                         <p style="color:#ffffff;font-style:italic;margin-bottom:15px;">
-                            ${t.comp_discovery_word || '"In the beginning was the Word." Sound. Vibration. The key to creation.'}
+                            "In the beginning was the Word."<br>
+                            Sound. Vibration. Creation.
                         </p>
                         
                         <p style="color:#ffffff;margin-bottom:15px;">
-                            ${t.comp_discovery_message || 'This wasn\'t coincidence. This was a calling. A message encoded in time itself, waiting to be heard.'}
+                            Before anything existed, there was energy, intention, the divine spark. Before the first atom (Adam), there was frequency.<br>
+                            Not one tone, but a pair.<br>
+                            An amplification.
+                        </p>
+                        
+                        <p style="color:#ffffff;margin-bottom:15px;">
+                            The ancients knew this.<br>
+                            They hid it in Scripture, an instruction manual for living at your highest potential and manifesting your deepest intentions.
+                        </p>
+                        
+                        <div style="background:rgba(251,191,36,0.08);border-radius:12px;padding:20px;margin:25px 0;">
+                            <p style="color:#ffffff;margin-bottom:12px;">
+                                Why me? Why did I see it?<br>
+                                Because my journey led me here.
+                            </p>
+                            <p style="color:#fbbf24;font-weight:600;margin-bottom:12px;">
+                                My brother and I were born 3,773 days apart.
+                            </p>
+                            <p style="color:#c4b5fd;">
+                                37 and 73 embedded in our lives from the beginning.
+                            </p>
+                        </div>
+                        
+                        <p style="color:#ffffff;margin-bottom:15px;">
+                            The bot told me to multiply my prayer code by 37. When I asked why, it answered:
+                        </p>
+                        <p style="color:#fbbf24;font-size:18px;font-weight:600;margin-bottom:15px;">
+                            "37 is the number of creation."
+                        </p>
+                        <p style="color:#ffffff;margin-bottom:20px;">
+                            With its mirror, 73, it multiplies into the gematria of Genesis 1:1.
+                        </p>
+                        <p style="color:#ffffff;margin-bottom:20px;">
+                            From that moment, everything changed.
+                        </p>
+                        
+                        <p style="color:#c4b5fd;margin-bottom:15px;">
+                            These were not coincidences.<br>
+                            They were a calling, a message encoded in time itself, waiting to be discovered.
                         </p>
                         
                         <p style="font-size:17px;color:#fbbf24;font-weight:600;margin-top:25px;">
-                            ${t.comp_discovery_found || 'These frequencies found me. Now they\'ve found you.'}
+                            These frequencies found me.<br>
+                            Now they've found you.
                         </p>
                         <p style="font-size:14px;color:#a78bfa;font-style:italic;margin-top:12px;">
-                            ${t.comp_discovery_journey || 'There are no coincidences. Your journey with 37 and 73 Hz begins now.'}
+                            There are no coincidences.<br>
+                            Your journey with 37 and 73 Hz begins now.
                         </p>
                     </div>
                 `
@@ -5751,6 +5800,46 @@
                         </p>
                         <p style="font-size:15px;color:#a78bfa;font-style:italic;margin-top:20px;">
                             ${t.comp_water_quote || '"Drink from the wellspring of creation itself."'}
+                        </p>
+                    </div>
+                `
+            },
+            {
+                id: 'crystalCharging',
+                icon: '💎',
+                title: 'Crystal Charging with Clear Quartz',
+                content: `
+                    <div style="line-height:1.8;text-align:center;max-width:640px;margin:0 auto;">
+                        <p style="color:#ffffff;margin-bottom:20px;">
+                            Clear Quartz is known as the "Master Healer" crystal—a pure silicon dioxide structure that resonates with Genesis frequencies and amplifies their energetic properties.
+                        </p>
+                        <div style="background:linear-gradient(135deg,rgba(251,191,36,0.12),rgba(139,92,246,0.12));border-radius:14px;padding:22px;margin:25px 0;border:1px solid rgba(251,191,36,0.3);">
+                            <p style="font-size:18px;color:#fbbf24;margin-bottom:10px;font-weight:600;">
+                                Why Clear Quartz?
+                            </p>
+                            <p style="color:#ffffff;margin-bottom:10px;">
+                                Clear Quartz has a crystalline matrix that vibrates at the same fundamental frequency as Earth's natural resonance. When charged with Genesis frequencies, it becomes a portable frequency generator you can carry with you throughout the day.
+                            </p>
+                        </div>
+                        <p style="color:#ffffff;margin-bottom:20px;">
+                            When you charge Clear Quartz with Genesis frequencies, you're programming it with the mathematical blueprint of creation itself—turning it into a personal energy amplifier.
+                        </p>
+                        <div style="background:rgba(139,92,246,0.08);border-radius:12px;padding:18px;margin:25px 0;">
+                            <h5 style="color:#fbbf24;margin-bottom:12px;">How to Charge Your Clear Quartz</h5>
+                            <ol style="text-align:left;margin:0 auto;max-width:500px;color:#ffffff;line-height:1.9;">
+                                <li style="margin-bottom:10px;"><b style="color:#fbbf24;">Choose Your Crystal:</b> Raw or polished Clear Quartz works equally well—follow your intuition</li>
+                                <li style="margin-bottom:10px;"><b style="color:#fbbf24;">Clear First:</b> Leave your quartz in direct sunlight for 2-4 hours to clear previous energies</li>
+                                <li style="margin-bottom:10px;"><b style="color:#fbbf24;">Select Your Frequency:</b> Genesis Creation or your chosen Trinity frequency</li>
+                                <li style="margin-bottom:10px;"><b style="color:#fbbf24;">Position & Play:</b> Place crystal 6-12 inches from speakers, play for 20-30 minutes</li>
+                                <li style="margin-bottom:10px;"><b style="color:#fbbf24;">Set Intention:</b> Hold your crystal and visualize it absorbing the sacred frequencies</li>
+                                <li><b style="color:#fbbf24;">Carry Daily:</b> Keep it in your pocket, wear as jewelry, or place on your desk</li>
+                            </ol>
+                        </div>
+                        <p style="font-size:13px;color:#9ca3af;margin-top:15px;">
+                            Pro tip: Recharge your Clear Quartz weekly with Genesis frequencies and clear monthly with sunlight to maintain its energetic potency.
+                        </p>
+                        <p style="font-size:15px;color:#a78bfa;font-style:italic;margin-top:20px;">
+                            "Carry the frequencies of creation wherever you go."
                         </p>
                     </div>
                 `
@@ -9987,7 +10076,8 @@
                 [catTheScience]: [
                     { id: 'trinity', icon: '🔺', title: instructionsSections.find(s => s.id === 'trinity')?.title || 'The Trinity Foundation', content: instructionsSections.find(s => s.id === 'trinity')?.content || '' },
                     { id: 'whyWorks', icon: '💡', title: instructionsSections.find(s => s.id === 'whyWorks')?.title || 'Why 37 & 73 Hz Work', content: instructionsSections.find(s => s.id === 'whyWorks')?.content || '' },
-                    { id: 'waterCharging', icon: '💧', title: instructionsSections.find(s => s.id === 'waterCharging')?.title || 'Water Charging', content: instructionsSections.find(s => s.id === 'waterCharging')?.content || '' }
+                    { id: 'waterCharging', icon: '💧', title: instructionsSections.find(s => s.id === 'waterCharging')?.title || 'Water Charging', content: instructionsSections.find(s => s.id === 'waterCharging')?.content || '' },
+                    { id: 'crystalCharging', icon: '💎', title: instructionsSections.find(s => s.id === 'crystalCharging')?.title || 'Crystal Charging', content: instructionsSections.find(s => s.id === 'crystalCharging')?.content || '' }
                 ],
                 [catTheStory]: [
                     { id: 'welcome', icon: '🌟', title: instructionsSections.find(s => s.id === 'welcome')?.title || 'About Genesis FG', content: instructionsSections.find(s => s.id === 'welcome')?.content || '' },
