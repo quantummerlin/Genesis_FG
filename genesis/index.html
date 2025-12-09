@@ -26,6 +26,15 @@
             -webkit-tap-highlight-color: transparent;
         }
 
+        /* Hide scrollbars but keep scroll functionality */
+        * {
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE/Edge */
+        }
+        *::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: url('/Frequency-Generator/Genesis.png') center center/cover fixed;
@@ -3278,6 +3287,15 @@
                             <li>Drink water before and after</li>
                             <li>Journal after each session</li>
                         </ul>
+                    </div>
+                    
+                    <div style="background:rgba(139,92,246,0.15);border-radius:10px;padding:15px;margin-top:15px;border:1px solid rgba(139,92,246,0.4);">
+                        <p style="font-size:15px;color:#e9d5ff;margin-bottom:8px;font-weight:600;">
+                            ✨ Genesis Companion
+                        </p>
+                        <p style="text-align:left;color:#ffffff;font-size:12px;line-height:1.5;margin:0;">
+                            Tap the <b style="color:#fbbf24;">Genesis Companion</b> button at the top to access detailed track info, view achievements, and track your listening streak.
+                        </p>
                     </div>
                 </div>
             </div>
