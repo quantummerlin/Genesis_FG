@@ -2172,6 +2172,16 @@
             text-decoration: none;
             display: inline-block;
             margin: 10px;
+            animation: upgradeGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes upgradeGlow {
+            0%, 100% {
+                box-shadow: 0 4px 15px rgba(251,191,36,0.3);
+            }
+            50% {
+                box-shadow: 0 4px 25px rgba(251,191,36,0.6), 0 0 30px rgba(251,191,36,0.4);
+            }
         }
 
         .upgrade-btn:hover {
@@ -3418,11 +3428,10 @@
                     <div class="tier-price" style="font-size: 42px; text-align: center;">$9.99 <span style="font-size: 16px;">/ lifetime</span></div>
                     
                     <ul style="list-style: none; padding: 0; margin: 25px 0; text-align: left; font-size: 14px; color: #e5e7eb;">
-                        <li style="margin-bottom: 12px;"><i data-lucide="check" class="lucide-icon icon-green" style="width:18px;height:18px;"></i> <b>All 20+ frequency tracks</b></li>
+                        <li style="margin-bottom: 12px;"><i data-lucide="check" class="lucide-icon icon-green" style="width:18px;height:18px;"></i> <b>All 49 frequency tracks</b></li>
                         <li style="margin-bottom: 12px;"><i data-lucide="check" class="lucide-icon icon-green" style="width:18px;height:18px;"></i> <b>Unlimited listening time</b></li>
                         <li style="margin-bottom: 12px;"><i data-lucide="check" class="lucide-icon icon-green" style="width:18px;height:18px;"></i> <b>Individual volume controls</b></li>
                         <li style="margin-bottom: 12px;"><i data-lucide="check" class="lucide-icon icon-green" style="width:18px;height:18px;"></i> <b>WAV export</b> - Listen offline in pocket</li>
-                        <li style="margin-bottom: 12px;"><i data-lucide="check" class="lucide-icon icon-green" style="width:18px;height:18px;"></i> <b>Save favorites</b></li>
                         <li style="margin-bottom: 12px;"><i data-lucide="check" class="lucide-icon icon-green" style="width:18px;height:18px;"></i> <b>Keep screen awake</b></li>
                         <li style="margin-bottom: 12px;"><i data-lucide="check" class="lucide-icon icon-green" style="width:18px;height:18px;"></i> <b>Achievement system</b></li>
                         <li style="margin-bottom: 12px;"><i data-lucide="check" class="lucide-icon icon-green" style="width:18px;height:18px;"></i> <b>Future updates included</b></li>
@@ -3514,7 +3523,7 @@
 
             <!-- Sacred Guide Button -->
             <div style="text-align: center; margin: 20px 0;">
-                <button id="genesisCompanionBtn" class="btn-instructions" onclick="handleCompanionClick(event)" style="font-size: 18px; font-weight: 700; background: linear-gradient(90deg, #8b5cf6 0%, #fbbf24 100%); color: #1a0033; border: none; border-radius: 12px; padding: 10px 24px; box-shadow: 0 2px 12px rgba(139,92,246,0.15); cursor: pointer; position: relative; z-index: 1000; pointer-events: auto;" data-translate="genesisCompanion">
+                <button id="genesisCompanionBtn" class="btn-instructions" onclick="handleCompanionClick(event)" style="font-size: 18px; font-weight: 700; background: linear-gradient(90deg, #8b5cf6 0%, #fbbf24 100%); color: #1a0033; border: none; border-radius: 12px; padding: 10px 24px; box-shadow: 0 2px 12px rgba(139,92,246,0.15); cursor: pointer; position: relative; z-index: 1000; pointer-events: auto; animation: companionShimmer 4s ease-in-out infinite;" data-translate="genesisCompanion">
                     Genesis Companion
                 </button>
             </div>
@@ -10750,11 +10759,18 @@
                         this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
                         
                         // Add state change listener to handle interruptions gracefully
-                        this.audioContext.addEventListener('statechange', () => {
+                        this.audioContext.addEventListener('statechange', async () => {
                             console.log('AudioContext state changed to:', this.audioContext.state);
                             if (this.audioContext.state === 'interrupted' || this.audioContext.state === 'suspended') {
                                 // Audio was interrupted (e.g., phone call, silent mode switch)
-                                console.log('Audio interrupted - will resume when possible');
+                                console.log('Audio interrupted - attempting to resume...');
+                                // Auto-resume after interruption
+                                try {
+                                    await this.audioContext.resume();
+                                    console.log('Audio resumed after interruption');
+                                } catch (e) {
+                                    console.log('Could not resume audio:', e);
+                                }
                             }
                         });
                     }
