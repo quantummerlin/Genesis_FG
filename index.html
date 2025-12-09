@@ -3648,12 +3648,12 @@
         </div>
 
         <!-- Info Modal -->
-        <div class="info-modal" id="infoModal" style="position:fixed;top:0;left:0;right:0;bottom:0;width:100vw;height:100vh;display:none;align-items:center;justify-content:center;z-index:10000;background:rgba(0,0,0,0.92);">
-            <div class="info-modal-content" style="background:linear-gradient(135deg, rgba(26,0,51,0.98), rgba(139,92,246,0.95));border-radius:20px;padding:25px;width:90%;max-width:500px;max-height:80vh;overflow-y:auto;border:2px solid rgba(251,191,36,0.5);box-shadow:0 25px 80px rgba(0,0,0,0.6),0 0 30px rgba(139,92,246,0.3);position:relative;">
-                <button class="info-modal-close" onclick="closeInfoModal()" style="position:absolute;top:15px;right:15px;width:32px;height:32px;border-radius:50%;border:none;background:rgba(251,191,36,0.2);color:#fbbf24;font-size:20px;cursor:pointer;z-index:10;">×</button>
-                <div class="info-modal-header" id="modalTitle" style="color:#fbbf24;font-size:24px;font-weight:800;margin-bottom:15px;text-align:center;"></div>
-                <div class="info-modal-freqs" id="modalFreqs" style="color:#c4b5fd;font-size:16px;margin-bottom:20px;text-align:center;padding:10px;background:rgba(139,92,246,0.2);border-radius:10px;"></div>
-                <div class="info-modal-body" id="modalBody" style="color:#e9d5ff;font-size:15px;line-height:1.6;"></div>
+        <div id="infoModal" style="position:fixed;top:0;left:0;right:0;bottom:0;width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;z-index:10000;background:rgba(0,0,0,0.92);visibility:hidden;opacity:0;transition:opacity 0.3s,visibility 0.3s;">
+            <div style="background:linear-gradient(135deg, rgba(26,0,51,0.98), rgba(139,92,246,0.95));border-radius:20px;padding:25px;width:90%;max-width:500px;max-height:80vh;overflow-y:auto;border:2px solid rgba(251,191,36,0.5);box-shadow:0 25px 80px rgba(0,0,0,0.6),0 0 30px rgba(139,92,246,0.3);position:relative;">
+                <button onclick="closeInfoModal()" style="position:absolute;top:15px;right:15px;width:32px;height:32px;border-radius:50%;border:none;background:rgba(251,191,36,0.2);color:#fbbf24;font-size:20px;cursor:pointer;z-index:10;">×</button>
+                <div id="modalTitle" style="color:#fbbf24;font-size:24px;font-weight:800;margin-bottom:15px;text-align:center;"></div>
+                <div id="modalFreqs" style="color:#c4b5fd;font-size:16px;margin-bottom:20px;text-align:center;padding:10px;background:rgba(139,92,246,0.2);border-radius:10px;"></div>
+                <div id="modalBody" style="color:#e9d5ff;font-size:15px;line-height:1.6;"></div>
             </div>
         </div>
 
@@ -10379,8 +10379,8 @@
                 body.innerHTML = `<p>${recipe.description}</p>`;
             }
             
-            modal.style.display = 'flex';
-            modal.classList.add('active');
+            modal.style.visibility = 'visible';
+            modal.style.opacity = '1';
             console.log('Modal classList after adding active:', Array.from(modal.classList));
             console.log('Modal computed display:', window.getComputedStyle(modal).display);
             console.log('Modal computed z-index:', window.getComputedStyle(modal).zIndex);
@@ -10394,8 +10394,8 @@
         
         function closeInfoModal() {
             const modal = document.getElementById('infoModal');
-            modal.classList.remove('active');
-            modal.style.display = 'none';
+            modal.style.visibility = 'hidden';
+            modal.style.opacity = '0';
             // Restore body scroll
             document.body.style.overflow = '';
             // Restore scroll position
