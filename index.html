@@ -1425,7 +1425,7 @@
             box-sizing: border-box;
             align-items: center;
             justify-content: center;
-            overflow-y: auto;
+            overflow-y: hidden;
         }
 
         .info-modal.active {
@@ -1521,6 +1521,7 @@
             border: 2px solid rgba(251, 191, 36, 0.5);
             box-sizing: border-box;
             margin: 0;
+            flex-shrink: 0;
         }
 
         @media (min-width: 768px) {
