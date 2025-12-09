@@ -10384,6 +10384,13 @@
             console.log('Modal classList after adding active:', Array.from(modal.classList));
             console.log('Modal computed display:', window.getComputedStyle(modal).display);
             console.log('Modal computed z-index:', window.getComputedStyle(modal).zIndex);
+            console.log('Modal computed visibility:', window.getComputedStyle(modal).visibility);
+            console.log('Modal computed opacity:', window.getComputedStyle(modal).opacity);
+            console.log('Modal style.visibility:', modal.style.visibility);
+            console.log('Modal style.opacity:', modal.style.opacity);
+            console.log('Modal offsetWidth:', modal.offsetWidth);
+            console.log('Modal offsetHeight:', modal.offsetHeight);
+            console.log('Modal getBoundingClientRect:', JSON.stringify(modal.getBoundingClientRect()));
             
             // Scroll modal content to top
             const modalContent = modal.querySelector('.info-modal-content');
