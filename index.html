@@ -10560,12 +10560,15 @@
                         });
                         
                         if (infoBtn) {
+                            console.log('Setting up info button for:', recipe.name, infoBtn);
                             infoBtn.addEventListener('click', (e) => {
                                 e.stopPropagation();
                                 e.preventDefault();
                                 console.log('Info button clicked for:', recipe.name);
                                 showInfoModal(recipe);
                             });
+                        } else {
+                            console.error('Info button element is null for:', recipe.name);
                         }
                         
                         // Also allow clicking the info area to load without playing
