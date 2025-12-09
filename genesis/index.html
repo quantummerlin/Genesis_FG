@@ -10324,7 +10324,11 @@
         }
 
         function showInfoModal(recipe) {
+            console.log('showInfoModal called for:', recipe.name);
             const modal = document.getElementById('infoModal');
+            console.log('Modal element found:', modal);
+            console.log('Modal classList before:', Array.from(modal.classList));
+            
             const title = document.getElementById('modalTitle');
             const freqs = document.getElementById('modalFreqs');
             const body = document.getElementById('modalBody');
@@ -10367,6 +10371,9 @@
             }
             
             modal.classList.add('active');
+            console.log('Modal classList after adding active:', Array.from(modal.classList));
+            console.log('Modal computed display:', window.getComputedStyle(modal).display);
+            console.log('Modal computed z-index:', window.getComputedStyle(modal).zIndex);
             
             // Scroll modal content to top and ensure visibility
             const modalContent = modal.querySelector('.info-modal-content');
