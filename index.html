@@ -10330,11 +10330,7 @@
         let savedScrollPosition = 0;
         
         function showInfoModal(recipe) {
-            console.log('showInfoModal called for:', recipe.name);
             const modal = document.getElementById('infoModal');
-            console.log('Modal element found:', modal);
-            console.log('Modal classList before:', Array.from(modal.classList));
-            
             const title = document.getElementById('modalTitle');
             const freqs = document.getElementById('modalFreqs');
             const body = document.getElementById('modalBody');
@@ -10380,9 +10376,6 @@
             }
             
             modal.style.display = 'flex';
-            console.log('Modal set to display flex');
-            console.log('Modal computed display:', window.getComputedStyle(modal).display);
-            console.log('Modal getBoundingClientRect:', JSON.stringify(modal.getBoundingClientRect()));
             
             // Scroll modal content to top
             const modalContent = modal.querySelector('.info-modal-content');
@@ -10558,15 +10551,11 @@
                         });
                         
                         if (infoBtn) {
-                            console.log('Setting up info button for:', recipe.name, infoBtn);
                             infoBtn.addEventListener('click', (e) => {
                                 e.stopPropagation();
                                 e.preventDefault();
-                                console.log('Info button clicked for:', recipe.name);
                                 showInfoModal(recipe);
                             });
-                        } else {
-                            console.error('Info button element is null for:', recipe.name);
                         }
                         
                         // Also allow clicking the info area to load without playing
