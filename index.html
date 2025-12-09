@@ -10379,8 +10379,11 @@
                 body.innerHTML = `<p>${recipe.description}</p>`;
             }
             
-            modal.style.visibility = 'visible';
-            modal.style.opacity = '1';
+            modal.style.setProperty('visibility', 'visible', 'important');
+            modal.style.setProperty('opacity', '1', 'important');
+            modal.style.setProperty('top', '0', 'important');
+            modal.style.setProperty('left', '0', 'important');
+            modal.style.setProperty('position', 'fixed', 'important');
             console.log('Modal classList after adding active:', Array.from(modal.classList));
             console.log('Modal computed display:', window.getComputedStyle(modal).display);
             console.log('Modal computed z-index:', window.getComputedStyle(modal).zIndex);
