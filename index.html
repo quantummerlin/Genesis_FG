@@ -1270,6 +1270,9 @@
             display: flex;
             gap: 8px;
             align-items: center;
+            pointer-events: all;
+            position: relative;
+            z-index: 5;
         }
 
         .track-btn {
@@ -10535,6 +10538,10 @@
                         const playBtn = recipeElement.querySelector('.play-btn');
                         const infoBtn = recipeElement.querySelector('.info-btn');
                         
+                        if (!infoBtn) {
+                            console.error('Info button not found for recipe:', recipe.name);
+                        }
+                        
                         playBtn.addEventListener('click', (e) => {
                             e.stopPropagation();
                             this.selectRecipe(recipe);
@@ -10542,10 +10549,14 @@
                             setTimeout(() => this.play(), 300);
                         });
                         
-                        infoBtn.addEventListener('click', (e) => {
-                            e.stopPropagation();
-                            showInfoModal(recipe);
-                        });
+                        if (infoBtn) {
+                            infoBtn.addEventListener('click', (e) => {
+                                e.stopPropagation();
+                                e.preventDefault();
+                                console.log('Info button clicked for:', recipe.name);
+                                showInfoModal(recipe);
+                            });
+                        }
                         
                         // Also allow clicking the info area to load without playing
                         const infoArea = recipeElement.querySelector('.recipe-info');
