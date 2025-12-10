@@ -881,18 +881,18 @@
 
         .duration-btn {
             padding: 12px 18px;
-            border: 2px solid rgba(139, 92, 246, 0.5);
+            border: 2px solid rgba(251, 191, 36, 0.5);
             border-radius: 12px;
             background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(107, 70, 193, 0.15));
-            color: #e9d5ff;
+            color: #fbbf24;
             font-size: 18px;
             font-weight: 800;
             cursor: pointer;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 2px 8px rgba(139, 92, 246, 0.2);
-            text-shadow: 0 0 10px rgba(233, 213, 255, 0.6), 0 0 20px rgba(139, 92, 246, 0.4);
+            box-shadow: 0 2px 8px rgba(251, 191, 36, 0.3);
+            text-shadow: 0 0 10px rgba(251, 191, 36, 0.6), 0 0 20px rgba(251, 191, 36, 0.4);
         }
 
         .duration-btn::before {
@@ -912,12 +912,12 @@
         }
 
         .duration-btn:hover {
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.3), rgba(107, 70, 193, 0.3));
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.2), rgba(249, 115, 22, 0.2));
             border-color: #fbbf24;
             color: #fbbf24;
-            transform: scale(1.05);
-            box-shadow: 0 4px 16px rgba(251, 191, 36, 0.4);
-            text-shadow: 0 0 15px rgba(251, 191, 36, 0.8), 0 0 30px rgba(251, 191, 36, 0.5);
+            transform: scale(1.08);
+            box-shadow: 0 4px 20px rgba(251, 191, 36, 0.6);
+            text-shadow: 0 0 20px rgba(251, 191, 36, 1), 0 0 40px rgba(251, 191, 36, 0.6);
         }
 
         .duration-btn:hover::before {
@@ -8321,6 +8321,9 @@
         function renderLockedAchievement(achievement, achievementId) {
             // Decide how mysterious based on achievement tier
             const isMysteryBox = achievement.rarity === 'legendary'; // Hide details for rare achievements
+            
+            // Get progress for this achievement
+            const progress = getAchievementProgress(achievementId, achievement);
             
             return `
                 <div class="achievement-card locked" style="
