@@ -884,14 +884,15 @@
             border: 2px solid rgba(139, 92, 246, 0.5);
             border-radius: 12px;
             background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(107, 70, 193, 0.15));
-            color: #c4b5fd;
-            font-size: 16px;
-            font-weight: 700;
+            color: #e9d5ff;
+            font-size: 18px;
+            font-weight: 800;
             cursor: pointer;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(139, 92, 246, 0.2);
+            text-shadow: 0 0 10px rgba(233, 213, 255, 0.6), 0 0 20px rgba(139, 92, 246, 0.4);
         }
 
         .duration-btn::before {
@@ -916,6 +917,7 @@
             color: #fbbf24;
             transform: scale(1.05);
             box-shadow: 0 4px 16px rgba(251, 191, 36, 0.4);
+            text-shadow: 0 0 15px rgba(251, 191, 36, 0.8), 0 0 30px rgba(251, 191, 36, 0.5);
         }
 
         .duration-btn:hover::before {
@@ -8471,6 +8473,22 @@
                                 🔒 Locked
                             </div>
                             
+                            ${progress ? `
+                                <div style="
+                                    text-align: center;
+                                    color: #8b5cf6;
+                                    font-size: 12px;
+                                    margin-top: 10px;
+                                    font-weight: 600;
+                                    background: rgba(139,92,246,0.1);
+                                    padding: 8px 12px;
+                                    border-radius: 12px;
+                                    border: 1px solid rgba(139,92,246,0.2);
+                                ">
+                                    📊 ${progress.text}
+                                </div>
+                            ` : ''}
+                            
                             <div style="
                                 text-align: center;
                                 color: #8b5cf6;
@@ -8570,28 +8588,6 @@
                     overflow-y: auto;
                     margin: auto;
                 ">
-                    <!-- Close button -->
-                    <button onclick="this.closest('.achievement-modal').remove()" style="
-                        position: sticky;
-                        top: 0;
-                        right: 0;
-                        float: right;
-                        background: linear-gradient(90deg, #fbbf24, #f59e0b);
-                        border: none;
-                        color: #1a0033;
-                        width: 48px;
-                        height: 48px;
-                        border-radius: 50%;
-                        font-size: 24px;
-                        font-weight: 700;
-                        cursor: pointer;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        box-shadow: 0 4px 12px rgba(251,191,36,0.4);
-                        z-index: 10;
-                        margin-bottom: -48px;
-                    ">✕</button>
                     
                     <!-- Lock icon (large) -->
                     <div style="
@@ -8737,7 +8733,7 @@
                         margin-top: 20px;
                         box-shadow: 0 4px 20px rgba(139,92,246,0.4);
                     ">
-                        ${progress && progress.percentage >= 75 ? '🚀 Let\'s Finish This!' : '✨ Start Your Journey'}
+                        ← Return to Tracks
                     </button>
                 </div>
             `;
