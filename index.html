@@ -7888,15 +7888,16 @@
                     border: 2px solid #22c55e;
                     border-radius: 16px;
                     padding: 20px;
+                    padding-top: 30px;
                     position: relative;
-                    overflow: hidden;
+                    overflow: visible;
                     animation: pulse-glow 2s ease-in-out infinite;
                 ">
                     <!-- Badges -->
                     ${achievement.legendary ? `
                         <div style="
                             position: absolute;
-                            top: 10px;
+                            top: -5px;
                             left: 50%;
                             transform: translateX(-50%);
                             background: linear-gradient(90deg, #fbbf24, #f59e0b);
@@ -7911,7 +7912,7 @@
                     ` : achievement.special ? `
                         <div style="
                             position: absolute;
-                            top: 10px;
+                            top: -5px;
                             left: 50%;
                             transform: translateX(-50%);
                             background: rgba(139,92,246,0.9);
@@ -7988,8 +7989,8 @@
                     border: 3px solid #fbbf24;
                     border-radius: 16px;
                     padding: 20px;
+                    padding-top: 35px;
                     position: relative;
-                    overflow: hidden;
                     animation: pulse-intense 1s ease-in-out infinite;
                     box-shadow: 0 0 30px rgba(251,191,36,0.4);
                 ">
@@ -8171,14 +8172,14 @@
                     border: 2px solid rgba(139,92,246,0.5);
                     border-radius: 16px;
                     padding: 20px;
+                    padding-top: 35px;
                     position: relative;
-                    overflow: hidden;
                 ">
                     <!-- Badges -->
                     ${achievement.legendary ? `
                         <div style="
                             position: absolute;
-                            top: -10px;
+                            top: 5px;
                             left: 50%;
                             transform: translateX(-50%);
                             background: linear-gradient(90deg, #fbbf24, #f59e0b);
@@ -8325,8 +8326,8 @@
                     border: 2px dashed rgba(107,114,128,0.3);
                     border-radius: 16px;
                     padding: 20px;
+                    padding-top: 35px;
                     position: relative;
-                    overflow: hidden;
                     cursor: pointer;
                     transition: all 0.3s ease;
                 "
@@ -8549,7 +8550,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                z-index: 10000;
+                z-index: 2147483647;
                 padding: 20px;
                 animation: fadeIn 0.3s ease;
             `;
