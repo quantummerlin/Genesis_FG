@@ -4030,7 +4030,7 @@
                     }
                 });
         // Modal flow functions for first-time users - with Safari/WebKit compatibility
-        function showFrequencyBenefits() {
+        window.showFrequencyBenefits = function() {
             // Remove Safari early-init style
             var safariStyle = document.getElementById('safari-welcome-fix');
             if (safariStyle) safariStyle.remove();
@@ -4044,9 +4044,9 @@
             benefits.style.display = 'flex';
             benefits.style.visibility = 'visible';
             benefits.style.opacity = '1';
-        }
+        };
 
-        function showHowToUse() {
+        window.showHowToUse = function() {
             const benefits = document.getElementById('frequencyBenefitsModal');
             const howTo = document.getElementById('howToUseModal');
             benefits.classList.remove('active');
@@ -4055,9 +4055,9 @@
             howTo.style.display = 'flex';
             howTo.style.visibility = 'visible';
             howTo.style.opacity = '1';
-        }
+        };
 
-        function showPWATip() {
+        window.showPWATip = function() {
             const howTo = document.getElementById('howToUseModal');
             const pwa = document.getElementById('pwaTipModal');
             howTo.classList.remove('active');
@@ -4066,9 +4066,9 @@
             pwa.style.display = 'flex';
             pwa.style.visibility = 'visible';
             pwa.style.opacity = '1';
-        }
+        };
 
-        function showUpgradeBenefits() {
+        window.showUpgradeBenefits = function() {
             console.log('showUpgradeBenefits() called - adding active class to upgrade modal');
             // Hide any current modal
             const pwa = document.getElementById('pwaTipModal');
@@ -4095,9 +4095,9 @@
                 benefits.style.visibility = 'visible';
                 benefits.style.opacity = '1';
             }
-        }
+        };
 
-        function skipToApp() {
+        window.skipToApp = function() {
             // Remove Safari early-init style if present
             var safariStyle = document.getElementById('safari-welcome-fix');
             if (safariStyle) safariStyle.remove();
