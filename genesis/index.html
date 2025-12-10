@@ -3928,13 +3928,13 @@
                     }
                 }
                 
-                // Add to Home Screen banner logic (just close, no popup)
-                function closeAddToHome() {
-                    document.getElementById('addToHome').style.display = 'none';
-                    try { localStorage.setItem('hideAddToHome', 'true'); } catch(e) {}
-                }
-                
-                function showAddToHomeInstructions() {
+            
+            // Add to Home Screen banner logic (just close, no popup)
+            window.closeAddToHome = function() {
+                document.getElementById('addToHome').style.display = 'none';
+                try { localStorage.setItem('hideAddToHome', 'true'); } catch(e) {}
+            };
+                            function showAddToHomeInstructions() {
                     const modal = document.createElement('div');
                     modal.style.cssText = `
                         position: fixed;
