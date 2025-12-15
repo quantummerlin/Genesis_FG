@@ -12,7 +12,53 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>Genesis Frequency Generator</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Biblical Genesis Frequency Generator | Sacred 37Hz 73Hz 2701Hz Healing Frequencies</title>
+    <meta name="description" content="Free online frequency generator featuring sacred Genesis 1:1 frequencies (37Hz, 73Hz, 2701Hz), Solfeggio tones (396Hz, 417Hz, 528Hz, 639Hz, 741Hz, 852Hz, 963Hz), 432Hz relaxation music, and binaural beats. Experience Biblical sound meditation derived from Hebrew gematria for relaxation, prayer, and spiritual wellness.">
+    <meta name="keywords" content="Biblical Genesis Frequency Generator, Genesis 1:1 frequencies, 37Hz frequency, 73Hz frequency, 2701Hz frequency, 432Hz frequency, 432Hz music, 528Hz frequency, 528Hz love frequency, 528Hz meditation, Solfeggio frequencies, 396Hz, 417Hz, 639Hz, 741Hz, 852Hz, 963Hz, binaural beats, binaural beats generator, frequency generator, sound meditation, relaxation frequencies, Hz generator, tone generator, meditation frequencies, sleep frequencies, focus frequencies, relaxation sounds, chakra meditation, spiritual frequencies, Schumann resonance, 7.83Hz, Hebrew gematria frequencies, sacred frequencies, Biblical sound meditation, divine frequency generator, spiritual frequency, prayer frequencies, ambient meditation tones">
+    <meta name="author" content="Quantum Merlin">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://genesis.quantummerlin.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://genesis.quantummerlin.com/">
+    <meta property="og:title" content="Biblical Genesis Frequency Generator | Sacred Healing Frequencies">
+    <meta property="og:description" content="Unlock the sacred frequencies hidden in Genesis 1:1. Experience 37Hz, 73Hz, and 2701Hz - divine healing tones derived from Hebrew gematria.">
+    <meta property="og:image" content="https://genesis.quantummerlin.com/Genesis.png">
+    <meta property="og:site_name" content="Genesis Frequency Generator">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://genesis.quantummerlin.com/">
+    <meta name="twitter:title" content="Biblical Genesis Frequency Generator | Sacred Healing Frequencies">
+    <meta name="twitter:description" content="Unlock the sacred frequencies hidden in Genesis 1:1. Experience 37Hz, 73Hz, and 2701Hz - divine healing tones derived from Hebrew gematria.">
+    <meta name="twitter:image" content="https://genesis.quantummerlin.com/Genesis.png">
+    
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Biblical Genesis Frequency Generator",
+        "description": "Generate sacred meditation frequencies from Genesis 1:1 including 37Hz, 73Hz, and 2701Hz derived from Hebrew gematria",
+        "url": "https://genesis.quantummerlin.com/",
+        "applicationCategory": "LifestyleApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Quantum Merlin",
+            "url": "https://quantummerlin.com"
+        },
+        "keywords": "Biblical frequencies, Genesis 1:1, 37Hz, 73Hz, 2701Hz, 432Hz, 528Hz, Solfeggio frequencies, binaural beats, meditation frequencies, relaxation, prayer, sound meditation, frequency generator"
+    }
+    </script>
 
     <link rel="manifest" href="/Frequency-Generator/manifest.json">
     <link rel="icon" type="image/png" sizes="192x192" href="/Frequency-Generator/Genesis.png">
@@ -3767,8 +3813,8 @@
             </div>
         </div>
 
-        <!-- Bottom Upgrade CTA -->
-        <div id="premiumCtaBottom" style="text-align: center; margin: 40px 0; padding: 30px; background: linear-gradient(135deg, rgba(26,0,51,0.8), rgba(139,92,246,0.6)); border-radius: 20px; border: 2px solid rgba(251,191,36,0.3); position: relative; z-index: 1100;">
+        <!-- Bottom Upgrade CTA - HIDDEN (Free version) -->
+        <div id="premiumCtaBottom" style="display: none; text-align: center; margin: 40px 0; padding: 30px; background: linear-gradient(135deg, rgba(26,0,51,0.8), rgba(139,92,246,0.6)); border-radius: 20px; border: 2px solid rgba(251,191,36,0.3); position: relative; z-index: 1100;">
             <h3 id="premiumCtaBottomTitle" style="color: #fbbf24; font-size: 24px; margin-bottom: 15px;" data-translate="readyToUnlock">🚀 Ready to Unlock Premium Features?</h3>
             <p style="color: #c4b5fd; font-size: 16px; margin-bottom: 20px; line-height: 1.6;" data-translate="premiumCtaDesc">
                 Get lifetime access to individual volume controls, custom durations, WAV export (play on free VLC Player!), silent mode bypass, achievement system, plus free upgrade when we launch on App Store!
@@ -3781,8 +3827,8 @@
             </p>
         </div>
 
-        <!-- Share & Earn Footer Section -->
-        <div style="background: linear-gradient(135deg, #1a2a3e, #0a1f15); border: 2px solid #10b981; border-radius: 16px; padding: 40px 20px; text-align: center; margin-top: 30px; position: relative; z-index: 1100;">
+        <!-- Share & Earn Footer Section - HIDDEN -->
+        <div id="affiliateSection" style="display: none; background: linear-gradient(135deg, #1a2a3e, #0a1f15); border: 2px solid #10b981; border-radius: 16px; padding: 40px 20px; text-align: center; margin-top: 30px; position: relative; z-index: 1100;">
             <div style="max-width: 500px; margin: 0 auto;">
                 <h3 style="color: #4ade80; font-size: 24px; margin-bottom: 15px; font-weight: 700;">🤝 Affiliate Program Coming Soon!</h3>
                 <p style="color: #ffffff; font-size: 16px; line-height: 1.7; margin-bottom: 20px;">
@@ -4194,6 +4240,50 @@
             setTimeout(updatePremiumFeatures, 100);
         }
 
+        // Export-specific upgrade modal for $19.99 one-time purchase
+        function showExportUpgradeModal() {
+            const existingModal = document.getElementById('exportUpgradeModal');
+            if (existingModal) {
+                existingModal.style.display = 'flex';
+                return;
+            }
+            
+            const modal = document.createElement('div');
+            modal.id = 'exportUpgradeModal';
+            modal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); display: flex; align-items: center; justify-content: center; z-index: 10000;';
+            modal.innerHTML = `
+                <div style="background: linear-gradient(135deg, #1a0033 0%, #2d1b4e 50%, #1a0033 100%); border-radius: 20px; padding: 30px; max-width: 400px; width: 90%; text-align: center; border: 2px solid #8b5cf6; box-shadow: 0 0 30px rgba(139,92,246,0.5);">
+                    <div style="font-size: 48px; margin-bottom: 15px;">⬇️</div>
+                    <h2 style="color: #fbbf24; font-size: 24px; margin-bottom: 15px;">Export to WAV</h2>
+                    <p style="color: #e0e0e0; font-size: 16px; margin-bottom: 20px; line-height: 1.5;">
+                        Save your custom frequency sessions as high-quality WAV audio files for offline listening, meditation, or sharing.
+                    </p>
+                    <div style="background: rgba(139,92,246,0.2); border-radius: 12px; padding: 15px; margin-bottom: 20px;">
+                        <div style="color: #10b981; font-size: 32px; font-weight: 700;">$19.99</div>
+                        <div style="color: #a0a0a0; font-size: 14px;">One-time purchase • Lifetime access</div>
+                    </div>
+                    <ul style="text-align: left; color: #e0e0e0; margin-bottom: 20px; padding-left: 20px;">
+                        <li style="margin-bottom: 8px;">✓ Export unlimited WAV files</li>
+                        <li style="margin-bottom: 8px;">✓ High-quality audio (44.1kHz)</li>
+                        <li style="margin-bottom: 8px;">✓ Custom duration exports</li>
+                        <li style="margin-bottom: 8px;">✓ All frequency combinations</li>
+                    </ul>
+                    <a href="https://www.etsy.com/listing/YOUR_EXPORT_LISTING" target="_blank" style="display: block; background: linear-gradient(90deg, #fbbf24, #f59e0b); color: #1a0033; text-decoration: none; border-radius: 25px; padding: 15px 30px; font-size: 18px; font-weight: 700; margin-bottom: 15px;">
+                        🛒 Purchase Export Feature
+                    </a>
+                    <button onclick="closeExportUpgradeModal()" style="background: transparent; border: 1px solid #8b5cf6; color: #8b5cf6; border-radius: 20px; padding: 10px 25px; cursor: pointer; font-size: 14px;">
+                        Maybe Later
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+        
+        function closeExportUpgradeModal() {
+            const modal = document.getElementById('exportUpgradeModal');
+            if (modal) modal.style.display = 'none';
+        }
+
         // Function to enable/disable premium features based on access status
         function updatePremiumFeatures() {
             // Check if user has premium (includes old 'ultimate' keys for backward compatibility)
@@ -4576,7 +4666,7 @@
                 recipeSacralChakraWhat: "417 Hz facilitates change and helps undo negative situations, working on the sacral chakra for creativity and emotional healing.",
                 recipeSacralChakraBenefits: "Enhances creativity, emotional balance, and pleasure in life.",
                 recipeSacralChakraHow: "Use for 10-15 minutes to boost creativity or emotional healing. Focus on the lower abdomen.",
-                recipeSolarPlexusWhat: "528 Hz is the frequency of transformation and DNA repair, working on the solar plexus for personal power and confidence.",
+                recipeSolarPlexusWhat: "528 Hz is the frequency of transformation and personal empowerment, working on the solar plexus for personal power and confidence.",
                 recipeSolarPlexusBenefits: "Boosts confidence, personal power, and supports transformation.",
                 recipeSolarPlexusHow: "Listen for 10-15 minutes to empower yourself before important tasks. Focus on the upper abdomen.",
                 recipeHeartChakraWhat: "639 Hz promotes connection and love, working on the heart chakra for emotional healing and relationships.",
@@ -4611,12 +4701,12 @@
                 recipe3DaysBenefits: "Brings new life to stagnant areas, restores hope in seemingly impossible situations, and activates resurrection power in your circumstances. Perfect for breakthrough moments.",
                 recipe3DaysHow: "Listen for 3 minutes three times daily during 3-day prayer intensives. Speak life over dead situations. Particularly powerful Friday through Sunday or during personal 3-day fasts.",
                 // Recipe fullInfo translations - Solfeggio & Healing
-                recipeSacredHealingWhat: "432 Hz is known as the 'natural frequency of the universe,' promoting healing and harmony with nature. Combined with the Trinity foundation, this creates a powerful healing environment at cellular and spiritual levels.",
-                recipeSacredHealingBenefits: "Reduces stress and anxiety, promotes physical healing, aligns you with natural rhythms, and creates inner peace. Helps resolve emotional wounds and trauma at deep levels.",
+                recipeSacredHealingWhat: "432 Hz is known as the 'natural frequency of the universe,' associated with harmony and balance in nature. Combined with the Trinity foundation, this creates a deeply relaxing meditation environment.",
+                recipeSacredHealingBenefits: "Supports relaxation, may help reduce stress, promotes a sense of harmony with natural rhythms, and encourages inner peace. Useful for emotional processing and unwinding.",
                 recipeSacredHealingHow: "Listen for 20-30 minutes during healing sessions, before sleep, or when feeling physically unwell. Breathe deeply and allow the frequencies to permeate every cell. Can be used during energy healing work.",
-                recipeLoveFrequencyWhat: "528 Hz is called the 'Love Frequency' or 'Miracle Tone,' scientifically shown to repair DNA and promote cellular healing. It's the exact frequency used by genetic engineers to repair DNA.",
-                recipeLoveFrequencyBenefits: "Repairs DNA damage, promotes cellular regeneration, opens the heart chakra, increases love and compassion, and facilitates profound healing at the genetic level. Helps release ancestral trauma.",
-                recipeLoveFrequencyHow: "Use for 15-20 minutes daily for DNA repair and heart healing. Place hands on heart while listening. Excellent for morning rituals or before important heart-centered conversations.",
+                recipeLoveFrequencyWhat: "528 Hz is called the 'Love Frequency' or 'Miracle Tone,' traditionally associated with transformation and harmony. Combined with the Trinity foundation, it creates a heart-opening meditation experience.",
+                recipeLoveFrequencyBenefits: "Opens the heart chakra, increases feelings of love and compassion, supports emotional balance, and facilitates a sense of peace and well-being. May help release emotional blocks.",
+                recipeLoveFrequencyHow: "Use for 15-20 minutes daily for heart-centered meditation. Place hands on heart while listening. Excellent for morning rituals or before important heart-centered conversations.",
                 recipeLiberation396What: "396 Hz is the Solfeggio frequency for liberating guilt and fear. It works on the root chakra, helping to release deep-seated negative emotions and trauma from the subconscious.",
                 recipeLiberation396Benefits: "Releases fear, guilt, and trauma stored in the body. Helps break free from limiting beliefs and past conditioning. Creates safety and security at the foundational level of being.",
                 recipeLiberation396How: "Listen for 10-15 minutes while identifying fears or guilt to release. Breathe into areas of tension. Best used in evening or during shadow work. Journal afterward to process released emotions.",
@@ -4681,7 +4771,7 @@
                 recipeMaster55How: "Listen for 15 minutes when contemplating major changes or feeling stuck. Use during eclipses or mercury retrograde endings. Dance or move while listening to embody change.",
                 // Recipe fullInfo translations - Cosmic & Planetary
                 recipeEarthResonanceWhat: "7.83 Hz is Earth's Schumann Resonance—the electromagnetic frequency of our planet's heartbeat. Combined with Trinity frequencies, this grounds you deeply into Earth's natural rhythm.",
-                recipeEarthResonanceBenefits: "Deeply grounds and centers you, reduces anxiety and stress, syncs you with Earth's natural rhythms, enhances meditation depth, and promotes physical healing through grounding.",
+                recipeEarthResonanceBenefits: "Deeply grounds and centers you, may help reduce stress, syncs you with Earth's natural rhythms, enhances meditation depth, and supports overall well-being through grounding.",
                 recipeEarthResonanceHow: "Listen for 20-30 minutes when feeling ungrounded or spacey. Sit or lie directly on the earth if possible. Perfect after air travel or intense spiritual work. Barefoot recommended.",
                 recipeVenusLoveWhat: "221.23 Hz is the orbital frequency of Venus, the planet of love, beauty, and harmony. This frequency carries the essence of divine feminine energy and attraction.",
                 recipeVenusLoveBenefits: "Attracts love and beauty, enhances creativity and artistic expression, promotes self-love and worthiness, harmonizes relationships, and activates divine feminine energy.",
@@ -4699,8 +4789,8 @@
                 recipeGoldenRatioBenefits: "Aligns your energy field with divine proportion, promotes natural harmony and beauty, enhances aesthetic sense, and attunes you to the sacred geometry of creation.",
                 recipeGoldenRatioHow: "Use for 20 minutes during creative work or healing practices. Excellent for artists and healers. Visualize the golden spiral expanding from your heart.",
                 // Recipe fullInfo translations - Wellness & States
-                recipePainReliefWhat: "174 Hz is the lowest of the Solfeggio frequencies, known for its anesthetic properties and pain relief effects. It works at the cellular level to reduce pain perception.",
-                recipePainReliefBenefits: "Reduces physical pain and discomfort, promotes cellular healing and regeneration, provides natural anesthetic effects, and helps recover from injuries or surgery.",
+                recipePainReliefWhat: "174 Hz is the lowest of the Solfeggio frequencies, traditionally associated with deep relaxation and grounding. It creates a foundation for calm and inner peace.",
+                recipePainReliefBenefits: "Promotes deep relaxation, supports a sense of physical comfort, provides grounding energy, and helps create a peaceful atmosphere for rest and recovery.",
                 recipePainReliefHow: "Listen for 20-30 minutes when experiencing pain. Focus breath and attention on painful areas. Can be used multiple times daily. Combine with ice or heat therapy.",
                 recipeStressReliefWhat: "10.5 Hz is an alpha-theta border frequency that calms the nervous system and promotes deep relaxation. It's the frequency of deep meditation and stress release.",
                 recipeStressReliefBenefits: "Deeply calms nervous system, reduces stress and anxiety, promotes relaxation, lowers blood pressure and heart rate, and facilitates emotional release and healing.",
@@ -4714,9 +4804,9 @@
                 recipeMemoryBoostWhat: "20.3 Hz is a beta frequency optimized for rapid learning and memory formation. This frequency enhances neural plasticity and information encoding.",
                 recipeMemoryBoostBenefits: "Improves memory formation and recall, accelerates learning, enhances neural connections, supports studying and skill acquisition, and boosts mental retention.",
                 recipeMemoryBoostHow: "Use for 20-30 minutes while studying or learning new skills. Review material while listening. Best used during morning or early afternoon learning sessions.",
-                recipeMiracleToneWhat: "528 Hz, also known as the 'Miracle Tone,' is the frequency of love and DNA repair. Research shows it can repair DNA damage and promote miraculous healing.",
+                recipeMiracleToneWhat: "528 Hz, also known as the 'Miracle Tone,' is traditionally associated with love and transformation. Many find it supports a sense of harmony and positive change.",
                 recipeMiracleToneBenefits: "Repairs DNA at molecular level, promotes miraculous healing, opens heart to love, facilitates transformation, and activates the miracle frequency within your cells.",
-                recipeMiracleToneHow: "Listen for 15-30 minutes daily for healing and transformation. Place hands on areas needing healing. Best used consistently over 21-40 days for deep cellular changes.",
+                recipeMiracleToneHow: "Listen for 15-30 minutes daily for relaxation and personal reflection. Focus on areas where you seek positive change. Best used consistently as part of a meditation practice.",
                 
                 // ========== COMPANION PANEL CONTENT TRANSLATIONS ==========
                 // Welcome Section
@@ -4935,7 +5025,7 @@
                 
                 // Daily Wisdom Quotes
                 wisdom1: "The frequencies that created the universe are now working through you.",
-                wisdom2: "Every vibration you absorb rewrites your cellular memory.",
+                wisdom2: "Every vibration you absorb shapes your inner harmony.",
                 wisdom3: "37 × 73 = 2701 — the mathematics of divine creation itself.",
                 wisdom4: "In the beginning was the Word, and the Word was a frequency.",
                 wisdom5: "Your body is 70% water — a perfect receiver for sacred sound.",
@@ -5030,7 +5120,7 @@
                     frequencies: [37, 73, 528],
                     description: "Personal power, confidence, and transformation. Associated with Love Frequency (528 Hz).",
                     fullInfo: {
-                        whatItIs: "528 Hz is the frequency of transformation and DNA repair, working on the solar plexus for personal power and confidence.",
+                        whatItIs: "528 Hz is the frequency of transformation and personal empowerment, working on the solar plexus for personal power and confidence.",
                         benefits: "Boosts confidence, personal power, and supports transformation.",
                         howToUse: "Listen for 10-15 minutes to empower yourself before important tasks. Focus on the upper abdomen."
                     }
@@ -5144,19 +5234,19 @@
                     frequencies: [37, 73, 432],
                     description: "Universal healing with Trinity foundation",
                     fullInfo: {
-                        whatItIs: "432 Hz is known as the 'natural frequency of the universe,' promoting healing and harmony with nature. Combined with the Trinity foundation, this creates a powerful healing environment at cellular and spiritual levels.",
-                        benefits: "Reduces stress and anxiety, promotes physical healing, aligns you with natural rhythms, and creates inner peace. Helps resolve emotional wounds and trauma at deep levels.",
+                        whatItIs: "432 Hz is known as the 'natural frequency of the universe,' associated with harmony and balance in nature. Combined with the Trinity foundation, this creates a deeply relaxing meditation environment.",
+                        benefits: "Supports relaxation, may help reduce stress, promotes a sense of harmony with natural rhythms, and encourages inner peace. Useful for emotional processing and unwinding.",
                         howToUse: "Listen for 20-30 minutes during healing sessions, before sleep, or when feeling physically unwell. Breathe deeply and allow the frequencies to permeate every cell. Can be used during energy healing work."
                     }
                 },
                 {
                     name: "Love Frequency",
                     frequencies: [37, 73, 528],
-                    description: "DNA repair + Trinity foundation",
+                    description: "Heart-opening meditation + Trinity foundation",
                     fullInfo: {
-                        whatItIs: "528 Hz is called the 'Love Frequency' or 'Miracle Tone,' scientifically shown to repair DNA and promote cellular healing. It's the exact frequency used by genetic engineers to repair DNA.",
-                        benefits: "Repairs DNA damage, promotes cellular regeneration, opens the heart chakra, increases love and compassion, and facilitates profound healing at the genetic level. Helps release ancestral trauma.",
-                        howToUse: "Use for 15-20 minutes daily for DNA repair and heart healing. Place hands on heart while listening. Excellent for morning rituals or before important heart-centered conversations."
+                        whatItIs: "528 Hz is called the 'Love Frequency' or 'Miracle Tone,' traditionally associated with transformation and harmony. Combined with the Trinity foundation, it creates a heart-opening meditation experience.",
+                        benefits: "Opens the heart chakra, increases feelings of love and compassion, supports emotional balance, and facilitates a sense of peace and well-being. May help release emotional blocks.",
+                        howToUse: "Use for 15-20 minutes daily for heart-centered meditation. Place hands on heart while listening. Excellent for morning rituals or before important heart-centered conversations."
                     }
                 },
                 {
@@ -5371,7 +5461,7 @@
                     description: "Schumann resonance + Trinity",
                     fullInfo: {
                         whatItIs: "7.83 Hz is Earth's Schumann Resonance—the electromagnetic frequency of our planet's heartbeat. Combined with Trinity frequencies, this grounds you deeply into Earth's natural rhythm.",
-                        benefits: "Deeply grounds and centers you, reduces anxiety and stress, syncs you with Earth's natural rhythms, enhances meditation depth, and promotes physical healing through grounding.",
+                        benefits: "Deeply grounds and centers you, may help reduce stress, syncs you with Earth's natural rhythms, enhances meditation depth, and supports overall well-being through grounding.",
                         howToUse: "Listen for 20-30 minutes when feeling ungrounded or spacey. Sit or lie directly on the earth if possible. Perfect after air travel or intense spiritual work. Barefoot recommended."
                     }
                 },
@@ -5430,10 +5520,10 @@
                 {
                     name: "Pain Relief",
                     frequencies: [37, 73, 174],
-                    description: "Cellular regeneration + Trinity",
+                    description: "Deep relaxation + Trinity",
                     fullInfo: {
-                        whatItIs: "174 Hz is the lowest of the Solfeggio frequencies, known for its anesthetic properties and pain relief effects. It works at the cellular level to reduce pain perception.",
-                        benefits: "Reduces physical pain and discomfort, promotes cellular healing and regeneration, provides natural anesthetic effects, and helps recover from injuries or surgery.",
+                        whatItIs: "174 Hz is the lowest of the Solfeggio frequencies, traditionally associated with deep relaxation and grounding. It creates a foundation for calm and inner peace.",
+                        benefits: "Promotes deep relaxation, supports a sense of physical comfort, provides grounding energy, and helps create a peaceful atmosphere for rest and recovery.",
                         howToUse: "Listen for 20-30 minutes when experiencing pain. Focus breath and attention on painful areas. Can be used multiple times daily. Combine with ice or heat therapy."
                     }
                 },
@@ -5480,11 +5570,11 @@
                 {
                     name: "Miracle Tone",
                     frequencies: [37, 73, 528],
-                    description: "Divine healing activation",
+                    description: "Love and transformation",
                     fullInfo: {
-                        whatItIs: "528 Hz, also known as the 'Miracle Tone,' is the frequency of love and DNA repair. Research shows it can repair DNA damage and promote miraculous healing.",
-                        benefits: "Repairs DNA at molecular level, promotes miraculous healing, opens heart to love, facilitates transformation, and activates the miracle frequency within your cells.",
-                        howToUse: "Listen for 15-30 minutes daily for healing and transformation. Place hands on areas needing healing. Best used consistently over 21-40 days for deep cellular changes."
+                        whatItIs: "528 Hz, also known as the 'Miracle Tone,' is traditionally associated with love and transformation. Many find it supports a sense of harmony and positive change.",
+                        benefits: "Opens the heart to love, facilitates emotional transformation, supports a sense of wonder and possibility, and creates an atmosphere of positive change.",
+                        howToUse: "Listen for 15-30 minutes daily for relaxation and personal reflection. Focus on areas where you seek positive change. Best used consistently as part of a meditation practice."
                     }
                 }
             ]
@@ -6133,6 +6223,20 @@
                         <p style="text-align:center;color:#a78bfa;font-style:italic;margin-top:20px;">
                             ${t.comp_credits_gratitude || 'With gratitude for the divine mathematics that connects us all.'}
                         </p>
+                        
+                        <!-- Buy Me a Coffee Section -->
+                        <div style="background:linear-gradient(135deg,rgba(255,221,51,0.15),rgba(251,191,36,0.1));border-radius:14px;padding:25px;margin:25px 0;text-align:center;border:2px solid rgba(251,191,36,0.3);">
+                            <h5 style="color:#fbbf24;margin-bottom:12px;font-size:18px;">☕ Support This Project</h5>
+                            <p style="color:#ffffff;font-size:14px;margin-bottom:15px;line-height:1.6;">If Genesis Frequencies has helped you, consider buying me a coffee to support continued development!</p>
+                            <a href="https://buymeacoffee.com/quantummerlin" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:linear-gradient(135deg,#FFDD00,#fbbf24);color:#1a0033;padding:12px 28px;border-radius:25px;font-weight:700;font-size:16px;text-decoration:none;box-shadow:0 4px 15px rgba(251,191,36,0.4);transition:transform 0.2s;">☕ Buy Me a Coffee</a>
+                        </div>
+                        
+                        <!-- Explore More from Quantum Merlin -->
+                        <div style="background:linear-gradient(135deg,rgba(139,92,246,0.15),rgba(168,85,247,0.1));border-radius:14px;padding:25px;margin:25px 0;text-align:center;border:2px solid rgba(139,92,246,0.3);">
+                            <h5 style="color:#a78bfa;margin-bottom:12px;font-size:18px;">✨ Want to explore more from Quantum Merlin?</h5>
+                            <p style="color:#ffffff;font-size:14px;margin-bottom:15px;line-height:1.6;">Visit Quantum Merlin for all current and upcoming tools!</p>
+                            <a href="https://quantummerlin.com" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:linear-gradient(135deg,#8b5cf6,#a78bfa);color:#ffffff;padding:12px 28px;border-radius:25px;font-weight:700;font-size:16px;text-decoration:none;box-shadow:0 4px 15px rgba(139,92,246,0.4);transition:transform 0.2s;">🌐 Visit QuantumMerlin.com</a>
+                        </div>
                     </div>
                 `
             }
@@ -11861,7 +11965,6 @@ async function activateLicense() {
                         cursor: pointer;
                         margin-bottom: 10px;
                     ">✨ Continue to App</button>
-                    <p style="text-align: center; color: #9ca3af; font-size: 11px; margin-top: 10px;">🤝 Want to earn 30% sharing with friends? <a href="#" onclick="closeLicenseModal(); setTimeout(showAffiliateModal, 300); return false;" style="color: #10b981; text-decoration: underline;">Register interest</a></p>
                 </div>
             `;
             successEl.style.display = 'block';
@@ -11964,12 +12067,12 @@ function unlockPremiumControls() {
         durationInput.removeAttribute('readonly');
     }
     
-    // Unlock export button
+    // Unlock export button - SKIP! Export remains a $19.99 premium feature
+    // The export button will be handled separately with showExportUpgradeModal()
     const exportBtn = document.getElementById('exportBtn');
     if (exportBtn) {
-        exportBtn.classList.remove('premium-lock');
-        exportBtn.classList.add('premium-unlocked');
-        exportBtn.onclick = null;
+        // Keep export locked - it's a premium feature at $19.99
+        exportBtn.onclick = function() { showExportUpgradeModal(); };
     }
     
     // Initialize screen awake toggle
@@ -12186,13 +12289,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1000);
     }
 
-    // Handle premium-locked inputs
-    updatePremiumFeatures();
+    // Handle premium-locked inputs - FORCE UNLOCK ALL FOR FREE VERSION
+    unlockPremiumControls();
     
-    // Also run updateUIForLicenseTier to handle license tier changes
-    if (typeof updateUIForLicenseTier === 'function') {
-        updateUIForLicenseTier();
-    }
+    // Hide upgrade CTAs and affiliate sections since everything is free now
+    const premiumCtaTop = document.getElementById('premiumCtaTop');
+    const premiumCtaBottom = document.getElementById('premiumCtaBottom');
+    if (premiumCtaTop) premiumCtaTop.style.display = 'none';
+    if (premiumCtaBottom) premiumCtaBottom.style.display = 'none';
+    
+    // Hide affiliate section
+    document.querySelectorAll('[onclick*="showAffiliateModal"]').forEach(el => {
+        if (el.closest('div[style*="border: 2px solid #10b981"]')) {
+            el.closest('div[style*="border: 2px solid #10b981"]').style.display = 'none';
+        }
+    });
 
     // Listen for storage changes (when license tier changes)
     window.addEventListener('storage', function(e) {
