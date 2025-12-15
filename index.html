@@ -3411,12 +3411,11 @@
                 </div>
             </div>
             <div style="display: flex; gap: 15px; justify-content: center; margin-top: 15px; padding-bottom: 20px;">
-                <button onclick="showUpgradeBenefits()" style="background: linear-gradient(90deg, #fbbf24, #f59e0b); color: #1a0033; border: none; border-radius: 25px; padding: 15px 35px; font-size: 18px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 20px rgba(251,191,36,0.4);">Continue →</button>
-                <button onclick="skipToApp()" style="background: rgba(26,0,51,0.7); color: #e9d5ff; border: 1px solid rgba(139,92,246,0.5); border-radius: 25px; padding: 15px 25px; font-size: 16px; font-weight: 600; cursor: pointer;">Skip</button>
+                <button onclick="skipToApp()" style="background: linear-gradient(90deg, #fbbf24, #f59e0b); color: #1a0033; border: none; border-radius: 25px; padding: 15px 35px; font-size: 18px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 20px rgba(251,191,36,0.4);">Start Exploring →</button>
             </div>
         </div>
     </div>
-    <div id="upgradeBenefitsModal" class="info-modal" style="z-index:9999995;">
+    <div id="upgradeBenefitsModal" class="info-modal" style="z-index:9999995; display: none !important;">
         <div class="info-modal-content" style="max-width: 450px; text-align: center;">
             <div class="welcome-header">Unlock Premium Access</div>
             <div class="welcome-subheader" style="font-size:14px;color:#e9d5ff;margin-bottom:15px;">Ready to open the next layer of the Genesis Engine?</div>
@@ -4265,36 +4264,33 @@
                 modal = document.createElement('div');
                 modal.id = 'exportUpgradeModal';
                 modal.innerHTML = `
-                    <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.9); display: flex; align-items: center; justify-content: center; z-index: 999999; padding: 20px;">
-                        <div style="background: linear-gradient(135deg, #1a0a2e, #2d1b4e); border-radius: 24px; padding: 40px; max-width: 450px; width: 100%; text-align: center; border: 3px solid rgba(251,191,36,0.4); box-shadow: 0 25px 80px rgba(251,191,36,0.3);">
-                            <button onclick="closeExportUpgradeModal()" style="position: absolute; top: 15px; right: 20px; background: none; border: none; color: #9ca3af; font-size: 28px; cursor: pointer;">&times;</button>
+                    <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.9); display: flex; align-items: center; justify-content: center; z-index: 999999; padding: 15px; overflow-y: auto;">
+                        <div style="background: linear-gradient(135deg, #1a0a2e, #2d1b4e); border-radius: 20px; padding: 25px; max-width: 340px; width: 100%; text-align: center; border: 2px solid rgba(251,191,36,0.4); box-shadow: 0 15px 50px rgba(251,191,36,0.3); position: relative; max-height: 90vh; overflow-y: auto;">
+                            <button onclick="closeExportUpgradeModal()" style="position: absolute; top: 10px; right: 15px; background: none; border: none; color: #9ca3af; font-size: 24px; cursor: pointer; z-index: 10;">&times;</button>
                             
-                            <div style="font-size: 64px; margin-bottom: 20px;">📥</div>
-                            <h2 style="color: #fbbf24; font-size: 28px; margin-bottom: 15px; font-weight: 800;">Export to WAV</h2>
-                            <p style="color: #e0d4ff; font-size: 16px; line-height: 1.7; margin-bottom: 25px;">
-                                Unlock the ability to <strong style="color: #fbbf24;">export any frequency track</strong> as a high-quality WAV file!
+                            <div style="font-size: 40px; margin-bottom: 10px;">📥</div>
+                            <h2 style="color: #fbbf24; font-size: 22px; margin-bottom: 10px; font-weight: 800;">Export to WAV</h2>
+                            <p style="color: #e0d4ff; font-size: 14px; line-height: 1.5; margin-bottom: 15px;">
+                                Export any frequency as a high-quality WAV file!
                             </p>
                             
-                            <div style="background: rgba(251,191,36,0.1); border-radius: 16px; padding: 20px; margin-bottom: 25px; border: 2px solid rgba(251,191,36,0.3);">
-                                <div style="color: #fbbf24; font-size: 14px; margin-bottom: 8px;">EXPORT FEATURE</div>
-                                <div style="color: #fff; font-size: 42px; font-weight: 900;">$19.99</div>
-                                <div style="color: #10b981; font-size: 14px; margin-top: 5px;">One-time purchase • Lifetime access</div>
+                            <div style="background: rgba(251,191,36,0.1); border-radius: 12px; padding: 15px; margin-bottom: 15px; border: 1px solid rgba(251,191,36,0.3);">
+                                <div style="color: #fff; font-size: 32px; font-weight: 900;">$19.99</div>
+                                <div style="color: #10b981; font-size: 12px; margin-top: 3px;">One-time • Lifetime access</div>
                             </div>
                             
-                            <ul style="text-align: left; color: #fff; font-size: 15px; line-height: 2; margin-bottom: 25px; list-style: none; padding-left: 10px;">
-                                <li>✅ Export unlimited WAV files</li>
-                                <li>✅ High-quality audio (44.1kHz)</li>
-                                <li>✅ Play offline on any device</li>
-                                <li>✅ Use with VLC, Spotify local files, etc.</li>
-                                <li>✅ Perfect for sleep & meditation</li>
+                            <ul style="text-align: left; color: #fff; font-size: 13px; line-height: 1.8; margin-bottom: 15px; list-style: none; padding-left: 5px;">
+                                <li>✅ Unlimited WAV exports</li>
+                                <li>✅ High-quality 44.1kHz audio</li>
+                                <li>✅ Play offline anywhere</li>
                             </ul>
                             
-                            <a href="https://www.etsy.com/listing/YOUR_EXPORT_LISTING" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #1a0033; padding: 16px 40px; border-radius: 30px; font-size: 18px; font-weight: 800; text-decoration: none; box-shadow: 0 8px 25px rgba(251,191,36,0.5); margin-bottom: 15px;">
+                            <a href="https://www.etsy.com/listing/YOUR_EXPORT_LISTING" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #1a0033; padding: 12px 30px; border-radius: 25px; font-size: 16px; font-weight: 800; text-decoration: none; box-shadow: 0 5px 20px rgba(251,191,36,0.4); margin-bottom: 10px;">
                                 🛒 Get Export Feature
                             </a>
                             
-                            <p style="color: #9ca3af; font-size: 13px; margin-top: 15px;">
-                                Already purchased? <a href="#" onclick="closeExportUpgradeModal(); showLicenseModal(); return false;" style="color: #a78bfa; text-decoration: underline;">Enter your license key</a>
+                            <p style="color: #9ca3af; font-size: 11px; margin-top: 10px;">
+                                Already purchased? <a href="#" onclick="closeExportUpgradeModal(); showLicenseModal(); return false;" style="color: #a78bfa; text-decoration: underline;">Enter license key</a>
                             </p>
                         </div>
                     </div>
