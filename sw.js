@@ -1,5 +1,5 @@
 // Service Worker for Genesis Frequency Generator
-const CACHE_NAME = 'genesis-fg-v1.0.2';
+const CACHE_NAME = 'genesis-fg-v1.0.3';
 const urlsToCache = [
   '/Frequency-Generator/',
   '/Frequency-Generator/index.html',
