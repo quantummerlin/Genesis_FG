@@ -7044,7 +7044,7 @@
                             color: #fff;
                             font-size: 15px;
                         ">
-                            ?? Bonus Unlocked: ${achievement.unlocks.replace(/_/g, ' ')}
+                            🎁 Bonus Unlocked: ${achievement.unlocks.replace(/_/g, ' ')}
                         </div>
                     ` : ''}
 
@@ -7055,7 +7055,7 @@
                             margin-bottom: 20px;
                             font-weight: 600;
                         ">
-                            ? SPECIAL ACHIEVEMENT ?
+                            ⭐ SPECIAL ACHIEVEMENT ⭐
                         </div>
                     ` : ''}
 
@@ -7067,7 +7067,7 @@
                             font-weight: 700;
                             text-shadow: 0 0 10px rgba(251,191,36,0.8);
                         ">
-                            ?? LEGENDARY ACHIEVEMENT ??
+                            👑 LEGENDARY ACHIEVEMENT 👑
                         </div>
                     ` : ''}
 
@@ -7143,7 +7143,7 @@
                     box-shadow: 0 20px 60px rgba(139,92,246,0.6);
                     animation: scaleIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
                 ">
-                    <div style="font-size: 100px; margin-bottom: 20px;">??</div>
+                    <div style="font-size: 100px; margin-bottom: 20px;">🏆</div>
                     <h2 style="color: #fbbf24; font-size: 36px; margin-bottom: 10px; font-weight: 700;">
                         LEVEL UP!
                     </h2>
@@ -7219,7 +7219,7 @@
                     text-align: center;
                     box-shadow: 0 20px 60px rgba(128,0,128,0.5);
                 ">
-                    <div style="font-size: 80px; margin-bottom: 20px;">??</div>
+                    <div style="font-size: 80px; margin-bottom: 20px;">🎉</div>
                     <h2 style="color: #fbbf24; font-size: 28px; margin-bottom: 15px;">
                         Streak Broken
                     </h2>
@@ -7237,7 +7237,7 @@
                         margin-bottom: 25px;
                     ">
                         <p style="color: #fbbf24; font-weight: 600; margin-bottom: 10px;">
-                            ?? Start Fresh
+                            🌟 Start Fresh
                         </p>
                         <p style="color: #fff; font-size: 14px;">
                             Begin a new streak today. Each day is a new beginning.
@@ -7251,7 +7251,7 @@
                             margin-bottom: 25px;
                         ">
                             <p style="color: #c4b5fd; font-size: 13px;">
-                                ?? Premium users get a <b>Streak Freeze</b> to protect their progress
+                                💎 Premium users get a <b>Streak Freeze</b> to protect their progress
                             </p>
                         </div>
                     ` : ''}
@@ -7266,7 +7266,7 @@
                         cursor: pointer;
                         box-shadow: 0 4px 15px rgba(139,92,246,0.4);
                     ">
-                        Begin Again ??
+                        Begin Again ➡️
                     </button>
                 </div>
             `;
@@ -7313,7 +7313,7 @@
                         text-align: center;
                     ">
                         <div style="font-size: 60px; margin-bottom: 10px;">
-                            ??
+                            🔥
                         </div>
                         <div style="color: #fbbf24; font-size: 48px; font-weight: 700; margin-bottom: 5px;">
                             ${userProgress.currentStreak}
@@ -7322,7 +7322,7 @@
                             Day Streak
                         </div>
                         <div style="color: #a78bfa; font-size: 14px;">
-                            Longest: ${userProgress.longestStreak} days ??
+                            Longest: ${userProgress.longestStreak} days 🏆
                         </div>
 
                         ${userProgress.currentStreak >= 3 ? `
@@ -7350,7 +7350,7 @@
                             padding: 20px;
                             text-align: center;
                         ">
-                            <div style="font-size: 36px; margin-bottom: 8px;">??</div>
+                            <div style="font-size: 36px; margin-bottom: 8px;">🎧</div>
                             <div style="color: #fbbf24; font-size: 28px; font-weight: 700;">
                                 ${userProgress.totalSessions}
                             </div>
@@ -7363,7 +7363,7 @@
                             padding: 20px;
                             text-align: center;
                         ">
-                            <div style="font-size: 36px; margin-bottom: 8px;">??</div>
+                            <div style="font-size: 36px; margin-bottom: 8px;">⏱️</div></div>
                             <div style="color: #fbbf24; font-size: 28px; font-weight: 700;">
                                 ${Math.floor(userProgress.totalSeconds / 3600)}h
                             </div>
@@ -7376,7 +7376,7 @@
                             padding: 20px;
                             text-align: center;
                         ">
-                            <div style="font-size: 36px; margin-bottom: 8px;">??</div>
+                            <div style="font-size: 36px; margin-bottom: 8px;">🏆</div></div>
                             <div style="color: #fbbf24; font-size: 28px; font-weight: 700;">
                                 ${unlockedAchievements}
                             </div>
@@ -7389,7 +7389,7 @@
                             padding: 20px;
                             text-align: center;
                         ">
-                            <div style="font-size: 36px; margin-bottom: 8px;">??</div>
+                            <div style="font-size: 36px; margin-bottom: 8px;">🎵</div></div>
                             <div style="color: #fbbf24; font-size: 28px; font-weight: 700;">
                                 ${userProgress.frequenciesUsed.size}
                             </div>
@@ -7446,7 +7446,7 @@
                             box-shadow: 0 4px 12px rgba(139,92,246,0.3);
                             margin: 5px;
                         ">
-                            View All Achievements ??
+                            View All Achievements ➡️
                         </button>
                     </div>
                 </div>
@@ -7461,7 +7461,7 @@
                     return `${milestone} days (${daysLeft} more to go)`;
                 }
             }
-            return '365 days reached! ??';
+            return '365 days reached! 👑';
         }
 
         // ============================================
@@ -7495,7 +7495,7 @@
                     <div style="max-width: 900px; margin: 0 auto;">
                         <div style="text-align: center; margin-bottom: 30px;">
                             <h2 style="color: #fbbf24; font-size: 32px; margin-bottom: 10px;">
-                                ?? All Achievements
+                                🏆 All Achievements
                             </h2>
                             <p style="color: #a78bfa; font-size: 16px;">
                                 ${userProgress.achievements.size} /${Object.keys(ACHIEVEMENTS).length} Unlocked
@@ -8250,7 +8250,7 @@
                         border: 2px solid #fbbf24;
                         box-shadow: 0 0 20px rgba(251,191,36,0.3);
                     ">
-                        ?? Almost there!
+                        ✨ Almost there!
                     </div>
                     
                     <!-- Motivational Message -->
@@ -8262,7 +8262,7 @@
                         font-weight: 600;
                         animation: pulse-text 1.5s ease-in-out infinite;
                     ">
-                        Keep going! You're about to unlock this! ??
+                        Keep going! You're about to unlock this! 🔥
                     </div>
                 </div>
             `;
@@ -8413,7 +8413,7 @@
                         font-weight: 600;
                         border: 1px solid rgba(139,92,246,0.3);
                     ">
-                        ?? Keep going!
+                        💪 Keep going!
                     </div>
                 </div>
             `;
@@ -8501,7 +8501,7 @@
                                 font-weight: 700;
                                 margin-bottom: 10px;
                             ">
-                                ??? Mystery Achievement ???
+                                ✨🔮 Mystery Achievement 🔮✨
                             </h4>
                             
                             <p style="
@@ -8578,7 +8578,7 @@
                                 font-weight: 600;
                                 border: 1px solid rgba(107,114,128,0.2);
                             ">
-                                ?? Locked
+                                🔒 Locked
                             </div>
                             
                             ${progress ? `
@@ -8593,7 +8593,7 @@
                                     border-radius: 12px;
                                     border: 1px solid rgba(139,92,246,0.2);
                                 ">
-                                    ?? ${progress.text}
+                                    📊 ${progress.text}
                                 </div>
                             ` : ''}
                             
@@ -8604,7 +8604,7 @@
                                 margin-top: 10px;
                                 font-weight: 500;
                             ">
-                                Click for details ?
+                                Click for details 👉
                             </div>
                         </div>
                     `}
@@ -8785,7 +8785,7 @@
                                     margin-top: 15px;
                                     animation: pulse-text 1.5s ease-in-out infinite;
                                 ">
-                                    ?? Almost there! Keep going!
+                                    ✨ Almost there! Keep going!
                                 </div>
                             ` : ''}
                         </div>
@@ -8799,7 +8799,7 @@
                             text-align: center;
                             margin-bottom: 20px;
                         ">
-                            <div style="font-size: 48px; margin-bottom: 12px; opacity: 0.5;">??</div>
+                            <div style="font-size: 48px; margin-bottom: 12px; opacity: 0.5;">🔒</div>
                             <div style="color: #9ca3af; font-size: 14px; line-height: 1.6;">
                                 Start practicing to make progress towards this achievement
                             </div>
@@ -8816,13 +8816,13 @@
                         ${progress && progress.percentage >= 75 ? 'box-shadow: 0 0 30px rgba(251,191,36,0.3);' : ''}
                     ">
                         ${achievement.rarity === 'legendary' ? `
-                            <div style="color: #fbbf24; font-size: 40px; margin-bottom: 8px;">?</div>
+                            <div style="color: #fbbf24; font-size: 40px; margin-bottom: 8px;">🌟</div></div>
                             <div style="color: #fbbf24; font-size: 16px; font-weight: 700;">LEGENDARY ACHIEVEMENT</div>
                         ` : achievement.rarity === 'rare' ? `
-                            <div style="color: #a78bfa; font-size: 40px; margin-bottom: 8px;">??</div>
+                            <div style="color: #a78bfa; font-size: 40px; margin-bottom: 8px;">💎</div></div>
                             <div style="color: #a78bfa; font-size: 16px; font-weight: 700;">RARE ACHIEVEMENT</div>
                         ` : `
-                            <div style="color: #22c55e; font-size: 40px; margin-bottom: 8px;">?</div>
+                            <div style="color: #22c55e; font-size: 40px; margin-bottom: 8px;">⭐</div></div>
                             <div style="color: #22c55e; font-size: 16px; font-weight: 700;">ACHIEVEMENT</div>
                         `}
                     </div>
@@ -8963,7 +8963,7 @@
                             margin-bottom: 15px;
                             text-shadow: 0 0 20px rgba(251,191,36,0.5);
                         ">
-                            ?? Achievements
+                            🏆 Achievements
                         </h2>
                         <p style="
                             color: #a78bfa;
@@ -9098,7 +9098,7 @@
                         margin-bottom: 15px;
                     ">
                         <h3 style="color: #fbbf24; font-size: 20px; margin: 0;">
-                            ?? Achievements
+                            🏆 Achievements
                         </h3>
                         <button onclick="showFullAchievements()" style="
                             background: rgba(139,92,246,0.2);
@@ -9110,7 +9110,7 @@
                             font-weight: 600;
                             cursor: pointer;
                         ">
-                            View All ?
+                            View All ➡️
                         </button>
                     </div>
                     
@@ -9187,7 +9187,7 @@
                             padding: 20px;
                             font-style: italic;
                         ">
-                            Complete your first session to start unlocking achievements! ??
+                            Complete your first session to start unlocking achievements! ✨
                         </div>
                     `}
                     
@@ -9224,7 +9224,7 @@
                             margin-top: 15px;
                         ">
                             <div style="color: #fbbf24; font-size: 12px; margin-bottom: 8px; font-weight: 600;">
-                                ?? NEXT ACHIEVEMENT
+                                🎯 NEXT ACHIEVEMENT
                             </div>
                             <div style="display: flex; align-items: center; gap: 12px;">
                                 <div style="font-size: 28px;">${achievement.name.split(' ')[0]}</div>
@@ -9253,7 +9253,7 @@
                     margin-top: 15px;
                 ">
                     <div style="color: #fbbf24; font-size: 12px; margin-bottom: 8px; font-weight: 600;">
-                        ?? ALMOST THERE!
+                        🎯 ALMOST THERE!
                     </div>
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
                         <div style="font-size: 28px;">${nextUp.achievement.name.split(' ')[0]}</div>
@@ -9605,7 +9605,7 @@
         }
 
         function showDailyChallengeComplete(challenge) {
-            showNotification(`?? Daily Challenge Complete! ${challenge.name}`);
+            showNotification(`🌟 Daily Challenge Complete! ${challenge.name}`);
         }
 
         function renderDailyChallenge() {
@@ -10119,10 +10119,10 @@
         function getTimeGreeting() {
             const hour = new Date().getHours();
             const t = translations.en;
-            if (hour < 12) return { greeting: t.greetingMorning || "Good morning", emoji: "??" };
-            if (hour < 17) return { greeting: t.greetingAfternoon || "Good afternoon", emoji: "??" };
-            if (hour < 21) return { greeting: t.greetingEvening || "Good evening", emoji: "??" };
-            return { greeting: t.greetingEvening || "Good night", emoji: "??" };
+            if (hour < 12) return { greeting: t.greetingMorning || "Good morning", emoji: "☀️" };
+            if (hour < 17) return { greeting: t.greetingAfternoon || "Good afternoon", emoji: "🌤️" };
+            if (hour < 21) return { greeting: t.greetingEvening || "Good evening", emoji: "🌅" };
+            return { greeting: t.greetingEvening || "Good night", emoji: "🌙" };
         }
 
         // Render personalized companion header
@@ -10148,7 +10148,7 @@
             greetingContainer.innerHTML = `
                 ${timeInfo.emoji} ${timeInfo.greeting}, ${userTitle}
                 <span style="font-size: 14px; color: #c4b5fd; font-weight: 400; display: block; margin-top: 4px;">
-                    ${streak > 0 ? `?? ${streak} ${t.dayStreak || 'day streak'}` : (t.beginJourney || 'Begin your sacred journey today')}
+                    ${streak > 0 ? `🔥 ${streak} ${t.dayStreak || 'day streak'}` : (t.beginJourney || 'Begin your sacred journey today')}
                 </span>
             `;
 
@@ -10175,10 +10175,11 @@
             // Quick action buttons (removed Start Session - user can use main PLAY button)
             actionsContainer.innerHTML = `
                 <button onclick="showDailyChallengeModal();" style="background: linear-gradient(90deg, #fbbf24, #f59e0b); color: #1a0033; border: none; border-radius: 20px; padding: 10px 18px; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px;">
-                    <span>??</span> ${t.btnDailyChallenge || 'Daily Challenge'}
+                    <span>🎯</span> ${t.btnDailyChallenge || 'Daily Challenge'}
                 </button>
                 <button onclick="if(typeof showFullAchievements === 'function') showFullAchievements();" style="background: linear-gradient(90deg, #8b5cf6, #6b46c1); color: #fff; border: none; border-radius: 20px; padding: 10px 18px; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px;">
-                    <span>??</span> ${t.btnAchievements || 'Achievements'}
+                    <span>🏆</span> ${t.btnAchievements || 'Achievements'}
+                </button>
                 </button>
             `;
         }
@@ -10367,7 +10368,7 @@
                             <div class="recipe-name" style="font-size: 15px;">${section.icon} ${section.title}</div>
                         </div>
                         <div class="recipe-buttons">
-                            <button class="track-btn info-btn" title="Read this section" style="font-size: 16px;">??</button>
+                            <button class="track-btn info-btn" title="Read this section" style="font-size: 16px;">ℹ️</button>
                         </div>
                     `;
 
@@ -10693,13 +10694,13 @@
                     categoryTab.className = 'category-tab';
                     
                     const categoryIcons = {
-                        "Biblical & Original": "??",
-                        "Solfeggio & Healing": "??",
-                        "Angel Numbers": "??",
-                        "Master Numbers": "??",
-                        "Cosmic & Planetary": "??",
-                        "Wellness & States": "??",
-                        "Chakra Frequencies": "??"
+                        "Biblical & Original": "✡️",
+                        "Solfeggio & Healing": "💜",
+                        "Angel Numbers": "👼",
+                        "Master Numbers": "🔢",
+                        "Cosmic & Planetary": "🌌",
+                        "Wellness & States": "🧘",
+                        "Chakra Frequencies": "🌈"
                     };
 
                     const categoryKeys = {
@@ -10924,7 +10925,7 @@
                         }
                         
                         this.elements.duration.value = time;
-                        this.updateStatus(`?? Duration set to ${time}`);
+                        this.updateStatus(`⏱️ Duration set to ${time}`);
                         
                         // Remove active class from all duration buttons
                         document.querySelectorAll('.duration-btn').forEach(b => b.classList.remove('active'));
@@ -11267,7 +11268,7 @@
                         parseFloat(this.elements.freq3.value)
                     ].filter(freq => freq > 0);
                     
-                    this.updateStatus(`? Playing ${frequencies.join(' Hz + ')} Hz | ?? ${timeStr} remaining`);
+                    this.updateStatus(`🎵 Playing ${frequencies.join(' Hz + ')} Hz | ⏱️ ${timeStr} remaining`);
                     
                     if (remaining <= 0) {
                         clearInterval(this.countdownInterval);
@@ -11420,7 +11421,7 @@
                         border: 3px solid #fbbf24;
                         box-shadow: 0 20px 60px rgba(220, 38, 38, 0.6);
                     ">
-                        <div style="font-size: 72px; margin-bottom: 20px; animation: pulse 1.5s ease-in-out infinite;">??</div>
+                        <div style="font-size: 72px; margin-bottom: 20px; animation: pulse 1.5s ease-in-out infinite;">🔇</div>
                         <h2 style="color: #fbbf24; font-size: 26px; font-weight: 800; margin-bottom: 15px;">
                             Audio Blocked!
                         </h2>
@@ -11665,7 +11666,7 @@
                            padding: 12px 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.3); 
                            z-index: 1000; backdrop-filter: blur(10px); display: flex; align-items: center; gap: 12px;">
                     <div style="flex-shrink: 0; font-size: 32px;">
-                        ??
+                        📲
                     </div>
                     <div style="flex: 1;">
                         <div style="color: #1a0033; font-size: 15px; font-weight: 700;">
@@ -12014,7 +12015,7 @@ async function activateLicense() {
             // Show success message with Share & Earn option
             successEl.innerHTML = `
                 <div style="text-align: center; padding: 10px 0;">
-                    <div style="font-size: 48px; margin-bottom: 10px;">??</div>
+                    <div style="font-size: 48px; margin-bottom: 10px;">✅</div>
                     <div style="font-size: 20px; color: #10b981; font-weight: 700; margin-bottom: 8px;">License Activated!</div>
                     <div style="font-size: 14px; color: #e5e7eb; margin-bottom: 5px;">${data.message}</div>
                     <div style="font-size: 12px; color: #9ca3af;">
@@ -12357,7 +12358,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Returning user - showing welcome toast');
         setTimeout(() => {
             const t = translations.en;
-            showToast((t.welcomeBack || 'Welcome back! Ready to explore sacred frequencies?') + ' ??');
+            showToast((t.welcomeBack || 'Welcome back! Ready to explore sacred frequencies?') + ' 🌟');
         }, 1000);
     }
 
@@ -12692,7 +12693,7 @@ document.addEventListener('DOMContentLoaded', function() {
             cursor: pointer;
         ">�</button>
         
-        <div style="font-size: 40px; margin-bottom: 10px;">??</div>
+        <div style="font-size: 40px; margin-bottom: 10px;">🤝</div>
         <h2 style="color: #10b981; font-size: 20px; margin-bottom: 8px;">Affiliate Program Coming Soon!</h2>
         
         <div id="affiliateFormSection">
@@ -12703,7 +12704,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </p>
             
             <div style="background: rgba(16,185,129,0.1); border-radius: 10px; padding: 12px; margin-bottom: 15px;">
-                <div style="color: #10b981; font-weight: 700; margin-bottom: 5px; font-size: 14px;">?? Potential Earnings:</div>
+                <div style="color: #10b981; font-weight: 700; margin-bottom: 5px; font-size: 14px;">💰 Potential Earnings:</div>
                 <div style="color: #fff; font-size: 13px;">
                     Premium: <strong style="color: #fbbf24;">$3</strong> � Ultimate: <strong style="color: #fbbf24;">$6</strong> per sale
                 </div>
@@ -12737,7 +12738,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 cursor: pointer;
                 box-shadow: 0 4px 15px rgba(16,185,129,0.3);
             ">
-                ?? Register My Interest
+                🚀 Register My Interest
             </button>
             
             <p style="color: #6b7280; font-size: 11px; margin-top: 12px;">
