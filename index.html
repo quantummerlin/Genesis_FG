@@ -7470,14 +7470,14 @@
 
         function showAllAchievements() {
             const categories = {
-                'awakening': { name: 'Awakening', icon: '?' },
-                'sessions': { name: 'Session Milestones', icon: '??' },
-                'time': { name: 'Time Milestones', icon: '??' },
-                'streaks': { name: 'Streak Achievements', icon: '??' },
-                'exploration': { name: 'Frequency Exploration', icon: '??' },
-                'special': { name: 'Special Actions', icon: '??' },
-                'synchronicity': { name: 'Synchronicities', icon: '??' },
-                'mastery': { name: 'Mastery', icon: '??' }
+                'awakening': { name: 'Awakening', icon: '🌅' },
+                'sessions': { name: 'Session Milestones', icon: '🎯' },
+                'time': { name: 'Time Milestones', icon: '⏰' },
+                'streaks': { name: 'Streak Achievements', icon: '🔥' },
+                'exploration': { name: 'Frequency Exploration', icon: '🎵' },
+                'special': { name: 'Special Actions', icon: '⭐' },
+                'synchronicity': { name: 'Synchronicities', icon: '✨' },
+                'mastery': { name: 'Mastery', icon: '🏆' }
             };
 
             let html = `
@@ -10297,32 +10297,32 @@
             // Get translated category names
             const catQuickStart = t.catQuickStart || '? Quick Start';
             const catTheScience = t.catTheScience || '? The Science';
-            const catTheStory = t.catTheStory || '?? The Story';
-            const catHelp = t.catHelp || '? Help';
+            const catTheStory = t.catTheStory || '📖 The Story';
+            const catHelp = t.catHelp || '❓ Help';
 
             // Define instruction categories - organized for optimal user experience
             // Order: Quick actions first, then understanding, then deeper content
             const instructionCategories = {
                 [catQuickStart]: [
-                    { id: 'quickStart', icon: '??', title: instructionsSections.find(s => s.id === 'quickStart')?.title || 'Your First Session', content: instructionsSections.find(s => s.id === 'quickStart')?.content || instructionsSections.find(s => s.id === 'quickStart')?.getContent?.() || '' },
-                    { id: 'usageTips', icon: '??', title: instructionsSections.find(s => s.id === 'usageTips')?.title || 'Best Practices', content: instructionsSections.find(s => s.id === 'usageTips')?.content || instructionsSections.find(s => s.id === 'usageTips')?.getContent?.() || '' },
-                    { id: 'categories', icon: '??', title: instructionsSections.find(s => s.id === 'categories')?.title || 'Frequency Categories', content: instructionsSections.find(s => s.id === 'categories')?.content || instructionsSections.find(s => s.id === 'categories')?.getContent?.() || '' }
+                    { id: 'quickStart', icon: '🚀', title: instructionsSections.find(s => s.id === 'quickStart')?.title || 'Your First Session', content: instructionsSections.find(s => s.id === 'quickStart')?.content || instructionsSections.find(s => s.id === 'quickStart')?.getContent?.() || '' },
+                    { id: 'usageTips', icon: '💡', title: instructionsSections.find(s => s.id === 'usageTips')?.title || 'Best Practices', content: instructionsSections.find(s => s.id === 'usageTips')?.content || instructionsSections.find(s => s.id === 'usageTips')?.getContent?.() || '' },
+                    { id: 'categories', icon: '🎵', title: instructionsSections.find(s => s.id === 'categories')?.title || 'Frequency Categories', content: instructionsSections.find(s => s.id === 'categories')?.content || instructionsSections.find(s => s.id === 'categories')?.getContent?.() || '' }
                 ],
                 [catTheScience]: [
-                    { id: 'trinity', icon: '??', title: instructionsSections.find(s => s.id === 'trinity')?.title || 'The Trinity Foundation', content: instructionsSections.find(s => s.id === 'trinity')?.content || instructionsSections.find(s => s.id === 'trinity')?.getContent?.() || '' },
-                    { id: 'whyWorks', icon: '??', title: instructionsSections.find(s => s.id === 'whyWorks')?.title || 'Why 37 & 73 Hz Work', content: instructionsSections.find(s => s.id === 'whyWorks')?.content || instructionsSections.find(s => s.id === 'whyWorks')?.getContent?.() || '' },
-                    { id: 'waterCharging', icon: '??', title: instructionsSections.find(s => s.id === 'waterCharging')?.title || 'Water Charging', content: instructionsSections.find(s => s.id === 'waterCharging')?.content || instructionsSections.find(s => s.id === 'waterCharging')?.getContent?.() || '' },
-                    { id: 'crystalCharging', icon: '??', title: instructionsSections.find(s => s.id === 'crystalCharging')?.title || 'Crystal Charging', content: instructionsSections.find(s => s.id === 'crystalCharging')?.content || instructionsSections.find(s => s.id === 'crystalCharging')?.getContent?.() || '' },
-                    { id: 'progress', icon: '??', title: instructionsSections.find(s => s.id === 'progress')?.title || 'Your Journey', content: instructionsSections.find(s => s.id === 'progress')?.content || instructionsSections.find(s => s.id === 'progress')?.getContent?.() || '' }
+                    { id: 'trinity', icon: '🔱', title: instructionsSections.find(s => s.id === 'trinity')?.title || 'The Trinity Foundation', content: instructionsSections.find(s => s.id === 'trinity')?.content || instructionsSections.find(s => s.id === 'trinity')?.getContent?.() || '' },
+                    { id: 'whyWorks', icon: '🔬', title: instructionsSections.find(s => s.id === 'whyWorks')?.title || 'Why 37 & 73 Hz Work', content: instructionsSections.find(s => s.id === 'whyWorks')?.content || instructionsSections.find(s => s.id === 'whyWorks')?.getContent?.() || '' },
+                    { id: 'waterCharging', icon: '💧', title: instructionsSections.find(s => s.id === 'waterCharging')?.title || 'Water Charging', content: instructionsSections.find(s => s.id === 'waterCharging')?.content || instructionsSections.find(s => s.id === 'waterCharging')?.getContent?.() || '' },
+                    { id: 'crystalCharging', icon: '💎', title: instructionsSections.find(s => s.id === 'crystalCharging')?.title || 'Crystal Charging', content: instructionsSections.find(s => s.id === 'crystalCharging')?.content || instructionsSections.find(s => s.id === 'crystalCharging')?.getContent?.() || '' },
+                    { id: 'progress', icon: '📊', title: instructionsSections.find(s => s.id === 'progress')?.title || 'Your Journey', content: instructionsSections.find(s => s.id === 'progress')?.content || instructionsSections.find(s => s.id === 'progress')?.getContent?.() || '' }
                 ],
                 [catTheStory]: [
-                    { id: 'welcome', icon: '??', title: instructionsSections.find(s => s.id === 'welcome')?.title || 'About Genesis Frequencies', content: instructionsSections.find(s => s.id === 'welcome')?.content || instructionsSections.find(s => s.id === 'welcome')?.getContent?.() || '' },
-                    { id: 'myJourney', icon: '??', title: instructionsSections.find(s => s.id === 'myJourney')?.title || 'The Discovery', content: instructionsSections.find(s => s.id === 'myJourney')?.content || instructionsSections.find(s => s.id === 'myJourney')?.getContent?.() || '' }
+                    { id: 'welcome', icon: '✨', title: instructionsSections.find(s => s.id === 'welcome')?.title || 'About Genesis Frequencies', content: instructionsSections.find(s => s.id === 'welcome')?.content || instructionsSections.find(s => s.id === 'welcome')?.getContent?.() || '' },
+                    { id: 'myJourney', icon: '📖', title: instructionsSections.find(s => s.id === 'myJourney')?.title || 'The Discovery', content: instructionsSections.find(s => s.id === 'myJourney')?.content || instructionsSections.find(s => s.id === 'myJourney')?.getContent?.() || '' }
                 ],
                 [catHelp]: [
-                    { id: 'faq', icon: '??', title: instructionsSections.find(s => s.id === 'faq')?.title || 'FAQ', content: instructionsSections.find(s => s.id === 'faq')?.content || instructionsSections.find(s => s.id === 'faq')?.getContent?.() || '' },
-                    { id: 'share', icon: '??', title: instructionsSections.find(s => s.id === 'share')?.title || 'Share', content: instructionsSections.find(s => s.id === 'share')?.content || instructionsSections.find(s => s.id === 'share')?.getContent?.() || '' },
-                    { id: 'credits', icon: '??', title: instructionsSections.find(s => s.id === 'credits')?.title || 'Credits', content: instructionsSections.find(s => s.id === 'credits')?.content || instructionsSections.find(s => s.id === 'credits')?.getContent?.() || '' }
+                    { id: 'faq', icon: '❓', title: instructionsSections.find(s => s.id === 'faq')?.title || 'FAQ', content: instructionsSections.find(s => s.id === 'faq')?.content || instructionsSections.find(s => s.id === 'faq')?.getContent?.() || '' },
+                    { id: 'share', icon: '📤', title: instructionsSections.find(s => s.id === 'share')?.title || 'Share', content: instructionsSections.find(s => s.id === 'share')?.content || instructionsSections.find(s => s.id === 'share')?.getContent?.() || '' },
+                    { id: 'credits', icon: '📜', title: instructionsSections.find(s => s.id === 'credits')?.title || 'Credits', content: instructionsSections.find(s => s.id === 'credits')?.content || instructionsSections.find(s => s.id === 'credits')?.getContent?.() || '' }
                 ]
             };
 
