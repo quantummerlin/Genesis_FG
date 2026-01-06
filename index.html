@@ -3868,7 +3868,7 @@
     <!-- Now Playing Sticky Footer Bar -->
     <div class="now-playing-bar" id="nowPlayingBar">
         <div class="now-playing-info">
-            <span class="now-playing-icon">??</span>
+            <span class="now-playing-icon">🎵</span>
             <div class="now-playing-text">
                 <span class="now-playing-label">Now Playing</span>
                 <span class="now-playing-track" id="nowPlayingTrack">Genesis Creation</span>
@@ -3891,15 +3891,15 @@
     <script>
                         // Instructions panel toggle function
                         window.toggleInstructions = function() {
-                            console.log('?? toggleInstructions called!');
+                            console.log('🎯 toggleInstructions called!');
                             var panel = document.getElementById('instructionsPanel');
                             var overlay = document.getElementById('instructionsOverlay');
-                            console.log('?? Panel element:', panel);
-                            console.log('?? Overlay element:', overlay);
+                            console.log('📋 Panel element:', panel);
+                            console.log('📋 Overlay element:', overlay);
                             
                             // If overlay exists, we're closing
                             if (overlay) {
-                                console.log('?? Closing panel - removing overlay');
+                                console.log('✖️ Closing panel - removing overlay');
                                 try {
                                     // First move panel back to header
                                     var header = document.querySelector('.header');
@@ -3920,7 +3920,7 @@
                                     document.body.style.overflow = '';
                                 }
                             } else if (panel && (panel.style.display === 'none' || panel.style.display === '')) {
-                                console.log('?? Opening panel');
+                                console.log('📖 Opening panel');
                                 // Create modal overlay
                                 var newOverlay = document.createElement('div');
                                 newOverlay.id = 'instructionsOverlay';
@@ -3935,7 +3935,7 @@
                                 document.body.appendChild(newOverlay);
                                 
                                 // Refresh translations before rendering - ensure currentLanguage is applied
-                                console.log('?? Current language for companion panel:', currentLanguage);
+                                console.log('🌐 Current language for companion panel:', currentLanguage);
                                 instructionsSections = getInstructionsSections();
                                 renderInstructionsCategories();
                                 renderCompanionHeader(); // Force refresh header with current language
@@ -3945,7 +3945,7 @@
 
                         // Handle companion button click
                         window.handleCompanionClick = function(event) {
-                            console.log('?? Companion button clicked!', event);
+                            console.log('👆 Companion button clicked!', event);
                             event.preventDefault();
                             event.stopPropagation();
                             window.toggleInstructions();
@@ -3963,8 +3963,8 @@
                         const bannerText = document.getElementById('pwaBannerText');
                         const installText = document.getElementById('pwaInstallText');
                         
-                        if (header) header.textContent = '?? Install on Desktop ??';
-                        if (icon) icon.textContent = '??';
+                        if (header) header.textContent = '💻 Install on Desktop 💻';
+                        if (icon) icon.textContent = '💻';
                         if (bannerText) bannerText.textContent = 'INSTALL Genesis Frequencies for the best experience!';
                         if (installText) installText.innerHTML = 'Click the <b style="color:#fbbf24;">install button</b> in your browser address bar or use the menu to install';
                     } else if (isIOS) {
@@ -3974,8 +3974,8 @@
                         const bannerText = document.getElementById('pwaBannerText');
                         const installText = document.getElementById('pwaInstallText');
                         
-                        if (header) header.textContent = '?? Add to Home Screen ??';
-                        if (icon) icon.textContent = '??';
+                        if (header) header.textContent = '📱 Add to Home Screen 📱';
+                        if (icon) icon.textContent = '📱';
                         if (bannerText) bannerText.textContent = 'ADD to Home Screen for the best experience!';
                         if (installText) installText.innerHTML = 'Tap the <b style="color:#fbbf24;">Share</b> button, then <b style="color:#fbbf24;">"Add to Home Screen"</b>';
                     } else {
@@ -3984,8 +3984,8 @@
                         const icon = document.getElementById('pwaIcon');
                         const installText = document.getElementById('pwaInstallText');
                         
-                        if (header) header.textContent = '?? Install App ??';
-                        if (icon) icon.textContent = '??';
+                        if (header) header.textContent = '📲 Install App 📲';
+                        if (icon) icon.textContent = '📲';
                         if (installText) installText.innerHTML = 'Tap the <b style="color:#fbbf24;">menu</b> (?) and select <b style="color:#fbbf24;">"Install app"</b> or <b style="color:#fbbf24;">"Add to Home screen"</b>';
                     }
                 }
@@ -4025,7 +4025,7 @@
                             text-align: center;
                             border: 2px solid rgba(251,191,36,0.3);
                         ">
-                            <div style="font-size: 48px; margin-bottom: 20px;">??</div>
+                            <div style="font-size: 48px; margin-bottom: 20px;">📲</div>
                             <h2 style="color: #fbbf24; font-size: 24px; font-weight: 800; margin-bottom: 15px;">
                                 Add to Home Screen
                             </h2>
@@ -4037,7 +4037,7 @@
                                 <div style="background: rgba(139,92,246,0.2); border-radius: 16px; padding: 20px; text-align: left; margin-bottom: 20px; border: 1px solid rgba(139,92,246,0.3);">
                                     <div style="color: #fbbf24; font-weight: 700; margin-bottom: 10px; font-size: 14px;">iOS INSTRUCTIONS:</div>
                                     <ol style="color: #e9d5ff; font-size: 15px; line-height: 1.8; padding-left: 20px;">
-                                        <li>Tap the <span style="color: #fbbf24; font-weight: 700;">Share button</span> <span style="font-size: 20px;">??</span></li>
+                                        <li>Tap the <span style="color: #fbbf24; font-weight: 700;">Share button</span> <span style="font-size: 20px;">⬆️</span></li>
                                         <li>Scroll down and tap <span style="color: #fbbf24; font-weight: 700;">�Add to Home Screen�</span></li>
                                         <li>Tap <span style="color: #fbbf24; font-weight: 700;">�Add�</span> in the top right</li>
                                     </ol>
@@ -4199,7 +4199,7 @@
                     <div class="info-modal-body" style="color: #fff; font-size: 16px; line-height: 1.6;">
                         <div style="text-align: left; margin-bottom: 20px;">
                             <div style="margin-bottom: 15px;">
-                                <h3 style="color: #c4b5fd; margin-bottom: 8px;">??? ${t.volumeControls || 'Individual Volume Controls'}</h3>
+                                <h3 style="color: #c4b5fd; margin-bottom: 8px;">🏚️ ${t.volumeControls || 'Individual Volume Controls'}</h3>
                                 <p>${t.volumeControlsDesc || 'Adjust each of the 3 frequencies separately for perfect harmonic balance.'}</p>
                             </div>
                             <div style="margin-bottom: 15px;">
@@ -4207,20 +4207,20 @@
                                 <p>${t.customDurationsDesc || 'Set any session length from 1 minute to hours of continuous playback.'}</p>
                             </div>
                             <div style="margin-bottom: 15px;">
-                                <h3 style="color: #c4b5fd; margin-bottom: 8px;">?? ${t.achievementSystem || 'Achievement System'}</h3>
+                                <h3 style="color: #c4b5fd; margin-bottom: 8px;">🏆 ${t.achievementSystem || 'Achievement System'}</h3>
                                 <p>${t.achievementSystemDesc || 'Track your progress, unlock achievements, and log your sacred sessions.'}</p>
                             </div>
                             <div style="margin-bottom: 15px;">
-                                <h3 style="color: #c4b5fd; margin-bottom: 8px;">?? ${t.freeAppUpgrade || 'Free App Store Upgrade'}</h3>
+                                <h3 style="color: #c4b5fd; margin-bottom: 8px;">📱 ${t.freeAppUpgrade || 'Free App Store Upgrade'}</h3>
                                 <p>${t.freeAppUpgradeDesc || 'When we launch on App Store, premium users get automatic free upgrade with all features!'}</p>
                             </div>
                             <div style="margin-bottom: 15px;">
-                                <h3 style="color: #c4b5fd; margin-bottom: 8px;">?? ${t.exportSave || 'Export & Save Tracks'}</h3>
+                                <h3 style="color: #c4b5fd; margin-bottom: 8px;">💾 ${t.exportSave || 'Export & Save Tracks'}</h3>
                                 <p>${t.exportSaveDesc || 'Save your frequency combinations as WAV files for offline use.'}</p>
                             </div>
                         </div>
                         <div style="background: rgba(251,191,36,0.1); padding: 15px; border-radius: 12px; margin-bottom: 20px; border: 1px solid rgba(251,191,36,0.3);">
-                            <p style="font-size: 18px; color: #fbbf24; font-weight: 600; margin-bottom: 8px;">?? ${t.lifetimeAccess || 'Lifetime Access'} - ${t.oneTimePayment || 'One-Time Payment'}</p>
+                            <p style="font-size: 18px; color: #fbbf24; font-weight: 600; margin-bottom: 8px;">✨ ${t.lifetimeAccess || 'Lifetime Access'} - ${t.oneTimePayment || 'One-Time Payment'}</p>
                             <p style="font-size: 14px; color: #d1d5db;">${t.joinThousands || 'Join thousands unlocking the full Genesis experience'}</p>
                         </div>
                         <div style="display: flex; gap: 15px; justify-content: center; margin-top: 20px;">
@@ -4268,7 +4268,7 @@
                         <div style="background: linear-gradient(135deg, #1a0a2e, #2d1b4e); border-radius: 20px; padding: 25px; max-width: 340px; width: 100%; text-align: center; border: 2px solid rgba(251,191,36,0.4); box-shadow: 0 15px 50px rgba(251,191,36,0.3); position: relative; max-height: 90vh; overflow-y: auto;">
                             <button onclick="closeExportUpgradeModal()" style="position: absolute; top: 10px; right: 15px; background: none; border: none; color: #9ca3af; font-size: 24px; cursor: pointer; z-index: 10;">&times;</button>
                             
-                            <div style="font-size: 40px; margin-bottom: 10px;">??</div>
+                            <div style="font-size: 40px; margin-bottom: 10px;">💾</div>
                             <h2 style="color: #fbbf24; font-size: 22px; margin-bottom: 10px; font-weight: 800;">Export to WAV</h2>
                             <p style="color: #e0d4ff; font-size: 14px; line-height: 1.5; margin-bottom: 15px;">
                                 Export any frequency as a high-quality WAV file!
@@ -4286,7 +4286,7 @@
                             </ul>
                             
                             <a href="https://www.etsy.com/listing/YOUR_EXPORT_LISTING" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #1a0033; padding: 12px 30px; border-radius: 25px; font-size: 16px; font-weight: 800; text-decoration: none; box-shadow: 0 5px 20px rgba(251,191,36,0.4); margin-bottom: 10px;">
-                                ?? Get Export Feature
+                                💾 Get Export Feature
                             </a>
                             
                             <p style="color: #9ca3af; font-size: 11px; margin-top: 10px;">
@@ -4323,25 +4323,25 @@
                 title: "Genesis 1:1",
                 subtitle: "The Sound of Creation",
                 pattern: "Prayer Amplifier",
-                trinityTitle: "?? Trinity Foundation Frequencies ??",
+                trinityTitle: "✨ Trinity Foundation Frequencies ✨",
                 formMatter: "Form/Matter",
                 spiritDivine: "Spirit/Divine",
                 beatPattern: "Beat Pattern",
-                recipesTitle: "?? Trinity Frequency Recipes ??",
-                controlsTitle: "?? Frequency Controls ??",
+                recipesTitle: "✨ Trinity Frequency Recipes ✨",
+                controlsTitle: "✨ Frequency Controls ✨",
                 duration: "Duration",
                 play: "PLAY",
                 pause: "PAUSE",
                 stop: "STOP",
                 export: "EXPORT WAV",
                 reset: "RESET",
-                ready: "?? Ready to Generate Genesis Frequencies ??",
-                stopped: "?? Stopped - Ready to Generate ??",
+                ready: "✨ Ready to Generate Genesis Frequencies ✨",
+                stopped: "✨ Stopped - Ready to Generate ✨",
                 playing: "? Playing",
                 remaining: "remaining",
                 selected: "Selected",
                 autoBalanced: "Auto-balanced volumes",
-                addToHomeText: "?? ADD to Home Screen NOW for best experience!",
+                addToHomeText: "✨ ADD to Home Screen NOW for best experience!",
                 // Companion Navigation
                 genesisCompanion: "Genesis Frequency Companion",
                 genesisFrequencyCompanion: "Genesis Frequency Companion",
