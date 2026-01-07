@@ -1999,6 +1999,12 @@
         .premium-lock {
             position: relative;
             opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        
+        .premium-lock:hover {
+            opacity: 0.85;
+            transform: scale(1.01);
         }
 
         .premium-lock input[type="number"],
@@ -2009,20 +2015,23 @@
         }
 
         .premium-lock::after {
-            content: '🔒';
+            content: '🔒 Premium';
             position: absolute;
             top: 8px;
             right: 8px;
-            font-size: 14px;
+            font-size: 12px;
+            font-weight: 700;
             color: #fbbf24;
-            background: rgba(26, 0, 51, 0.8);
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
+            background: linear-gradient(135deg, rgba(139,92,246,0.95), rgba(107,70,193,0.95));
+            border-radius: 12px;
+            padding: 6px 12px;
             display: flex;
             align-items: center;
             justify-content: center;
+            gap: 4px;
             z-index: 10;
+            box-shadow: 0 2px 8px rgba(251,191,36,0.3);
+            pointer-events: none;
         }
         
         /* Premium unlocked styles - fully enabled controls */
@@ -3699,7 +3708,7 @@
         <div class="section">
             <div class="section-title" data-translate="controlsTitle">Frequency Controls</div>
             <div class="controls">
-                <div class="frequency-controls">
+                <div class="frequency-controls premium-lock" onclick="if(!hasPremiumAccess()) showUpgradeModal();" style="cursor: pointer;">
                     <div class="control-group">
                         <div>
                             <input type="number" id="freq1" min="0.1" max="100000" step="0.1" value="37">
@@ -3728,7 +3737,7 @@
                     </div>
                 </div>
                 
-                <div class="control-group duration-control">
+                <div class="control-group duration-control premium-lock" onclick="if(!hasPremiumAccess()) showUpgradeModal();" style="cursor: pointer;">
                     <label for="duration" data-translate="duration">⏱️ Duration</label>
                     <div class="duration-input-wrapper">
                         <div class="duration-input-container">
@@ -12127,6 +12136,7 @@ function unlockPremiumControls() {
         el.onclick = null; // Remove the upgrade modal trigger
         el.style.opacity = '1';
         el.style.pointerEvents = 'auto';
+        el.style.cursor = 'default';
         
         // Enable volume sliders and buttons, but NOT frequency number inputs
         el.querySelectorAll('input[type="range"], button').forEach(input => {
