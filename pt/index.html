@@ -3912,8 +3912,8 @@ function shareViaWhatsApp() {
                     <div style="display: flex; align-items: center; gap: 10px;">
                         <span style="font-size: 20px;">📱</span>
                         <div>
-                            <div style="color: #e5e7eb; font-size: 14px; font-weight: 600;">Keep Screen Awake</div>
-                            <div style="color: #9ca3af; font-size: 11px;">Prevents audio stopping when screen dims</div>
+                            <div style="color: #e5e7eb; font-size: 14px; font-weight: 600;">Manter Tela Ativa</div>
+                            <div style="color: #9ca3af; font-size: 11px;">Impede o áudio de parar quando a tela escurece</div>
                         </div>
                     </div>
                     <label class="toggle-switch" onclick="event.stopPropagation();">
@@ -3943,7 +3943,7 @@ function shareViaWhatsApp() {
             <div class="category-header" onclick="this.parentElement.classList.toggle('expanded')" style="cursor: pointer;">
                 <div class="category-title">
                     <span class="category-icon">✨</span>
-                    <span data-translate="yourSpiritualJourney">Your Spiritual Journey</span>
+                    <span data-translate="yourSpiritualJourney">Sua Jornada Espiritual</span>
                     <span class="category-icon">✨</span>
                 </div>
                 <div class="category-arrow">▼</div>
@@ -3954,7 +3954,7 @@ function shareViaWhatsApp() {
                 </div>
                 <div style="text-align: center; padding: 10px 15px 20px;">
                     <button onclick="showFullAchievements()" style="background: linear-gradient(90deg, #8b5cf6, #6b46c1); color: #fff; border: none; border-radius: 25px; padding: 12px 25px; font-size: 16px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 15px rgba(139,92,246,0.3); transition: all 0.3s ease;" data-translate="viewAllAchievements">
-                        🏆 View All Achievements
+                        🏆 Ver Todas as Conquistas
                     </button>
                 </div>
             </div>
@@ -6481,273 +6481,273 @@ function shareViaWhatsApp() {
 
         // Sacred achievement definitions with spiritual numerology
         const ACHIEVEMENTS = {
-            // AWAKENING - Foundation of the spiritual journey
+            // DESPERTAR - Fundação da jornada espiritual
             trinityThreshold: {
                 id: 'trinityThreshold',
-                name: '✨ Trinity Threshold',
-                description: 'Complete your first 3 sessions - the sacred trinity of awakening',
+                name: '✨ Limiar da Trindade',
+                description: 'Complete suas primeiras 3 sessões - a sagrada trindade do despertar',
                 category: 'awakening',
                 xpReward: 100,
                 checkUnlock: () => userProgress.totalSessions >= 3
             },
             sevenFoldBlessing: {
                 id: 'sevenFoldBlessing',
-                name: '⭐ Sevenfold Blessing',
-                description: 'Reach 7 sessions - the number of divine completion',
+                name: '⭐ Bênção Sétupla',
+                description: 'Alcance 7 sessões - o número da conclusão divina',
                 category: 'awakening',
                 xpReward: 150,
                 checkUnlock: () => userProgress.totalSessions >= 7
             },
             tenthGate: {
                 id: 'tenthGate',
-                name: '🎯 Tenth Gate',
-                description: 'Pass through the 10th session - gateway to higher consciousness',
+                name: '🎯 Décimo Portal',
+                description: 'Atravesse a 10ª sessão - portal para consciência superior',
                 category: 'awakening',
                 xpReward: 200,
                 checkUnlock: () => userProgress.totalSessions >= 10
             },
 
-            // SESSION MILESTONES - Sacred numbers in spiritual tradition
+            // MARCOS DE SESSÃO - Números sagrados na tradição espiritual
             quarterCentury: {
                 id: 'quarterCentury',
-                name: '⭐ Quarter Century',
-                description: '25 sessions completed - a quarter century of spiritual practice',
+                name: '⭐ Quarto de Século',
+                description: '25 sessões completadas - um quarto de século de prática espiritual',
                 category: 'sessions',
                 xpReward: 300,
                 checkUnlock: () => userProgress.totalSessions >= 25
             },
             mirrorOfForm: {
                 id: 'mirrorOfForm',
-                name: '🪞 Mirror of Form',
-                description: '37 sessions - the mirror that reflects divine form',
+                name: '🪞 Espelho da Forma',
+                description: '37 sessões - o espelho que reflete a forma divina',
                 category: 'sessions',
                 xpReward: 400,
                 checkUnlock: () => userProgress.totalSessions >= 37
             },
             fiftySteps: {
                 id: 'fiftySteps',
-                name: '🏅 Fifty Steps',
-                description: '50 sessions - fifty steps toward enlightenment',
+                name: '🏅 Cinquenta Passos',
+                description: '50 sessões - cinquenta passos rumo à iluminação',
                 category: 'sessions',
                 xpReward: 500,
                 checkUnlock: () => userProgress.totalSessions >= 50
             },
             mirrorOfSpirit: {
                 id: 'mirrorOfSpirit',
-                name: '🔮 Mirror of Spirit',
-                description: '73 sessions - the mirror that reveals divine spirit',
+                name: '🔮 Espelho do Espírito',
+                description: '73 sessões - o espelho que revela o espírito divino',
                 category: 'sessions',
                 xpReward: 600,
                 checkUnlock: () => userProgress.totalSessions >= 73
             },
             centuryGuardian: {
                 id: 'centuryGuardian',
-                name: '🏆 Century Guardian',
-                description: '100 sessions - guardian of a century of sacred practice',
+                name: '🏆 Guardião do Século',
+                description: '100 sessões - guardião de um século de prática sagrada',
                 category: 'sessions',
                 xpReward: 750,
                 checkUnlock: () => userProgress.totalSessions >= 100
             },
             sacredGateway108: {
                 id: 'sacredGateway108',
-                name: '🌟 Sacred Gateway 108',
-                description: '108 sessions - the sacred gateway to enlightenment',
+                name: '🌟 Portal Sagrado 108',
+                description: '108 sessões - o portal sagrado para a iluminação',
                 category: 'sessions',
                 xpReward: 1000,
                 legendary: true,
                 checkUnlock: () => userProgress.totalSessions >= 108
             },
 
-            // TIME MILESTONES - Sacred time investments
+            // MARCOS DE TEMPO - Investimentos de tempo sagrado
             fiveMinuteMark: {
                 id: 'fiveMinuteMark',
-                name: '⏰ Five Minute Mark',
-                description: '5 minutes of sacred listening time',
+                name: '⏰ Marco de Cinco Minutos',
+                description: '5 minutos de escuta sagrada',
                 category: 'time',
                 xpReward: 50,
                 checkUnlock: () => userProgress.totalSeconds >= 300
             },
             halfHourDevotee: {
                 id: 'halfHourDevotee',
-                name: '⏱️ Half Hour Devotee',
-                description: '30 minutes dedicated to frequency healing',
+                name: '⏱️ Devoto de Meia Hora',
+                description: '30 minutos dedicados à cura por frequências',
                 category: 'time',
                 xpReward: 150,
                 checkUnlock: () => userProgress.totalSeconds >= 1800
             },
             hourMaster: {
                 id: 'hourMaster',
-                name: '⏰ Hour Master',
-                description: '1 hour of transformative frequency experience',
+                name: '⏰ Mestre da Hora',
+                description: '1 hora de experiência transformadora com frequências',
                 category: 'time',
                 xpReward: 250,
                 checkUnlock: () => userProgress.totalSeconds >= 3600
             },
             fiveHourPilgrim: {
                 id: 'fiveHourPilgrim',
-                name: '🕓 Five Hour Pilgrim',
-                description: '5 hours on the sacred frequency pilgrimage',
+                name: '🕓 Peregrino de Cinco Horas',
+                description: '5 horas na peregrinação sagrada de frequências',
                 category: 'time',
                 xpReward: 400,
                 checkUnlock: () => userProgress.totalSeconds >= 18000
             },
             tenHourSage: {
                 id: 'tenHourSage',
-                name: '🕛 Ten Hour Sage',
-                description: '10 hours of wisdom through frequency resonance',
+                name: '🕛 Sábio das Dez Horas',
+                description: '10 horas de sabedoria através da ressonância de frequências',
                 category: 'time',
                 xpReward: 600,
                 checkUnlock: () => userProgress.totalSeconds >= 36000
             },
 
-            // STREAK ACHIEVEMENTS - Consecutive spiritual practice
+            // CONQUISTAS DE SEQUÊNCIA - Prática espiritual consecutiva
             threeDayInitiate: {
                 id: 'threeDayInitiate',
-                name: '🔥 Three Day Initiate',
-                description: '3 consecutive days of spiritual practice',
+                name: '🔥 Iniciado de Três Dias',
+                description: '3 dias consecutivos de prática espiritual',
                 category: 'streaks',
                 xpReward: 100,
                 checkUnlock: () => userProgress.currentStreak >= 3
             },
             sevenDaySeeker: {
                 id: 'sevenDaySeeker',
-                name: '🔥 Seven Day Seeker',
-                description: '7 consecutive days - the sacred week of creation',
+                name: '🔥 Buscador de Sete Dias',
+                description: '7 dias consecutivos - a semana sagrada da criação',
                 category: 'streaks',
                 xpReward: 200,
                 checkUnlock: () => userProgress.currentStreak >= 7
             },
             twoWeekChampion: {
                 id: 'twoWeekChampion',
-                name: '🔥 Two Week Champion',
-                description: '14 consecutive days of unwavering commitment',
+                name: '🔥 Campeão de Duas Semanas',
+                description: '14 dias consecutivos de compromisso inabalável',
                 category: 'streaks',
                 xpReward: 300,
                 checkUnlock: () => userProgress.currentStreak >= 14
             },
             twentyOneDayTransformer: {
                 id: 'twentyOneDayTransformer',
-                name: '🔥 21 Day Transformer',
-                description: '21 days - the sacred cycle of transformation',
+                name: '🔥 Transformador de 21 Dias',
+                description: '21 dias - o ciclo sagrado de transformação',
                 category: 'streaks',
                 xpReward: 400,
                 checkUnlock: () => userProgress.currentStreak >= 21
             },
             monthMaster: {
                 id: 'monthMaster',
-                name: '🔥 Month Master',
-                description: '30 consecutive days of spiritual mastery',
+                name: '🔥 Mestre do Mês',
+                description: '30 dias consecutivos de maestria espiritual',
                 category: 'streaks',
                 xpReward: 500,
                 checkUnlock: () => userProgress.currentStreak >= 30
             },
             fortyDayPilgrim: {
                 id: 'fortyDayPilgrim',
-                name: '🌄 Forty Day Pilgrim',
-                description: '40 days - the sacred pilgrimage of purification',
+                name: '🌄 Peregrino de Quarenta Dias',
+                description: '40 dias - a peregrinação sagrada de purificação',
                 category: 'streaks',
                 xpReward: 600,
                 checkUnlock: () => userProgress.currentStreak >= 40
             },
             seventyThreeDayMystic: {
                 id: 'seventyThreeDayMystic',
-                name: '🔮 73 Day Mystic',
-                description: '73 consecutive days - mystical mastery achieved',
+                name: '🔮 Místico de 73 Dias',
+                description: '73 dias consecutivos - maestria mística alcançada',
                 category: 'streaks',
                 xpReward: 800,
                 checkUnlock: () => userProgress.currentStreak >= 73
             },
             oneHundredEightDaySage: {
                 id: 'oneHundredEightDaySage',
-                name: '🧘 108 Day Sage',
-                description: '108 consecutive days - enlightenment embodied',
+                name: '🧘 Sábio de 108 Dias',
+                description: '108 dias consecutivos - iluminação incorporada',
                 category: 'streaks',
                 xpReward: 1000,
                 legendary: true,
                 checkUnlock: () => userProgress.currentStreak >= 108
             },
 
-            // FREQUENCY EXPLORATION - Discovering sacred vibrations
+            // EXPLORAÇÃO DE FREQUÊNCIAS - Descobrindo vibrações sagradas
             trinityMaster: {
                 id: 'trinityMaster',
-                name: '🔱 Trinity Master',
-                description: 'Master the sacred Trinity frequencies (37, 73, 2701 Hz)',
+                name: '🔱 Mestre da Trindade',
+                description: 'Domine as frequências sagradas da Trindade (37, 73, 2701 Hz)',
                 category: 'exploration',
                 xpReward: 250,
                 checkUnlock: () => (userProgress.trackPlayCounts['genesisCreation'] || 0) >= 10
             },
             solfeggioExplorer: {
                 id: 'solfeggioExplorer',
-                name: '🎶 Solfeggio Explorer',
-                description: 'Explore the ancient Solfeggio healing frequencies',
+                name: '🎶 Explorador Solfeggio',
+                description: 'Explore as antigas frequências de cura Solfeggio',
                 category: 'exploration',
                 xpReward: 200,
                 checkUnlock: () => userProgress.categoriesExplored.has('solfeggio')
             },
             angelWhisperer: {
                 id: 'angelWhisperer',
-                name: '👼 Angel Whisperer',
-                description: 'Connect with divine Angel Number frequencies',
+                name: '👼 Sussurrador dos Anjos',
+                description: 'Conecte-se com as frequências divinas dos Números Angelicais',
                 category: 'exploration',
                 xpReward: 200,
                 checkUnlock: () => userProgress.categoriesExplored.has('angelNumbers')
             },
             cosmicTraveler: {
                 id: 'cosmicTraveler',
-                name: '🌌 Cosmic Traveler',
-                description: 'Journey through Cosmic & Planetary frequencies',
+                name: '🌌 Viajante Cósmico',
+                description: 'Viaje através das frequências Cósmicas & Planetárias',
                 category: 'exploration',
                 xpReward: 200,
                 checkUnlock: () => userProgress.categoriesExplored.has('cosmic')
             },
             frequencyScholar: {
                 id: 'frequencyScholar',
-                name: '🎓 Frequency Scholar',
-                description: 'Explore all sacred frequency categories',
+                name: '🎓 Estudioso das Frequências',
+                description: 'Explore todas as categorias de frequências sagradas',
                 category: 'exploration',
                 xpReward: 400,
                 checkUnlock: () => userProgress.categoriesExplored.size >= 5
             },
 
-            // SPECIAL ACTIONS - Sacred rituals and practices
+            // AÇÕES ESPECIAIS - Rituais e práticas sagradas
             waterAlchemist: {
                 id: 'waterAlchemist',
-                name: '💧 Water Alchemist',
-                description: 'Charge water with sacred frequencies 3 times',
+                name: '💧 Alquimista da Água',
+                description: 'Carregue água com frequências sagradas 3 vezes',
                 category: 'special',
                 xpReward: 150,
                 checkUnlock: () => userProgress.waterChargingSessions >= 3
             },
             intentionSetter: {
                 id: 'intentionSetter',
-                name: '🙏 Intention Setter',
-                description: 'Set sacred intentions for 10 sessions',
+                name: '🙏 Definidor de Intenções',
+                description: 'Defina intenções sagradas para 10 sessões',
                 category: 'special',
                 xpReward: 200,
                 checkUnlock: () => userProgress.intentionsSet >= 10
             },
             genesisEvangelist: {
                 id: 'genesisEvangelist',
-                name: '📣 Genesis Evangelist',
-                description: 'Share the Genesis experience with 5 friends',
+                name: '📣 Evangelista Gênesis',
+                description: 'Compartilhe a experiência Gênesis com 5 amigos',
                 category: 'special',
                 xpReward: 250,
                 checkUnlock: () => userProgress.appShares >= 5
             },
             journalKeeper: {
                 id: 'journalKeeper',
-                name: '📝 Journal Keeper',
-                description: 'Record your spiritual journey 10 times',
+                name: '📝 Guardião do Diário',
+                description: 'Registre sua jornada espiritual 10 vezes',
                 category: 'special',
                 xpReward: 150,
                 checkUnlock: () => userProgress.journalEntries >= 10
             },
 
-            // SYNCHRONICITIES - Divine timing and flow
+            // SINCRONICIDADES - Timing e fluxo divino
             morningRitualist: {
                 id: 'morningRitualist',
-                name: '🌅 Morning Ritualist',
-                description: 'Complete 7 sessions before 9 AM',
+                name: '🌅 Ritualista Matinal',
+                description: 'Complete 7 sessões antes das 9h',
                 category: 'synchronicity',
                 xpReward: 300,
                 checkUnlock: () => {
@@ -6759,8 +6759,8 @@ function shareViaWhatsApp() {
             },
             eveningContemplator: {
                 id: 'eveningContemplator',
-                name: '🌙 Evening Contemplator',
-                description: 'Complete 7 sessions after 8 PM',
+                name: '🌙 Contemplador Noturno',
+                description: 'Complete 7 sessões após as 20h',
                 category: 'synchronicity',
                 xpReward: 300,
                 checkUnlock: () => {
@@ -6772,8 +6772,8 @@ function shareViaWhatsApp() {
             },
             perfectTiming: {
                 id: 'perfectTiming',
-                name: '✨ Perfect Timing',
-                description: 'Complete sessions at exactly 11:11 or 22:22',
+                name: '✨ Timing Perfeito',
+                description: 'Complete sessões exatamente às 11:11 ou 22:22',
                 category: 'synchronicity',
                 xpReward: 500,
                 special: true,
@@ -6785,78 +6785,78 @@ function shareViaWhatsApp() {
                 }
             },
 
-            // MASTERY - Ultimate spiritual achievements
+            // MAESTRIA - Conquistas espirituais supremas
             levelApprentice: {
                 id: 'levelApprentice',
-                name: '⭐ Level 3: Apprentice',
-                description: 'Reach spiritual apprentice level',
+                name: '⭐ Nível 3: Aprendiz',
+                description: 'Alcance o nível de aprendiz espiritual',
                 category: 'mastery',
                 xpReward: 100,
                 checkUnlock: () => userProgress.level >= 3
             },
             levelSeeker: {
                 id: 'levelSeeker',
-                name: '🌟 Level 7: Seeker',
-                description: 'Attain seeker level in your spiritual journey',
+                name: '🌟 Nível 7: Buscador',
+                description: 'Atinja o nível de buscador em sua jornada espiritual',
                 category: 'mastery',
                 xpReward: 200,
                 checkUnlock: () => userProgress.level >= 7
             },
             levelAwakened: {
                 id: 'levelAwakened',
-                name: '✨ Level 12: Awakened',
-                description: 'Awaken to higher spiritual consciousness',
+                name: '✨ Nível 12: Desperto',
+                description: 'Desperte para a consciência espiritual superior',
                 category: 'mastery',
                 xpReward: 300,
                 checkUnlock: () => userProgress.level >= 12
             },
             levelPractitioner: {
                 id: 'levelPractitioner',
-                name: '🔮 Level 21: Practitioner',
-                description: 'Master practitioner of sacred frequencies',
+                name: '🔮 Nível 21: Praticante',
+                description: 'Praticante mestre de frequências sagradas',
                 category: 'mastery',
                 xpReward: 400,
                 checkUnlock: () => userProgress.level >= 21
             },
             levelMirrorOfForm: {
                 id: 'levelMirrorOfForm',
-                name: '🪞 Level 30: Mirror of Form',
-                description: 'Reflect divine form through your practice',
+                name: '🪞 Nível 30: Espelho da Forma',
+                description: 'Reflita a forma divina através de sua prática',
                 category: 'mastery',
                 xpReward: 500,
                 checkUnlock: () => userProgress.level >= 30
             },
             levelMirrorOfSpirit: {
                 id: 'levelMirrorOfSpirit',
-                name: '🔮 Level 37: Mirror of Spirit',
-                description: 'Reflect divine spirit in all your actions',
+                name: '🔮 Nível 37: Espelho do Espírito',
+                description: 'Reflita o espírito divino em todas as suas ações',
                 category: 'mastery',
                 xpReward: 600,
                 checkUnlock: () => userProgress.level >= 37
             },
             levelAdept: {
                 id: 'levelAdept',
-                name: '💫 Level 50: Adept',
-                description: 'True adept of frequency mastery',
+                name: '💫 Nível 50: Adepto',
+                description: 'Verdadeiro adepto da maestria de frequências',
                 category: 'mastery',
                 xpReward: 750,
                 checkUnlock: () => userProgress.level >= 50
             },
             levelAscendedMaster: {
                 id: 'levelAscendedMaster',
-                name: '👑 Level 108: Ascended Master',
-                description: 'Ascended master of sacred frequencies',
+                name: '👑 Nível 108: Mestre Ascensionado',
+                description: 'Mestre ascensionado de frequências sagradas',
                 category: 'mastery',
                 xpReward: 1500,
                 legendary: true,
                 checkUnlock: () => userProgress.level >= 108
             },
 
-            // LEGENDARY ACHIEVEMENTS - Ultimate spiritual milestones
+            // CONQUISTAS LENDÁRIAS - Marcos espirituais supremos
             genesisMaster: {
                 id: 'genesisMaster',
-                name: '🏆 Genesis Master',
-                description: 'Unlock all achievements in the Genesis system',
+                name: '🏆 Mestre Gênesis',
+                description: 'Desbloqueie todas as conquistas no sistema Gênesis',
                 category: 'mastery',
                 xpReward: 2000,
                 legendary: true,
@@ -6864,8 +6864,8 @@ function shareViaWhatsApp() {
             },
             eternalFlame: {
                 id: 'eternalFlame',
-                name: '🔥 Eternal Flame',
-                description: 'Maintain a 365-sequência de dias of spiritual practice',
+                name: '🔥 Chama Eterna',
+                description: 'Mantenha uma sequência de 365 dias de prática espiritual',
                 category: 'mastery',
                 xpReward: 3000,
                 legendary: true,
@@ -6873,7 +6873,7 @@ function shareViaWhatsApp() {
                 checkUnlock: () => userProgress.currentStreak >= 365
             },
             
-            // LICENSE ACHIEVEMENTS - Unlocking premium tiers
+            // CONQUISTAS DE LICENÇA - Desbloqueando níveis premium
             premiumUnlock: {
                 id: 'premiumUnlock',
                 name: '⭐ Ascensão Premium',
@@ -9070,43 +9070,43 @@ function shareViaWhatsApp() {
             
             const categories = {
                 awakening: {
-                    name: '✨ Awakening',
+                    name: '✨ Despertar',
                     achievements: ['trinityThreshold', 'sevenFoldBlessing', 'tenthGate']
                 },
                 sessions: {
-                    name: '🌅 Session Milestones',
+                    name: '🌅 Marcos de Sessão',
                     achievements: ['quarterCentury', 'mirrorOfForm', 'fiftySteps', 'mirrorOfSpirit', 'centuryGuardian', 'sacredGateway108']
                 },
                 time: {
-                    name: '⏰ Time Milestones',
+                    name: '⏰ Marcos de Tempo',
                     achievements: ['fiveMinuteMark', 'halfHourDevotee', 'hourMaster', 'fiveHourPilgrim', 'tenHourSage']
                 },
                 streaks: {
-                    name: '🔥 Streak Achievements',
+                    name: '🔥 Conquistas de Sequência',
                     achievements: ['threeDayInitiate', 'sevenDaySeeker', 'twoWeekChampion', 'twentyOneDayTransformer', 'monthMaster', 'fortyDayPilgrim', 'seventyThreeDayMystic', 'oneHundredEightDaySage']
                 },
                 exploration: {
-                    name: '🎵 Frequency Exploration',
+                    name: '🎵 Exploração de Frequências',
                     achievements: ['explorer', 'categoryConqueror', 'frequencyMaster']
                 },
                 specialty: {
-                    name: '⭐ Specialty Tracks',
+                    name: '⭐ Faixas Especiais',
                     achievements: ['genesisScholar', 'solfeggioAdept', 'angelWhisperer', 'chakraBalancer']
                 },
                 duration: {
-                    name: '⏱️ Session Types',
+                    name: '⏱️ Tipos de Sessão',
                     achievements: ['quickSession', 'deepMeditation', 'marathonListener']
                 },
                 timing: {
-                    name: '✨ Perfect Timing',
+                    name: '✨ Timing Perfeito',
                     achievements: ['earlyBird', 'nightOwl', 'midnightMystic']
                 },
                 special: {
-                    name: '🏆 Special Activities',
+                    name: '🏆 Atividades Especiais',
                     achievements: ['waterCharger', 'crystalHealer', 'intentionSetter', 'reflectiveSoul']
                 },
                 social: {
-                    name: '👥 Community',
+                    name: '👥 Comunidade',
                     achievements: ['shareTheLight', 'helpOthers']
                 }
             };
@@ -9123,14 +9123,14 @@ function shareViaWhatsApp() {
                             margin-bottom: 15px;
                             text-shadow: 0 0 20px rgba(251,191,36,0.5);
                         ">
-                            🏆 Achievements
+                            🏆 Conquistas
                         </h2>
                         <p style="
                             color: #a78bfa;
                             font-size: 16px;
                             margin-bottom: 20px;
                         ">
-                            Unlock rewards as you progress on your journey
+                            Desbloqueie recompensas conforme progride em sua jornada
                         </p>
                         
                         <!-- Overall Progress -->
@@ -9153,7 +9153,7 @@ function shareViaWhatsApp() {
                                         ${userProgress.achievements.size}
                                     </div>
                                     <div style="color: #a78bfa; font-size: 13px;">
-                                        Unlocked
+                                        Desbloqueadas
                                     </div>
                                 </div>
                                 
@@ -9162,7 +9162,7 @@ function shareViaWhatsApp() {
                                         ${Object.keys(ACHIEVEMENTS).length - userProgress.achievements.size}
                                     </div>
                                     <div style="color: #a78bfa; font-size: 13px;">
-                                        Remaining
+                                        Restantes
                                     </div>
                                 </div>
                                 
@@ -9171,7 +9171,7 @@ function shareViaWhatsApp() {
                                         ${Math.round((userProgress.achievements.size / Object.keys(ACHIEVEMENTS).length) * 100)}%
                                     </div>
                                     <div style="color: #a78bfa; font-size: 13px;">
-                                        Complete
+                                        Completo
                                     </div>
                                 </div>
                             </div>
@@ -9258,7 +9258,7 @@ function shareViaWhatsApp() {
                         margin-bottom: 15px;
                     ">
                         <h3 style="color: #fbbf24; font-size: 20px; margin: 0;">
-                            🏆 Achievements
+                            🏆 Conquistas
                         </h3>
                         <button onclick="showFullAchievements()" style="
                             background: rgba(139,92,246,0.2);
@@ -9270,7 +9270,7 @@ function shareViaWhatsApp() {
                             font-weight: 600;
                             cursor: pointer;
                         ">
-                            View All ➡️
+                            Ver Todas ➡️
                         </button>
                     </div>
                     
@@ -9290,7 +9290,7 @@ function shareViaWhatsApp() {
                                 ${unlockedCount}
                             </div>
                             <div style="color: #a78bfa; font-size: 12px;">
-                                Unlocked
+                                Desbloqueadas
                             </div>
                         </div>
                         
@@ -9305,7 +9305,7 @@ function shareViaWhatsApp() {
                                 ${totalAchievements - unlockedCount}
                             </div>
                             <div style="color: #a78bfa; font-size: 12px;">
-                                To Discover
+                                A Descobrir
                             </div>
                         </div>
                     </div>
@@ -9317,7 +9317,7 @@ function shareViaWhatsApp() {
                             padding: 15px;
                         ">
                             <div style="color: #a78bfa; font-size: 12px; margin-bottom: 12px; font-weight: 600;">
-                                RECENTLY UNLOCKED
+                                DESBLOQUEADAS RECENTEMENTE
                             </div>
                             ${recentUnlocks.map(({ id, achievement }) => `
                                 <div style="
@@ -9347,7 +9347,7 @@ function shareViaWhatsApp() {
                             padding: 20px;
                             font-style: italic;
                         ">
-                            Complete your first session to start unlocking achievements! ✨
+                            Complete sua primeira sessão para começar a desbloquear conquistas! ✨
                         </div>
                     `}
                     
@@ -9384,7 +9384,7 @@ function shareViaWhatsApp() {
                             margin-top: 15px;
                         ">
                             <div style="color: #fbbf24; font-size: 12px; margin-bottom: 8px; font-weight: 600;">
-                                🎯 NEXT ACHIEVEMENT
+                                🎯 PRÓXIMA CONQUISTA
                             </div>
                             <div style="display: flex; align-items: center; gap: 12px;">
                                 <div style="font-size: 28px;">${achievement.name.split(' ')[0]}</div>
@@ -9413,7 +9413,7 @@ function shareViaWhatsApp() {
                     margin-top: 15px;
                 ">
                     <div style="color: #fbbf24; font-size: 12px; margin-bottom: 8px; font-weight: 600;">
-                        🎯 ALMOST THERE!
+                        🎯 QUASE LÁ!
                     </div>
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
                         <div style="font-size: 28px;">${nextUp.achievement.name.split(' ')[0]}</div>
@@ -9566,108 +9566,108 @@ function shareViaWhatsApp() {
         function getAchievementProgress(id) {
             // Session-based
             if (id === 'trinityThreshold') {
-                return { percentage: Math.min((userProgress.totalSessions / 3) * 100, 100), text: `${userProgress.totalSessions}/3 sessions` };
+                return { percentage: Math.min((userProgress.totalSessions / 3) * 100, 100), text: `${userProgress.totalSessions}/3 sessões` };
             }
             if (id === 'sevenFoldBlessing') {
-                return { percentage: Math.min((userProgress.totalSessions / 7) * 100, 100), text: `${userProgress.totalSessions}/7 sessions` };
+                return { percentage: Math.min((userProgress.totalSessions / 7) * 100, 100), text: `${userProgress.totalSessions}/7 sessões` };
             }
             if (id === 'tenthGate') {
-                return { percentage: Math.min((userProgress.totalSessions / 10) * 100, 100), text: `${userProgress.totalSessions}/10 sessions` };
+                return { percentage: Math.min((userProgress.totalSessions / 10) * 100, 100), text: `${userProgress.totalSessions}/10 sessões` };
             }
             if (id === 'quarterCentury') {
-                return { percentage: Math.min((userProgress.totalSessions / 25) * 100, 100), text: `${userProgress.totalSessions}/25 sessions` };
+                return { percentage: Math.min((userProgress.totalSessions / 25) * 100, 100), text: `${userProgress.totalSessions}/25 sessões` };
             }
             if (id === 'mirrorOfForm') {
-                return { percentage: Math.min((userProgress.totalSessions / 37) * 100, 100), text: `${userProgress.totalSessions}/37 sessions` };
+                return { percentage: Math.min((userProgress.totalSessions / 37) * 100, 100), text: `${userProgress.totalSessions}/37 sessões` };
             }
             if (id === 'fiftySteps') {
-                return { percentage: Math.min((userProgress.totalSessions / 50) * 100, 100), text: `${userProgress.totalSessions}/50 sessions` };
+                return { percentage: Math.min((userProgress.totalSessions / 50) * 100, 100), text: `${userProgress.totalSessions}/50 sessões` };
             }
             if (id === 'mirrorOfSpirit') {
-                return { percentage: Math.min((userProgress.totalSessions / 73) * 100, 100), text: `${userProgress.totalSessions}/73 sessions` };
+                return { percentage: Math.min((userProgress.totalSessions / 73) * 100, 100), text: `${userProgress.totalSessions}/73 sessões` };
             }
             if (id === 'centuryGuardian') {
-                return { percentage: Math.min((userProgress.totalSessions / 100) * 100, 100), text: `${userProgress.totalSessions}/100 sessions` };
+                return { percentage: Math.min((userProgress.totalSessions / 100) * 100, 100), text: `${userProgress.totalSessions}/100 sessões` };
             }
             if (id === 'sacredGateway108') {
-                return { percentage: Math.min((userProgress.totalSessions / 108) * 100, 100), text: `${userProgress.totalSessions}/108 sessions` };
+                return { percentage: Math.min((userProgress.totalSessions / 108) * 100, 100), text: `${userProgress.totalSessions}/108 sessões` };
             }
 
             // Time-based
             if (id === 'fiveMinuteMark') {
                 const mins = Math.floor(userProgress.totalSeconds / 60);
-                return { percentage: Math.min((mins / 5) * 100, 100), text: `${mins}/5 minutes` };
+                return { percentage: Math.min((mins / 5) * 100, 100), text: `${mins}/5 minutos` };
             }
             if (id === 'halfHourDevotee') {
                 const mins = Math.floor(userProgress.totalSeconds / 60);
-                return { percentage: Math.min((mins / 30) * 100, 100), text: `${mins}/30 minutes` };
+                return { percentage: Math.min((mins / 30) * 100, 100), text: `${mins}/30 minutos` };
             }
             if (id === 'hourMaster') {
                 const hours = Math.floor(userProgress.totalSeconds / 3600);
-                return { percentage: Math.min(hours * 100, 100), text: `${hours}/1 hour` };
+                return { percentage: Math.min(hours * 100, 100), text: `${hours}/1 hora` };
             }
             if (id === 'fiveHourPilgrim') {
                 const hours = Math.floor(userProgress.totalSeconds / 3600);
-                return { percentage: Math.min((hours / 5) * 100, 100), text: `${hours}/5 hours` };
+                return { percentage: Math.min((hours / 5) * 100, 100), text: `${hours}/5 horas` };
             }
             if (id === 'tenHourSage') {
                 const hours = Math.floor(userProgress.totalSeconds / 3600);
-                return { percentage: Math.min((hours / 10) * 100, 100), text: `${hours}/10 hours` };
+                return { percentage: Math.min((hours / 10) * 100, 100), text: `${hours}/10 horas` };
             }
 
             // Streak-based
             if (id === 'threeDayInitiate') {
-                return { percentage: Math.min((userProgress.currentStreak / 3) * 100, 100), text: `${userProgress.currentStreak}/3 days` };
+                return { percentage: Math.min((userProgress.currentStreak / 3) * 100, 100), text: `${userProgress.currentStreak}/3 dias` };
             }
             if (id === 'sevenDaySeeker') {
-                return { percentage: Math.min((userProgress.currentStreak / 7) * 100, 100), text: `${userProgress.currentStreak}/7 days` };
+                return { percentage: Math.min((userProgress.currentStreak / 7) * 100, 100), text: `${userProgress.currentStreak}/7 dias` };
             }
             if (id === 'twoWeekChampion') {
-                return { percentage: Math.min((userProgress.currentStreak / 14) * 100, 100), text: `${userProgress.currentStreak}/14 days` };
+                return { percentage: Math.min((userProgress.currentStreak / 14) * 100, 100), text: `${userProgress.currentStreak}/14 dias` };
             }
             if (id === 'twentyOneDayTransformer') {
-                return { percentage: Math.min((userProgress.currentStreak / 21) * 100, 100), text: `${userProgress.currentStreak}/21 days` };
+                return { percentage: Math.min((userProgress.currentStreak / 21) * 100, 100), text: `${userProgress.currentStreak}/21 dias` };
             }
             if (id === 'monthMaster') {
-                return { percentage: Math.min((userProgress.currentStreak / 30) * 100, 100), text: `${userProgress.currentStreak}/30 days` };
+                return { percentage: Math.min((userProgress.currentStreak / 30) * 100, 100), text: `${userProgress.currentStreak}/30 dias` };
             }
             if (id === 'fortyDayPilgrim') {
-                return { percentage: Math.min((userProgress.currentStreak / 40) * 100, 100), text: `${userProgress.currentStreak}/40 days` };
+                return { percentage: Math.min((userProgress.currentStreak / 40) * 100, 100), text: `${userProgress.currentStreak}/40 dias` };
             }
             if (id === 'seventyThreeDayMystic') {
-                return { percentage: Math.min((userProgress.currentStreak / 73) * 100, 100), text: `${userProgress.currentStreak}/73 days` };
+                return { percentage: Math.min((userProgress.currentStreak / 73) * 100, 100), text: `${userProgress.currentStreak}/73 dias` };
             }
             if (id === 'oneHundredEightDaySage') {
-                return { percentage: Math.min((userProgress.currentStreak / 108) * 100, 100), text: `${userProgress.currentStreak}/108 days` };
+                return { percentage: Math.min((userProgress.currentStreak / 108) * 100, 100), text: `${userProgress.currentStreak}/108 dias` };
             }
 
             // Special actions
             if (id === 'waterAlchemist') {
-                return { percentage: Math.min((userProgress.waterChargingSessions / 3) * 100, 100), text: `${userProgress.waterChargingSessions}/3 charges` };
+                return { percentage: Math.min((userProgress.waterChargingSessions / 3) * 100, 100), text: `${userProgress.waterChargingSessions}/3 cargas` };
             }
             if (id === 'intentionSetter') {
-                return { percentage: Math.min((userProgress.intentionsSet / 10) * 100, 100), text: `${userProgress.intentionsSet}/10 intentions` };
+                return { percentage: Math.min((userProgress.intentionsSet / 10) * 100, 100), text: `${userProgress.intentionsSet}/10 intenções` };
             }
             if (id === 'genesisEvangelist') {
-                return { percentage: Math.min((userProgress.appShares / 5) * 100, 100), text: `${userProgress.appShares}/5 shares` };
+                return { percentage: Math.min((userProgress.appShares / 5) * 100, 100), text: `${userProgress.appShares}/5 compartilhamentos` };
             }
             if (id === 'trinityMaster') {
                 const count = userProgress.trackPlayCounts['genesisCreation'] || 0;
-                return { percentage: Math.min((count / 10) * 100, 100), text: `${count}/10 sessions` };
+                return { percentage: Math.min((count / 10) * 100, 100), text: `${count}/10 sessões` };
             }
 
             return null;
         }
 
         // ============================================
-        // DAILY CHALLENGES SYSTEM
+        // SISTEMA DE DESAFIOS DIÁRIOS
         // ============================================
 
         const DAILY_CHALLENGES = [
             {
                 id: 'morningDevotion',
-                name: '🌅 Morning Devotion',
-                description: 'Complete a session before 9 AM',
+                name: '🌅 Devoção Matinal',
+                description: 'Complete uma sessão antes das 9h',
                 xpReward: 50,
                 check: (session) => {
                     const hour = parseInt(session.time.split(':')[0]);
@@ -9676,8 +9676,8 @@ function shareViaWhatsApp() {
             },
             {
                 id: 'eveningReflection',
-                name: '🌙 Evening Reflection',
-                description: 'Complete a session after 8 PM',
+                name: '🌙 Reflexão Noturna',
+                description: 'Complete uma sessão após as 20h',
                 xpReward: 50,
                 check: (session) => {
                     const hour = parseInt(session.time.split(':')[0]);
@@ -9687,35 +9687,35 @@ function shareViaWhatsApp() {
             {
                 id: 'waterCeremony',
                 name: '💧 Water Ceremony',
-                description: 'Charge water today',
+                description: 'Carregue água hoje',
                 xpReward: 60,
                 check: (session) => session.waterCharging === true
             },
             {
                 id: 'backToBasics',
-                name: '🔱 Back to Basics',
-                description: 'Use Genesis Creation track',
+                name: '🔱 Volta às Origens',
+                description: 'Use a faixa Criação do Gênesis',
                 xpReward: 50,
                 check: (session) => session.trackId === 'genesisCreation'
             },
             {
                 id: 'angelMessage',
-                name: '👼 Angel Message',
-                description: 'Try an Angel Number frequency',
+                name: '👼 Mensagem Angelical',
+                description: 'Experimente uma frequência de Número Angelical',
                 xpReward: 50,
                 check: (session) => session.category === 'angelNumbers'
             },
             {
                 id: 'extendedPractice',
-                name: '⏳ Extended Practice',
-                description: 'Session of 20+ minutes',
+                name: '⏳ Prática Estendida',
+                description: 'Sessão de 20+ minutos',
                 xpReward: 75,
                 check: (session) => session.duration >= 1200
             },
             {
                 id: 'discovery',
-                name: '🔭 Discovery',
-                description: 'Try a frequency you haven\'t used in 7+ days',
+                name: '🔭 Descoberta',
+                description: 'Experimente uma frequência que não usou nos últimos 7+ dias',
                 xpReward: 60,
                 check: (session) => {
                     // Check if this track was used in last 7 days
@@ -9726,8 +9726,8 @@ function shareViaWhatsApp() {
             },
             {
                 id: 'intentionalListening',
-                name: '🙏 Intentional Listening',
-                description: 'Set an intention before your session',
+                name: '🙏 Escuta Intencional',
+                description: 'Defina uma intenção antes da sua sessão',
                 xpReward: 50,
                 check: (session) => session.intentionSet === true
             }
@@ -9765,7 +9765,7 @@ function shareViaWhatsApp() {
         }
 
         function showDailyChallengeComplete(challenge) {
-            showNotification(`🌟 Daily Challenge Complete! ${challenge.name}`);
+            showNotification(`🌟 Desafio Diário Completo! ${challenge.name}`);
         }
 
         function renderDailyChallenge() {
@@ -9793,7 +9793,7 @@ function shareViaWhatsApp() {
                             border-radius: 20px;
                             font-size: 12px;
                             font-weight: 700;
-                        ">✅ COMPLETED</div>
+                        ">✅ COMPLETO</div>
                     ` : ''}
 
                     <div style="display: flex; align-items: center; gap: 15px;">
@@ -9802,7 +9802,7 @@ function shareViaWhatsApp() {
                         </div>
                         <div style="flex: 1;">
                             <div style="color: #fbbf24; font-size: 14px; font-weight: 600; margin-bottom: 5px;">
-                                TODAY'S CHALLENGE
+                                DESAFIO DE HOJE
                             </div>
                             <h4 style="color: #fff; font-size: 18px; font-weight: 600; margin-bottom: 5px;">
                                 ${challenge.name}
