@@ -4017,7 +4017,7 @@ function shareViaWhatsApp() {
                     font-weight: 700;
                     cursor: pointer;
                     box-shadow: 0 4px 25px rgba(16, 185, 129, 0.5);
-                ">Register Your Interest</button>
+                ">Registrar Seu Interesse</button>
             </div>
         </div>
     </div>
@@ -4028,12 +4028,12 @@ function shareViaWhatsApp() {
             <span class="now-playing-icon">🎵</span>
             <div class="now-playing-text">
                 <span class="now-playing-label">Reproduzindo Agora</span>
-                <span class="now-playing-track" id="nowPlayingTrack">Genesis Creation</span>
+                <span class="now-playing-track" id="nowPlayingTrack">Criação do Gênesis</span>
             </div>
         </div>
         <div class="now-playing-time" id="nowPlayingTime">00:00</div>
         <div class="now-playing-controls">
-            <button class="now-playing-btn stop-btn" onclick="window.generator && window.generator.stop()" title="Stop">⏹</button>
+            <button class="now-playing-btn stop-btn" onclick="window.generator && window.generator.stop()" title="Parar">⏹</button>
         </div>
     </div>
 
@@ -10351,8 +10351,8 @@ function shareViaWhatsApp() {
             if (panel) panel.style.display = 'none';
             
             // Find Genesis Creation in trinityRecipes
-            const biblicalCategory = trinityRecipes['Biblical & Original'];
-            const genesisRecipe = biblicalCategory ? biblicalCategory.find(r => r.name.includes('Genesis Creation')) : null;
+            const biblicalCategory = trinityRecipes['Bíblico & Original'];
+            const genesisRecipe = biblicalCategory ? biblicalCategory.find(r => r.name.includes('Criação do Gênesis')) : null;
             
             if (genesisRecipe && window.generator) {
                 window.generator.selectRecipe(genesisRecipe);
@@ -10641,60 +10641,60 @@ function shareViaWhatsApp() {
         // Helper function to get recipe translation key prefix
         function getRecipeTranslationKey(recipeName) {
             const keyMap = {
-                // Chakra Frequencies
-                'Root Chakra': 'recipeRootChakra',
-                'Sacral Chakra': 'recipeSacralChakra',
-                'Solar Plexus Chakra': 'recipeSolarPlexus',
-                'Heart Chakra': 'recipeHeartChakra',
-                'Throat Chakra': 'recipeThroatChakra',
-                'Third Eye Chakra': 'recipeThirdEyeChakra',
-                'Crown Chakra': 'recipeCrownChakra',
-                // Biblical & Original
-                'Genesis Creation': 'recipeGenesisCreation',
-                'Divine Abundance': 'recipeDivineAbundance',
-                '12 Apostles': 'recipe12Apostles',
-                '7 Churches': 'recipe7Churches',
-                '40 Days': 'recipe40Days',
-                '3 Days': 'recipe3Days',
-                // Solfeggio & Healing
-                'Sacred Healing': 'recipeSacredHealing',
-                'Love Frequency': 'recipeLoveFrequency',
-                'Liberation (396)': 'recipeLiberation396',
-                'Resolution (417)': 'recipeResolution417',
-                'Transformation (639)': 'recipeTransformation639',
-                'Awakening (852)': 'recipeAwakening852',
-                'Higher Self': 'recipeHigherSelf',
-                'Intuition': 'recipeIntuition',
-                // Angel Numbers
-                'Angel Numbers': 'recipeAngel111',
-                'Angel 222': 'recipeAngel222',
-                'Angel 333': 'recipeAngel333',
-                'Angel 444': 'recipeAngel444',
-                'Angel 555': 'recipeAngel555',
-                'Angel 666': 'recipeAngel666',
-                'Angel 777': 'recipeAngel777',
-                'Angel 888': 'recipeAngel888',
-                'Angel 999': 'recipeAngel999',
-                // Master Numbers
-                'Master 11:11': 'recipeMaster11',
-                'Master 22': 'recipeMaster22',
-                'Master 33': 'recipeMaster33',
-                'Master 44': 'recipeMaster44',
-                'Master 55': 'recipeMaster55',
-                // Cosmic & Planetary
-                'Earth Resonance': 'recipeEarthResonance',
-                'Venus Love': 'recipeVenusLove',
-                'Mars Action': 'recipeMarsAction',
+                // Chakra Frequencies (Portuguese names)
+                'Chakra Raiz': 'recipeRootChakra',
+                'Chakra Sacral': 'recipeSacralChakra',
+                'Chakra Plexo Solar': 'recipeSolarPlexus',
+                'Chakra Cardíaco': 'recipeHeartChakra',
+                'Chakra Laríngeo': 'recipeThroatChakra',
+                'Chakra Terceiro Olho': 'recipeThirdEyeChakra',
+                'Chakra Coronário': 'recipeCrownChakra',
+                // Biblical & Original (Portuguese names)
+                'Criação do Gênesis': 'recipeGenesisCreation',
+                'Abundância Divina': 'recipeDivineAbundance',
+                '12 Apóstolos': 'recipe12Apostles',
+                '7 Igrejas': 'recipe7Churches',
+                '40 Dias': 'recipe40Days',
+                '3 Dias': 'recipe3Days',
+                // Solfeggio & Healing (Portuguese names)
+                'Cura Sagrada': 'recipeSacredHealing',
+                'Frequência do Amor': 'recipeLoveFrequency',
+                'Libertação (396)': 'recipeLiberation396',
+                'Resolução (417)': 'recipeResolution417',
+                'Transformação (639)': 'recipeTransformation639',
+                'Despertar (852)': 'recipeAwakening852',
+                'Eu Superior': 'recipeHigherSelf',
+                'Intuição': 'recipeIntuition',
+                // Angel Numbers (Portuguese names)
+                'Números Angelicais': 'recipeAngel111',
+                'Anjo 222': 'recipeAngel222',
+                'Anjo 333': 'recipeAngel333',
+                'Anjo 444': 'recipeAngel444',
+                'Anjo 555': 'recipeAngel555',
+                'Anjo 666': 'recipeAngel666',
+                'Anjo 777': 'recipeAngel777',
+                'Anjo 888': 'recipeAngel888',
+                'Anjo 999': 'recipeAngel999',
+                // Master Numbers (Portuguese names)
+                'Mestre 11:11': 'recipeMaster11',
+                'Mestre 22': 'recipeMaster22',
+                'Mestre 33': 'recipeMaster33',
+                'Mestre 44': 'recipeMaster44',
+                'Mestre 55': 'recipeMaster55',
+                // Cosmic & Planetary (Portuguese names)
+                'Ressonância da Terra': 'recipeEarthResonance',
+                'Amor de Vênus': 'recipeVenusLove',
+                'Ação de Marte': 'recipeMarsAction',
                 'Fibonacci 144': 'recipeFibonacci144',
                 'Pi 314': 'recipePi314',
-                'Golden Ratio': 'recipeGoldenRatio',
-                // Wellness & States
-                'Pain Relief': 'recipePainRelief',
-                'Stress Relief': 'recipeStressRelief',
-                'Sleep Deep': 'recipeSleepDeep',
-                'Focus Clear': 'recipeFocusClear',
-                'Memory Boost': 'recipeMemoryBoost',
-                'Miracle Tone': 'recipeMiracleTone'
+                'Proporção Áurea': 'recipeGoldenRatio',
+                // Wellness & States (Portuguese names)
+                'Alívio da Dor': 'recipePainRelief',
+                'Alívio do Estresse': 'recipeStressRelief',
+                'Sono Profundo': 'recipeSleepDeep',
+                'Foco Claro': 'recipeFocusClear',
+                'Aumento de Memória': 'recipeMemoryBoost',
+                'Tom do Milagre': 'recipeMiracleTone'
             };
             return keyMap[recipeName] || null;
         }
@@ -10833,15 +10833,15 @@ function shareViaWhatsApp() {
             loadRecipes() {
                 this.elements.recipes.innerHTML = '';
                 
-                // Define category order
+                // Define category order (Portuguese names)
                 const categoryOrder = [
-                    "Biblical & Original",
-                    "Angel Numbers",
-                    "Cosmic & Planetary",
-                    "Master Numbers",
-                    "Solfeggio & Healing",
-                    "Wellness & States",
-                    "Chakra Frequencies"
+                    "Bíblico & Original",
+                    "Números Angelicais",
+                    "Cósmico & Planetário",
+                    "Números Mestres",
+                    "Solfeggio & Cura",
+                    "Bem-estar & Estados",
+                    "Frequências de Chakra"
                 ];
                 
                 // Create category tabs in specified order
@@ -10854,23 +10854,23 @@ function shareViaWhatsApp() {
                     categoryTab.className = 'category-tab';
                     
                     const categoryIcons = {
-                        "Biblical & Original": "✡️",
-                        "Solfeggio & Healing": "💜",
-                        "Angel Numbers": "👼",
-                        "Master Numbers": "🔢",
-                        "Cosmic & Planetary": "🌌",
-                        "Wellness & States": "🧘",
-                        "Chakra Frequencies": "🌈"
+                        "Bíblico & Original": "✡️",
+                        "Solfeggio & Cura": "💜",
+                        "Números Angelicais": "👼",
+                        "Números Mestres": "🔢",
+                        "Cósmico & Planetário": "🌌",
+                        "Bem-estar & Estados": "🧘",
+                        "Frequências de Chakra": "🌈"
                     };
 
                     const categoryKeys = {
-                        "Biblical & Original": "catBiblical",
-                        "Solfeggio & Healing": "catSolfeggio",
-                        "Angel Numbers": "catAngel",
-                        "Master Numbers": "catMaster",
-                        "Cosmic & Planetary": "catCosmic",
-                        "Wellness & States": "catWellness",
-                        "Chakra Frequencies": "catChakra"
+                        "Bíblico & Original": "catBiblical",
+                        "Solfeggio & Cura": "catSolfeggio",
+                        "Números Angelicais": "catAngel",
+                        "Números Mestres": "catMaster",
+                        "Cósmico & Planetário": "catCosmic",
+                        "Bem-estar & Estados": "catWellness",
+                        "Frequências de Chakra": "catChakra"
                     };
                     
                     categoryTab.innerHTML = `
@@ -10904,8 +10904,8 @@ function shareViaWhatsApp() {
                                 <div class="recipe-freqs">${recipe.frequencies.join(' Hz + ')} Hz</div>
                             </div>
                             <div class="recipe-buttons">
-                                <button class="track-btn play-btn" title="Play this track">▶️</button>
-                                <button class="track-btn info-btn" title="Learn more">ℹ️</button>
+                                <button class="track-btn play-btn" title="Reproduzir esta faixa">▶️</button>
+                                <button class="track-btn info-btn" title="Saiba mais">ℹ️</button>
                             </div>
                         `;
                         
@@ -11375,7 +11375,7 @@ function shareViaWhatsApp() {
                 document.querySelectorAll('.track-btn.play-btn').forEach(btn => {
                     btn.classList.remove('playing');
                     btn.textContent = '▶';
-                    btn.title = 'Play this track';
+                    btn.title = 'Reproduzir esta faixa';
                 });
                 
                 // Clear countdown timer
@@ -12378,8 +12378,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Set Genesis Creation (37 + 73 Hz) as the default track - the beginning of the journey
     setTimeout(() => {
-        const biblicalCategory = trinityRecipes['Biblical & Original'];
-        const genesisRecipe = biblicalCategory ? biblicalCategory.find(r => r.name.includes('Genesis Creation')) : null;
+        const biblicalCategory = trinityRecipes['Bíblico & Original'];
+        const genesisRecipe = biblicalCategory ? biblicalCategory.find(r => r.name.includes('Criação do Gênesis')) : null;
         if (genesisRecipe && window.generator) {
             window.generator.selectRecipe(genesisRecipe);
         }
