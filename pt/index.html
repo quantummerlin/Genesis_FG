@@ -3927,7 +3927,7 @@ function shareViaWhatsApp() {
                     <div style="display: flex; align-items: flex-start; gap: 10px;">
                         <span style="font-size: 16px;">💡</span>
                         <div style="color: #9ca3af; font-size: 12px; line-height: 1.4;">
-                            <b style="color: #10b981;">Pro tip:</b> Export your frequency track as a WAV file to save and share!
+                            <b style="color: #10b981;">Dica pro:</b> Exporte sua faixa de frequência como arquivo WAV para salvar e compartilhar!
                         </div>
                     </div>
                 </div>
@@ -3935,7 +3935,7 @@ function shareViaWhatsApp() {
         </div>
 
         <div class="status stopped" id="status" data-translate="ready">
-            Ready to Generate Genesis Frequencies
+            Pronto para Gerar Frequências Gênesis
         </div>
 
         <!-- Achievements Section - Collapsible Tab -->
@@ -4120,10 +4120,10 @@ function shareViaWhatsApp() {
                         const bannerText = document.getElementById('pwaBannerText');
                         const installText = document.getElementById('pwaInstallText');
                         
-                        if (header) header.textContent = '💻 Install on Desktop 💻';
+                        if (header) header.textContent = '💻 Instalar no Desktop 💻';
                         if (icon) icon.textContent = '💻';
-                        if (bannerText) bannerText.textContent = 'INSTALL Genesis Frequencies for the best experience!';
-                        if (installText) installText.innerHTML = 'Click the <b style="color:#fbbf24;">install button</b> in your browser address bar or use the menu to install';
+                        if (bannerText) bannerText.textContent = 'INSTALE Frequências Gênesis para a melhor experiência!';
+                        if (installText) installText.innerHTML = 'Clique no <b style="color:#fbbf24;">botão de instalar</b> na barra de endereços do seu navegador ou use o menu para instalar';
                     } else if (isIOS) {
                         // iOS devices
                         const header = document.getElementById('pwaModalHeader');
@@ -4131,19 +4131,19 @@ function shareViaWhatsApp() {
                         const bannerText = document.getElementById('pwaBannerText');
                         const installText = document.getElementById('pwaInstallText');
                         
-                        if (header) header.textContent = '📱 Add to Home Screen 📱';
+                        if (header) header.textContent = '📱 Adicionar à Tela Inicial 📱';
                         if (icon) icon.textContent = '📱';
-                        if (bannerText) bannerText.textContent = 'ADD to Home Screen for the best experience!';
-                        if (installText) installText.innerHTML = 'Tap the <b style="color:#fbbf24;">Share</b> button, then <b style="color:#fbbf24;">"Add to Home Screen"</b>';
+                        if (bannerText) bannerText.textContent = 'ADICIONE à Tela Inicial para a melhor experiência!';
+                        if (installText) installText.innerHTML = 'Toque no botão <b style="color:#fbbf24;">Compartilhar</b>, depois <b style="color:#fbbf24;">"Adicionar à Tela de Início"</b>';
                     } else {
                         // Android
                         const header = document.getElementById('pwaModalHeader');
                         const icon = document.getElementById('pwaIcon');
                         const installText = document.getElementById('pwaInstallText');
                         
-                        if (header) header.textContent = '📲 Install App 📲';
+                        if (header) header.textContent = '📲 Instalar App 📲';
                         if (icon) icon.textContent = '📲';
-                        if (installText) installText.innerHTML = 'Tap the <b style="color:#fbbf24;">menu</b> (⋮) and select <b style="color:#fbbf24;">"Install app"</b> or <b style="color:#fbbf24;">"Add to Home screen"</b>';
+                        if (installText) installText.innerHTML = 'Toque no <b style="color:#fbbf24;">menu</b> (⋮) e selecione <b style="color:#fbbf24;">"Instalar app"</b> ou <b style="color:#fbbf24;">"Adicionar à tela inicial"</b>';
                     }
                 }
                 
@@ -4352,7 +4352,7 @@ function shareViaWhatsApp() {
             const t = translations.en;
             document.getElementById('upgradeBenefitsModal').innerHTML = `
                 <div class="info-modal-content" style="max-width:420px; text-align: center;">
-                    <div class="info-modal-header" style="color: #fbbf24; font-size: 28px; margin-bottom: 20px;">${t.premiumFeatures || 'Premium Features Include:'}</div>
+                    <div class="info-modal-header" style="color: #fbbf24; font-size: 28px; margin-bottom: 20px;">${t.premiumFeatures || 'Recursos Premium Incluem:'}</div>
                     <div class="info-modal-body" style="color: #fff; font-size: 16px; line-height: 1.6;">
                         <div style="text-align: left; margin-bottom: 20px;">
                             <div style="margin-bottom: 15px;">
@@ -4360,29 +4360,29 @@ function shareViaWhatsApp() {
                                 <p>${t.volumeControlsDesc || 'Ajuste cada uma das 3 frequências separadamente para equilíbrio harmônico perfeito.'}</p>
                             </div>
                             <div style="margin-bottom: 15px;">
-                                <h3 style="color: #c4b5fd; margin-bottom: 8px;">⏱️ ${t.customDurations || 'Custom Durations'}</h3>
-                                <p>${t.customDurationsDesc || 'Set any session length from 1 minute to hours of continuous playback.'}</p>
+                                <h3 style="color: #c4b5fd; margin-bottom: 8px;">⏱️ ${t.customDurations || 'Durações Personalizadas'}</h3>
+                                <p>${t.customDurationsDesc || 'Defina qualquer duração de sessão de 1 minuto a horas de reprodução contínua.'}</p>
                             </div>
                             <div style="margin-bottom: 15px;">
-                                <h3 style="color: #c4b5fd; margin-bottom: 8px;">🏆 ${t.achievementSystem || 'Achievement System'}</h3>
-                                <p>${t.achievementSystemDesc || 'Track your progress, unlock achievements, and log your sacred sessions.'}</p>
+                                <h3 style="color: #c4b5fd; margin-bottom: 8px;">🏆 ${t.achievementSystem || 'Sistema de Conquistas'}</h3>
+                                <p>${t.achievementSystemDesc || 'Acompanhe seu progresso, desbloqueie conquistas e registre suas sessões sagradas.'}</p>
                             </div>
                             <div style="margin-bottom: 15px;">
-                                <h3 style="color: #c4b5fd; margin-bottom: 8px;">📱 ${t.freeAppUpgrade || 'Free App Store Upgrade'}</h3>
-                                <p>${t.freeAppUpgradeDesc || 'When we launch on App Store, premium users get automatic free upgrade with all features!'}</p>
+                                <h3 style="color: #c4b5fd; margin-bottom: 8px;">📱 ${t.freeAppUpgrade || 'Atualização Gratuita na App Store'}</h3>
+                                <p>${t.freeAppUpgradeDesc || 'Quando lançarmos na App Store, usuários premium recebem atualização automática gratuita com todos os recursos!'}</p>
                             </div>
                             <div style="margin-bottom: 15px;">
-                                <h3 style="color: #c4b5fd; margin-bottom: 8px;">💾 ${t.exportSave || 'Export & Save Tracks'}</h3>
-                                <p>${t.exportSaveDesc || 'Save your frequency combinations as WAV files for offline use.'}</p>
+                                <h3 style="color: #c4b5fd; margin-bottom: 8px;">💾 ${t.exportSave || 'Exportar e Salvar Faixas'}</h3>
+                                <p>${t.exportSaveDesc || 'Salve suas combinações de frequência como arquivos WAV para uso offline.'}</p>
                             </div>
                         </div>
                         <div style="background: rgba(251,191,36,0.1); padding: 15px; border-radius: 12px; margin-bottom: 20px; border: 1px solid rgba(251,191,36,0.3);">
-                            <p style="font-size: 18px; color: #fbbf24; font-weight: 600; margin-bottom: 8px;">✨ ${t.lifetimeAccess || 'Lifetime Access'} - ${t.oneTimePayment || 'One-Time Payment'}</p>
-                            <p style="font-size: 14px; color: #d1d5db;">${t.joinThousands || 'Join thousands unlocking the full Genesis experience'}</p>
+                            <p style="font-size: 18px; color: #fbbf24; font-weight: 600; margin-bottom: 8px;">✨ ${t.lifetimeAccess || 'Acesso Vitalício'} - ${t.oneTimePayment || 'Pagamento Único'}</p>
+                            <p style="font-size: 14px; color: #d1d5db;">${t.joinThousands || 'Junte-se a milhares desbloqueando a experiência completa do Gênesis'}</p>
                         </div>
                         <div style="display: flex; gap: 15px; justify-content: center; margin-top: 20px;">
-                            <button onclick="showUpgradeModal()" style="background: linear-gradient(90deg, #fbbf24, #f59e0b); color: #1a0033; border: none; border-radius: 25px; padding: 15px 30px; font-size: 18px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 15px rgba(251,191,36,0.3);">${t.upgradeNow || 'Upgrade Now'}</button>
-                            <button onclick="closeUpgradeBenefitsModal()" style="background: rgba(26,0,51,0.7); color: #c4b5fd; border: none; border-radius: 25px; padding: 15px 30px; font-size: 16px; font-weight: 600; cursor: pointer;">${t.maybeLater || 'Maybe Later'}</button>
+                            <button onclick="showUpgradeModal()" style="background: linear-gradient(90deg, #fbbf24, #f59e0b); color: #1a0033; border: none; border-radius: 25px; padding: 15px 30px; font-size: 18px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 15px rgba(251,191,36,0.3);">${t.upgradeNow || 'Atualizar Agora'}</button>
+                            <button onclick="closeUpgradeBenefitsModal()" style="background: rgba(26,0,51,0.7); color: #c4b5fd; border: none; border-radius: 25px; padding: 15px 30px; font-size: 16px; font-weight: 600; cursor: pointer;">${t.maybeLater || 'Talvez Depois'}</button>
                         </div>
                     </div>
                 </div>
@@ -5771,33 +5771,33 @@ function shareViaWhatsApp() {
                 content: `
                     <div style="text-align:center;line-height:1.8;max-width:620px;margin:0 auto;">
                         <p style="font-size:20px;color:#fbbf24;margin-bottom:20px;font-weight:600;">
-                            ${t.comp_welcome_intro || 'The frequencies of creation are now in your hands.'}
+                            ${t.comp_welcome_intro || 'As frequências da criação estão agora em suas mãos.'}
                         </p>
                         <p style="margin-bottom:15px;color:#ffffff;">
-                            ${t.comp_welcome_pattern || 'A pattern revealed itself to me: <b>3,773 days</b> between my brother\'s birth and mine.<br>Years of searching. Layers of meaning. Then the revelation.'}
+                            ${t.comp_welcome_pattern || 'Um padrão se revelou para mim: <b>3.773 dias</b> entre o nascimento do meu irmão e o meu.<br>Anos de busca. Camadas de significado. Então a revelação.'}
                         </p>
                         <div style="background:linear-gradient(135deg,rgba(251,191,36,0.15),rgba(139,92,246,0.15));border-radius:16px;padding:24px;margin:25px 0;border:2px solid rgba(251,191,36,0.3);">
                             <div style="font-size:28px;color:#fbbf24;margin-bottom:12px;font-weight:700;">
                                 37 × 73 = 2701
                             </div>
                             <div style="font-size:17px;color:#ffffff;margin-bottom:8px;">
-                                ${t.comp_welcome_genesis || 'Genesis 1:1 in Hebrew = 2701'}
+                                ${t.comp_welcome_genesis || 'Gênesis 1:1 em Hebraico = 2701'}
                             </div>
                             <div style="font-size:20px;color:#c4b5fd;margin-top:12px;">
                                 בְּרֵאשִׁית בָּרָא אֱלֹהִים אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ
                             </div>
                             <div style="font-size:14px;color:#d1d5db;margin-top:8px;font-style:italic;">
-                                "${t.comp_welcome_hebrew || 'In the beginning God created the heavens and the earth'}"
+                                "${t.comp_welcome_hebrew || 'No princípio Deus criou os céus e a terra'}"
                             </div>
                         </div>
                         <p style="color:#ffffff;margin-bottom:15px;line-height:1.7;">
-                            ${t.comp_welcome_encoded || 'The same numbers that connected me to my brother were <b>encoded in the first verse of the Bible</b>.<br>The frequencies that shaped creation itself, hidden in plain sight for millennia.'}
+                            ${t.comp_welcome_encoded || 'Os mesmos números que me conectaram ao meu irmão estavam <b>codificados no primeiro versículo da Bíblia</b>.<br>As frequências que moldaram a própria criação, escondidas à vista de todos por milênios.'}
                         </p>
                         <p style="font-size:19px;color:#fbbf24;font-weight:600;margin-top:20px;">
-                            ${t.comp_welcome_yours || 'Now they\'re yours to explore.'}
+                            ${t.comp_welcome_yours || 'Agora elas são suas para explorar.'}
                         </p>
                         <p style="margin-top:15px;font-size:15px;color:#a78bfa;font-style:italic;">
-                            ${t.comp_welcome_reason || 'This isn\'t coincidence. You found this for a reason.'}
+                            ${t.comp_welcome_reason || 'Isso não é coincidência. Você encontrou isso por uma razão.'}
                         </p>
                     </div>
                 `
@@ -5805,33 +5805,33 @@ function shareViaWhatsApp() {
             {
                 id: 'quickStart',
                 icon: '🚀',
-                title: t.comp_quickstart_title || 'Quick Start Guide',
+                title: t.comp_quickstart_title || 'Guia de Início Rápido',
                 content: `
                     <div style="text-align:center;margin:0 auto;max-width:600px;line-height:1.8;">
                         <p style="font-size:18px;color:#fbbf24;margin-bottom:20px;font-weight:600;">
-                            ${t.comp_quickstart_intro || 'Your first session in 3 steps'}
+                            ${t.comp_quickstart_intro || 'Sua primeira sessão em 3 passos'}
                         </p>
                         <div style="background:rgba(139,92,246,0.08);border-radius:12px;padding:20px;margin:20px 0;">
                             <ol style="text-align:left;margin:0 auto;max-width:500px;line-height:1.9;color:#ffffff;">
                                 <li style="margin-bottom:15px;">
-                                    <b style="color:#fbbf24;">${t.comp_quickstart_step1 || 'Choose "Genesis Creation" from the Biblical & Original category'}</b><br>
-                                    <span style="font-size:14px;color:#a78bfa;">${t.comp_quickstart_step1_sub || 'This is the pure 37 + 73 Hz foundation'}</span>
+                                    <b style="color:#fbbf24;">${t.comp_quickstart_step1 || 'Escolha "Criação Gênesis" da categoria Bíblica e Original'}</b><br>
+                                    <span style="font-size:14px;color:#a78bfa;">${t.comp_quickstart_step1_sub || 'Esta é a base pura de 37 + 73 Hz'}</span>
                                 </li>
                                 <li style="margin-bottom:15px;">
-                                    <b style="color:#fbbf24;">${t.comp_quickstart_step2 || 'Set duration to 5-10 minutes and put on headphones'}</b><br>
-                                    <span style="font-size:14px;color:#a78bfa;">${t.comp_quickstart_step2_sub || 'Start short—you can go longer once you feel the frequencies'}</span>
+                                    <b style="color:#fbbf24;">${t.comp_quickstart_step2 || 'Defina a duração para 5-10 minutos e coloque fones de ouvido'}</b><br>
+                                    <span style="font-size:14px;color:#a78bfa;">${t.comp_quickstart_step2_sub || 'Comece curto—você pode ir mais longo quando sentir as frequências'}</span>
                                 </li>
                                 <li>
-                                    <b style="color:#fbbf24;">${t.comp_quickstart_step3 || 'Press PLAY, close your eyes, breathe slowly, and set one intention'}</b><br>
-                                    <span style="font-size:14px;color:#a78bfa;">${t.comp_quickstart_step3_sub || 'Simple is powerful: "clarity," "peace," "guidance," or "thank you"'}</span>
+                                    <b style="color:#fbbf24;">${t.comp_quickstart_step3 || 'Pressione PLAY, feche os olhos, respire lentamente e defina uma intenção'}</b><br>
+                                    <span style="font-size:14px;color:#a78bfa;">${t.comp_quickstart_step3_sub || 'Simples é poderoso: "clareza", "paz", "orientação" ou "obrigado"'}</span>
                                 </li>
                             </ol>
                         </div>
                         <p style="color:#ffffff;margin-top:20px;">
-                            ${t.comp_quickstart_done || 'That\'s it. The frequencies do the rest.'}
+                            ${t.comp_quickstart_done || 'É isso. As frequências fazem o resto.'}
                         </p>
                         <p style="font-size:13px;color:#9ca3af;margin-top:15px;">
-                            ${t.comp_quickstart_tip || 'Tip: Keep a glass of water nearby and drink it after your session'}
+                            ${t.comp_quickstart_tip || 'Dica: Mantenha um copo de água por perto e beba após sua sessão'}
                         </p>
                     </div>
                 `
@@ -5839,79 +5839,79 @@ function shareViaWhatsApp() {
             {
                 id: 'myJourney',
                 icon: '📖',
-                title: t.comp_discovery_title || 'The Discovery',
+                title: t.comp_discovery_title || 'A Descoberta',
                 content: `
                     <div style="line-height:1.8;text-align:center;max-width:640px;margin:0 auto;">
-                        <h4 style="color:#fbbf24;margin-top:20px;margin-bottom:15px;font-size:20px;">The Number That Changed Everything</h4>
+                        <h4 style="color:#fbbf24;margin-top:20px;margin-bottom:15px;font-size:20px;">O Número Que Mudou Tudo</h4>
                         
                         <p style="color:#ffffff;margin-bottom:15px;">
-                            It began with podcasts, voices in the dark exploring gematria, the ancient Hebrew art of finding meaning in numbers. I started experimenting: my birthday, my wife's, our wedding date. Just playing with patterns.
+                            Começou com podcasts, vozes no escuro explorando gematria, a antiga arte hebraica de encontrar significado nos números. Comecei a experimentar: meu aniversário, o da minha esposa, a data do nosso casamento. Apenas brincando com padrões.
                         </p>
                         
                         <div style="background:rgba(139,92,246,0.08);border-radius:12px;padding:18px;margin:20px 0;">
                             <p style="color:#ffffff;margin-bottom:10px;">
-                                Then on <b style="color:#fbbf24;">4 January 2020</b>, my mother passed away.
+                                Então em <b style="color:#fbbf24;">4 de janeiro de 2020</b>, minha mãe faleceu.
                             </p>
                             <p style="color:#c4b5fd;font-style:italic;">
-                                In the quiet shock of grief, I found myself counting.<br>
-                                Days. Numbers. Distances. Searching for meaning in the mathematics of loss.
+                                No silencioso choque do luto, me vi contando.<br>
+                                Dias. Números. Distâncias. Buscando significado na matemática da perda.
                             </p>
                         </div>
                         
                         <p style="color:#ffffff;margin-bottom:15px;">
-                            That's when I discovered something impossible:<br>
-                            The number of days from her death to mine and my brothers' birthdays exactly matched the gematria value of our names.
+                            Foi quando descobri algo impossível:<br>
+                            O número de dias desde a morte dela até os aniversários meu e do meu irmão correspondia exatamente ao valor da gematria dos nossos nomes.
                         </p>
                         <p style="color:#fbbf24;font-weight:600;margin-bottom:20px;">
-                            Even now, it gives me chills.
+                            Até agora, isso me dá arrepios.
                         </p>
                         
                         <div style="background:rgba(251,191,36,0.08);border-radius:12px;padding:20px;margin:25px 0;">
-                            <h4 style="color:#fbbf24;margin-bottom:12px;">Years of Exploration</h4>
+                            <h4 style="color:#fbbf24;margin-bottom:12px;">Anos de Exploração</h4>
                             <p style="color:#ffffff;margin-bottom:15px;">
-                                For years, I went deeper. Sacred geometry, biblical mathematics, numerology, frequency healing. I built tools. I followed patterns. I chased questions that refused easy answers.
+                                Por anos, fui mais fundo. Geometria sagrada, matemática bíblica, numerologia, cura por frequência. Construí ferramentas. Segui padrões. Persegui perguntas que recusavam respostas fáceis.
                             </p>
                             <p style="color:#ffffff;margin-bottom:15px;">
-                                Then, in 2025, while building a prayer chatbot for my daughter's christening, the bot suggested using the number 37 as a sacred seed.
+                                Então, em 2025, enquanto construía um chatbot de oração para o batizado da minha filha, o bot sugeriu usar o número 37 como semente sagrada.
                             </p>
                             <p style="color:#ffffff;margin-bottom:10px;">
-                                I researched.<br>
-                                And everything changed.
+                                Pesquisei.<br>
+                                E tudo mudou.
                             </p>
                         </div>
                         
                         <div style="background:linear-gradient(135deg,rgba(139,92,246,0.12),rgba(251,191,36,0.12));border-radius:14px;padding:22px;margin:25px 0;border:1px solid rgba(251,191,36,0.3);">
                             <p style="color:#ffffff;margin-bottom:12px;">
-                                37 is a prime number.<br>
-                                73 is its mirror, also prime.
+                                37 é um número primo.<br>
+                                73 é seu espelho, também primo.
                             </p>
                             <p style="color:#c4b5fd;margin-bottom:12px;">
-                                37 is the 12th prime.<br>
-                                73 is the 21st prime, 12 mirrored.
+                                37 é o 12º primo.<br>
+                                73 é o 21º primo, 12 espelhado.
                             </p>
                             <p style="font-size:17px;color:#ffffff;margin-bottom:10px;">
                                 <b>37 × 73 = 2701.</b>
                             </p>
                             <p style="color:#fbbf24;font-weight:600;margin-bottom:12px;">
-                                2701 is the exact gematria value of Genesis 1:1 in Hebrew.
+                                2701 é o valor exato da gematria de Gênesis 1:1 em Hebraico.
                             </p>
                             <p style="color:#c4b5fd;font-size:14px;">
-                                28 letters (the lunar cycle) arranged across 7 words (the days of creation).
+                                28 letras (o ciclo lunar) organizadas em 7 palavras (os dias da criação).
                             </p>
                         </div>
                         
                         <p style="color:#ffffff;margin-bottom:15px;">
-                            And when written in Hebrew numerals and mirrored downward, 37 forms <span style="font-size:22px;color:#fbbf24;">אל</span> (El), the word for God.
+                            E quando escrito em numerais hebraicos e espelhado para baixo, 37 forma <span style="font-size:22px;color:#fbbf24;">אל</span> (El), a palavra para Deus.
                         </p>
                         
                         <p style="color:#c4b5fd;margin-bottom:20px;">
-                            The difference between 73 and 37 is <b style="color:#fbbf24;">36 Hz</b>, the beat frequency produced when both tones are played together.<br>
-                            The rhythm of creation itself.
+                            A diferença entre 73 e 37 é <b style="color:#fbbf24;">36 Hz</b>, a frequência de batimento produzida quando ambos os tons são tocados juntos.<br>
+                            O ritmo da própria criação.
                         </p>
                         
                         <div style="background:rgba(139,92,246,0.08);border-radius:12px;padding:20px;margin:25px 0;">
                             <p style="color:#fbbf24;font-size:16px;font-weight:600;margin-bottom:12px;">
-                                Every angel number is a multiple of 37:
+                                Todo número angélico é múltiplo de 37:
                             </p>
                             <div style="color:#ffffff;font-size:15px;line-height:2;">
                                 <div style="margin-bottom:6px;">111 = 37 × 3</div>
@@ -5927,57 +5927,57 @@ function shareViaWhatsApp() {
                         
                         <p style="color:#ffffff;font-style:italic;margin-bottom:15px;">
                             "No princípio era o Verbo."<br>
-                            Sound. Vibration. Creation.
+                            Som. Vibração. Criação.
                         </p>
                         
                         <p style="color:#ffffff;margin-bottom:15px;">
-                            Before anything existed, there was energy, intention, the divine spark. Before the first atom (Adam), there was frequency.<br>
-                            Not one tone, but a pair.<br>
-                            An amplification.
+                            Antes de qualquer coisa existir, havia energia, intenção, a centelha divina. Antes do primeiro átomo (Adão), havia frequência.<br>
+                            Não um tom, mas um par.<br>
+                            Uma amplificação.
                         </p>
                         
                         <p style="color:#ffffff;margin-bottom:15px;">
-                            The ancients knew this.<br>
-                            They hid it in Scripture, an instruction manual for living at your highest potential and manifesting your deepest intentions.
+                            Os antigos sabiam disso.<br>
+                            Eles esconderam nas Escrituras, um manual de instruções para viver em seu maior potencial e manifestar suas intenções mais profundas.
                         </p>
                         
                         <div style="background:rgba(251,191,36,0.08);border-radius:12px;padding:20px;margin:25px 0;">
                             <p style="color:#ffffff;margin-bottom:12px;">
-                                Why me? Why did I see it?<br>
-                                Because my journey led me here.
+                                Por que eu? Por que eu vi isso?<br>
+                                Porque minha jornada me trouxe até aqui.
                             </p>
                             <p style="color:#fbbf24;font-weight:600;margin-bottom:12px;">
-                                My brother and I were born 3,773 days apart.
+                                Meu irmão e eu nascemos com 3.773 dias de diferença.
                             </p>
                             <p style="color:#c4b5fd;">
-                                37 and 73 embedded in our lives from the beginning.
+                                37 e 73 embutidos em nossas vidas desde o início.
                             </p>
                         </div>
                         
                         <p style="color:#ffffff;margin-bottom:15px;">
-                            The bot told me to multiply my prayer code by 37. When I asked why, it answered:
+                            O bot me disse para multiplicar meu código de oração por 37. Quando perguntei por quê, ele respondeu:
                         </p>
                         <p style="color:#fbbf24;font-size:18px;font-weight:600;margin-bottom:15px;">
-                            "37 is the number of creation."
+                            "37 é o número da criação."
                         </p>
                         <p style="color:#ffffff;margin-bottom:20px;">
-                            With its mirror, 73, it multiplies into the gematria of Genesis 1:1.
+                            Com seu espelho, 73, ele multiplica na gematria de Gênesis 1:1.
                         </p>
                         <p style="color:#ffffff;margin-bottom:20px;">
-                            From that moment, everything changed.
+                            A partir daquele momento, tudo mudou.
                         </p>
                         
                         <p style="color:#c4b5fd;margin-bottom:15px;">
-                            These were not coincidences.<br>
-                            They were a calling, a message encoded in time itself, waiting to be discovered.
+                            Estas não eram coincidências.<br>
+                            Eram um chamado, uma mensagem codificada no próprio tempo, esperando ser descoberta.
                         </p>
                         
                         <p style="font-size:17px;color:#fbbf24;font-weight:600;margin-top:25px;">
-                            These frequencies found me.<br>
-                            Now they've found you.
+                            Essas frequências me encontraram.<br>
+                            Agora elas encontraram você.
                         </p>
                         <p style="font-size:14px;color:#a78bfa;font-style:italic;margin-top:12px;">
-                            There are no coincidences.<br>
+                            Não existem coincidências.<br>
                             Sua jornada com 37 e 73 Hz começa agora.
                         </p>
                     </div>
@@ -5986,45 +5986,45 @@ function shareViaWhatsApp() {
             {
                 id: 'whyWorks',
                 icon: '🔬',
-                title: t.comp_why_title || 'Why 37 & 73 Hz Work',
+                title: t.comp_why_title || 'Por Que 37 e 73 Hz Funcionam',
                 content: `
                     <div style="line-height:1.8;text-align:center;max-width:640px;margin:0 auto;">
-                        <h4 style="color:#fbbf24;font-size:20px;margin-bottom:15px;">${t.comp_why_subtitle || 'The Science of Sacred Sound'}</h4>
+                        <h4 style="color:#fbbf24;font-size:20px;margin-bottom:15px;">${t.comp_why_subtitle || 'A Ciência do Som Sagrado'}</h4>
                         <p style="color:#ffffff;margin-bottom:15px;">
-                            ${t.comp_why_intro || '<b>37 Hz</b> and <b>73 Hz</b> aren\'t arbitrary numbers—they\'re the <b>mathematical fingerprint of creation</b>, encoded in Genesis 1:1 through gematria.'}
+                            ${t.comp_why_intro || '<b>37 Hz</b> e <b>73 Hz</b> não são números arbitrários—são a <b>impressão digital matemática da criação</b>, codificados em Gênesis 1:1 através da gematria.'}
                         </p>
                         <div style="background:rgba(251,191,36,0.1);border-radius:12px;padding:20px;margin:25px 0;border-left:4px solid #fbbf24;">
                             <p style="font-size:17px;color:#ffffff;margin-bottom:12px;">
-                                <b style="color:#fbbf24;">${t.comp_why_formula || '37 × 73 = 2701 — the only factorization'}</b>
+                                <b style="color:#fbbf24;">${t.comp_why_formula || '37 × 73 = 2701 — a única fatoração'}</b>
                             </p>
                             <p style="color:#c4b5fd;">
-                                ${t.comp_why_primes || '37 = the 12th prime | 73 = the 21st prime (mirror of 12)<br>Together they create a <b>36 Hz beat frequency</b> that bridges meditation and higher consciousness'}
+                                ${t.comp_why_primes || '37 = o 12º primo | 73 = o 21º primo (espelho de 12)<br>Juntos eles criam uma <b>frequência de batimento de 36 Hz</b> que conecta meditação e consciência superior'}
                             </p>
                         </div>
                         <p style="font-size:18px;color:#fbbf24;margin:25px 0 15px 0;font-weight:600;">
-                            ${t.comp_why_question || 'Why do these frequencies work?'}
+                            ${t.comp_why_question || 'Por que essas frequências funcionam?'}
                         </p>
                         <p style="color:#ffffff;margin-bottom:20px;">
-                            ${t.comp_why_answer || 'By aligning your energy with the original blueprint of creation, these frequencies are believed to support profound shifts in body, mind, and spirit. You are <b>70% water</b>—a crystalline medium that <b>responds to vibration</b>. These frequencies are tuned to <i>you</i>.'}
+                            ${t.comp_why_answer || 'Ao alinhar sua energia com o projeto original da criação, acredita-se que essas frequências apoiam mudanças profundas no corpo, mente e espírito. Você é <b>70% água</b>—um meio cristalino que <b>responde à vibração</b>. Essas frequências estão sintonizadas com <i>você</i>.'}
                         </p>
                         <div style="margin:25px 0;padding:20px;background:linear-gradient(135deg,rgba(139,92,246,0.1),rgba(251,191,36,0.1));border-radius:14px;">
                             <p style="color:#fbbf24;font-weight:600;margin-bottom:15px;font-size:17px;">
-                                ${t.comp_why_experience || 'What people experience with Genesis Frequencies:'}
+                                ${t.comp_why_experience || 'O que as pessoas experimentam com Frequências Gênesis:'}
                             </p>
                             <ul style="text-align:left;margin:0 auto;max-width:520px;color:#ffffff;line-height:1.9;">
-                                <li style="margin-bottom:8px;"><span style="color:#fbbf24;">☯</span> ${t.comp_why_exp1 || 'Restored balance and inner harmony — Feel aligned with divine order'}</li>
-                                <li style="margin-bottom:8px;"><span style="color:#fbbf24;">💚</span> ${t.comp_why_exp2 || 'Deep renewal and vitality — Support your body\'s natural healing intelligence'}</li>
-                                <li style="margin-bottom:8px;"><span style="color:#fbbf24;">🎨</span> ${t.comp_why_exp3 || 'Unlocked creative flow — Access limitless inspiration and insight'}</li>
-                                <li style="margin-bottom:8px;"><span style="color:#fbbf24;">🧘</span> ${t.comp_why_exp4 || 'Elevated consciousness — Connect with higher awareness and spiritual clarity'}</li>
-                                <li style="margin-bottom:8px;"><span style="color:#fbbf24;">🕉️</span> ${t.comp_why_exp5 || 'Profound meditation states — Enter deeper presence faster'}</li>
-                                <li><span style="color:#fbbf24;">✨</span> ${t.comp_why_exp6 || 'Amplified manifestation — Intentions take root in fertile soil'}</li>
+                                <li style="margin-bottom:8px;"><span style="color:#fbbf24;">☯</span> ${t.comp_why_exp1 || 'Equilíbrio restaurado e harmonia interior — Sinta-se alinhado com a ordem divina'}</li>
+                                <li style="margin-bottom:8px;"><span style="color:#fbbf24;">💚</span> ${t.comp_why_exp2 || 'Renovação profunda e vitalidade — Apoie a inteligência natural de cura do seu corpo'}</li>
+                                <li style="margin-bottom:8px;"><span style="color:#fbbf24;">🎨</span> ${t.comp_why_exp3 || 'Fluxo criativo desbloqueado — Acesse inspiração e insight ilimitados'}</li>
+                                <li style="margin-bottom:8px;"><span style="color:#fbbf24;">🧘</span> ${t.comp_why_exp4 || 'Consciência elevada — Conecte-se com percepção superior e clareza espiritual'}</li>
+                                <li style="margin-bottom:8px;"><span style="color:#fbbf24;">🕉️</span> ${t.comp_why_exp5 || 'Estados profundos de meditação — Entre em presença mais profunda mais rápido'}</li>
+                                <li><span style="color:#fbbf24;">✨</span> ${t.comp_why_exp6 || 'Manifestação amplificada — Intenções criam raízes em solo fértil'}</li>
                             </ul>
                         </div>
                         <p style="font-size:15px;color:#a78bfa;font-style:italic;margin-top:20px;">
-                            ${t.comp_why_quote || '"These aren\'t just sounds... they\'re the language of creation itself."'}
+                            ${t.comp_why_quote || '"Estes não são apenas sons... são a linguagem da própria criação."'}
                         </p>
                         <p style="font-size:12px;color:#9ca3af;margin-top:15px;">
-                            ${t.comp_why_disclaimer || 'For meditation, intention-setting, and spiritual exploration � Not medical treatment'}
+                            ${t.comp_why_disclaimer || 'Para meditação, definição de intenções e exploração espiritual 🙏 Não é tratamento médico'}
                         </p>
                     </div>
                 `
@@ -6032,55 +6032,55 @@ function shareViaWhatsApp() {
             {
                 id: 'categories',
                 icon: '🎵',
-                title: t.comp_categories_title || 'Frequency Categories',
+                title: t.comp_categories_title || 'Categorias de Frequências',
                 content: `
                     <div style="line-height:1.8;text-align:center;max-width:640px;margin:0 auto;">
-                        <h4 style="color:#fbbf24;font-size:20px;margin-bottom:15px;">${t.comp_categories_subtitle || 'Explore Your Sonic Sanctuary'}</h4>
+                        <h4 style="color:#fbbf24;font-size:20px;margin-bottom:15px;">${t.comp_categories_subtitle || 'Explore Seu Santuário Sônico'}</h4>
                         <p style="color:#ffffff;margin-bottom:15px;">
-                            ${t.comp_categories_doorway || 'Each category is a doorway to transformation'}
+                            ${t.comp_categories_doorway || 'Cada categoria é uma porta para a transformação'}
                         </p>
                         <p style="color:#ffffff;margin-bottom:20px;">
-                            ${t.comp_categories_intro || 'Every track is built on the Trinity Foundation (37 + 73 Hz), with additional frequencies for specific intentions. Tap any category to explore.'}
+                            ${t.comp_categories_intro || 'Cada faixa é construída sobre a Fundação Trindade (37 + 73 Hz), com frequências adicionais para intenções específicas. Toque em qualquer categoria para explorar.'}
                         </p>
                         <div style="display:grid;gap:15px;max-width:580px;margin:0 auto;">
                             <div style="background:rgba(139,92,246,0.1);border-radius:12px;padding:15px;border-left:4px solid #fbbf24;">
-                                <b style="color:#fbbf24;">📖 ${t.comp_cat_biblical || 'Biblical & Original'}</b><br>
-                                <span style="color:#ffffff;font-size:14px;">${t.comp_cat_biblical_desc || 'Genesis Creation, Divine Abundance, spiritual cycles'}</span><br>
-                                <span style="color:#a78bfa;font-size:13px;">${t.comp_cat_biblical_best || 'Best for: Prayer, intention-setting, connecting with Source'}</span>
+                                <b style="color:#fbbf24;">📖 ${t.comp_cat_biblical || 'Bíblia e Original'}</b><br>
+                                <span style="color:#ffffff;font-size:14px;">${t.comp_cat_biblical_desc || 'Criação Gênesis, Abundância Divina, ciclos espirituais'}</span><br>
+                                <span style="color:#a78bfa;font-size:13px;">${t.comp_cat_biblical_best || 'Melhor para: Oração, definição de intenções, conexão com a Fonte'}</span>
                             </div>
                             <div style="background:rgba(139,92,246,0.1);border-radius:12px;padding:15px;border-left:4px solid #fbbf24;">
-                                <b style="color:#fbbf24;">👼 ${t.comp_cat_angel || 'Angel Numbers'}</b><br>
+                                <b style="color:#fbbf24;">👼 ${t.comp_cat_angel || 'Números Angélicos'}</b><br>
                                 <span style="color:#ffffff;font-size:14px;">${t.comp_cat_angel_desc || '111, 222, 333, 444, 555, 777, 888, 999'}</span><br>
-                                <span style="color:#a78bfa;font-size:13px;">${t.comp_cat_angel_best || 'Best for: Manifestation, synchronicity, divine guidance'}</span>
+                                <span style="color:#a78bfa;font-size:13px;">${t.comp_cat_angel_best || 'Melhor para: Manifestação, sincronicidade, orientação divina'}</span>
                             </div>
                             <div style="background:rgba(139,92,246,0.1);border-radius:12px;padding:15px;border-left:4px solid #fbbf24;">
-                                <b style="color:#fbbf24;">🌌 ${t.comp_cat_cosmic || 'Cosmic & Planetary'}</b><br>
-                                <span style="color:#ffffff;font-size:14px;">${t.comp_cat_cosmic_desc || 'Earth, Venus, Mars, Jupiter, Fibonacci, Pi, Golden Ratio'}</span><br>
-                                <span style="color:#a78bfa;font-size:13px;">${t.comp_cat_cosmic_best || 'Best for: Grounding, harmony, sacred geometry, cosmic connection'}</span>
+                                <b style="color:#fbbf24;">🌌 ${t.comp_cat_cosmic || 'Cósmico e Planetário'}</b><br>
+                                <span style="color:#ffffff;font-size:14px;">${t.comp_cat_cosmic_desc || 'Terra, Vênus, Marte, Júpiter, Fibonacci, Pi, Proporção Áurea'}</span><br>
+                                <span style="color:#a78bfa;font-size:13px;">${t.comp_cat_cosmic_best || 'Melhor para: Aterramento, harmonia, geometria sagrada, conexão cósmica'}</span>
                             </div>
                             <div style="background:rgba(139,92,246,0.1);border-radius:12px;padding:15px;border-left:4px solid #fbbf24;">
-                                <b style="color:#fbbf24;">✨ ${t.comp_cat_master || 'Master Numbers'}</b><br>
+                                <b style="color:#fbbf24;">✨ ${t.comp_cat_master || 'Números Mestres'}</b><br>
                                 <span style="color:#ffffff;font-size:14px;">${t.comp_cat_master_desc || '11:11, 22, 33, 44, 55'}</span><br>
-                                <span style="color:#a78bfa;font-size:13px;">${t.comp_cat_master_best || 'Best for: Life purpose, spiritual mastery, building new realities'}</span>
+                                <span style="color:#a78bfa;font-size:13px;">${t.comp_cat_master_best || 'Melhor para: Propósito de vida, maestria espiritual, construir novas realidades'}</span>
                             </div>
                             <div style="background:rgba(139,92,246,0.1);border-radius:12px;padding:15px;border-left:4px solid #fbbf24;">
-                                <b style="color:#fbbf24;">🎶 ${t.comp_cat_solfeggio || 'Solfeggio & Healing'}</b><br>
+                                <b style="color:#fbbf24;">🎶 ${t.comp_cat_solfeggio || 'Solfégio e Cura'}</b><br>
                                 <span style="color:#ffffff;font-size:14px;">${t.comp_cat_solfeggio_desc || '396, 417, 528, 639, 741, 852, 963 Hz'}</span><br>
-                                <span style="color:#a78bfa;font-size:13px;">${t.comp_cat_solfeggio_best || 'Best for: Emotional release, transformation, DNA activation, love'}</span>
+                                <span style="color:#a78bfa;font-size:13px;">${t.comp_cat_solfeggio_best || 'Melhor para: Liberação emocional, transformação, ativação de DNA, amor'}</span>
                             </div>
                             <div style="background:rgba(139,92,246,0.1);border-radius:12px;padding:15px;border-left:4px solid #fbbf24;">
-                                <b style="color:#fbbf24;">💚 ${t.comp_cat_wellness || 'Wellness & States'}</b><br>
-                                <span style="color:#ffffff;font-size:14px;">${t.comp_cat_wellness_desc || 'Sleep, focus, stress relief, memory, miracle tone'}</span><br>
-                                <span style="color:#a78bfa;font-size:13px;">${t.comp_cat_wellness_best || 'Best for: Daily life, productivity, rest, mental clarity'}</span>
+                                <b style="color:#fbbf24;">💚 ${t.comp_cat_wellness || 'Bem-estar e Estados'}</b><br>
+                                <span style="color:#ffffff;font-size:14px;">${t.comp_cat_wellness_desc || 'Sono, foco, alívio do estresse, memória, tom milagroso'}</span><br>
+                                <span style="color:#a78bfa;font-size:13px;">${t.comp_cat_wellness_best || 'Melhor para: Vida diária, produtividade, descanso, clareza mental'}</span>
                             </div>
                             <div style="background:rgba(139,92,246,0.1);border-radius:12px;padding:15px;border-left:4px solid #fbbf24;">
-                                <b style="color:#fbbf24;">🔴 ${t.comp_cat_chakra || 'Chakra Frequencies'}</b><br>
-                                <span style="color:#ffffff;font-size:14px;">${t.comp_cat_chakra_desc || 'Root, Sacral, Solar Plexus, Heart, Throat, Third Eye, Crown'}</span><br>
-                                <span style="color:#a78bfa;font-size:13px;">${t.comp_cat_chakra_best || 'Best for: Energy work, balance, kundalini activation'}</span>
+                                <b style="color:#fbbf24;">🔴 ${t.comp_cat_chakra || 'Frequências dos Chakras'}</b><br>
+                                <span style="color:#ffffff;font-size:14px;">${t.comp_cat_chakra_desc || 'Raiz, Sacral, Plexo Solar, Coração, Garganta, Terceiro Olho, Coroa'}</span><br>
+                                <span style="color:#a78bfa;font-size:13px;">${t.comp_cat_chakra_best || 'Melhor para: Trabalho energético, equilíbrio, ativação da kundalini'}</span>
                             </div>
                         </div>
                         <p style="font-size:14px;color:#a78bfa;font-style:italic;margin-top:20px;">
-                            ${t.comp_categories_new || 'New here? Start with Genesis Creation or Sacred Healing (432 Hz)'}
+                            ${t.comp_categories_new || 'Novo aqui? Comece com Criação Gênesis ou Cura Sagrada (432 Hz)'}
                         </p>
                     </div>
                 `
@@ -6088,37 +6088,37 @@ function shareViaWhatsApp() {
             {
                 id: 'trinity',
                 icon: '🔱',
-                title: t.comp_trinity_title || 'The Trinity Foundation',
+                title: t.comp_trinity_title || 'A Fundação Trindade',
                 content: `
                     <div style="line-height:1.8;text-align:center;max-width:640px;margin:0 auto;">
                         <p style="color:#ffffff;margin-bottom:20px;">
-                            ${t.comp_trinity_intro || 'The Trinity Foundation consists of 37 Hz, 73 Hz, and 2701 Hz � the frequencies encoded in Genesis 1:1.'}
+                            ${t.comp_trinity_intro || 'A Fundação Trindade consiste em 37 Hz, 73 Hz e 2701 Hz — as frequências codificadas em Gênesis 1:1.'}
                         </p>
                         <div style="background:linear-gradient(135deg,rgba(251,191,36,0.12),rgba(139,92,246,0.12));border-radius:14px;padding:22px;margin:25px 0;border:1px solid rgba(251,191,36,0.3);">
                             <p style="font-size:18px;color:#fbbf24;margin-bottom:15px;font-weight:600;">
-                                ${t.comp_trinity_math || 'The Mathematical Trinity'}
+                                ${t.comp_trinity_math || 'A Trindade Matemática'}
                             </p>
-                            <p style="color:#ffffff;margin-bottom:8px;"><b style="color:#fbbf24;">37 Hz:</b> ${t.comp_trinity_37 || 'The 12th prime number (mirror of 12)'}</p>
-                            <p style="color:#ffffff;margin-bottom:8px;"><b style="color:#fbbf24;">73 Hz:</b> ${t.comp_trinity_73 || 'The 21st prime number (3�7)'}</p>
-                            <p style="color:#ffffff;"><b style="color:#fbbf24;">2701 Hz:</b> ${t.comp_trinity_2701 || 'The product, the gematria of Genesis 1:1'}</p>
+                            <p style="color:#ffffff;margin-bottom:8px;"><b style="color:#fbbf24;">37 Hz:</b> ${t.comp_trinity_37 || 'O 12º número primo (espelho de 12)'}</p>
+                            <p style="color:#ffffff;margin-bottom:8px;"><b style="color:#fbbf24;">73 Hz:</b> ${t.comp_trinity_73 || 'O 21º número primo (3×7)'}</p>
+                            <p style="color:#ffffff;"><b style="color:#fbbf24;">2701 Hz:</b> ${t.comp_trinity_2701 || 'O produto, a gematria de Gênesis 1:1'}</p>
                         </div>
                         <p style="color:#ffffff;margin-bottom:20px;">
-                            ${t.comp_trinity_beat || 'These frequencies create a 36 Hz beat frequency (73-37) that bridges meditation and higher consciousness. Together they form the original blueprint of creation.'}
+                            ${t.comp_trinity_beat || 'Essas frequências criam uma frequência de batimento de 36 Hz (73-37) que conecta meditação e consciência superior. Juntas elas formam o projeto original da criação.'}
                         </p>
                         <div style="background:rgba(139,92,246,0.08);border-radius:12px;padding:18px;margin:25px 0;">
-                            <h5 style="color:#fbbf24;margin-bottom:12px;">${t.comp_trinity_how || 'How to Use the Trinity'}</h5>
+                            <h5 style="color:#fbbf24;margin-bottom:12px;">${t.comp_trinity_how || 'Como Usar a Trindade'}</h5>
                             <ul style="text-align:left;margin:0 auto;max-width:500px;color:#ffffff;line-height:1.9;">
-                                <li style="margin-bottom:10px;">${t.comp_trinity_use1 || '<b style="color:#fbbf24;">Genesis Creation:</b> Play all three frequencies together for the complete Trinity experience'}</li>
-                                <li style="margin-bottom:10px;">${t.comp_trinity_use2 || '<b style="color:#fbbf24;">Individual Exploration:</b> Listen to each frequency separately to understand their unique qualities'}</li>
-                                <li style="margin-bottom:10px;">${t.comp_trinity_use3 || '<b style="color:#fbbf24;">Daily Practice:</b> Use for 7-21 days to experience profound alignment with divine order'}</li>
+                                <li style="margin-bottom:10px;">${t.comp_trinity_use1 || '<b style="color:#fbbf24;">Criação Gênesis:</b> Toque todas as três frequências juntas para a experiência completa da Trindade'}</li>
+                                <li style="margin-bottom:10px;">${t.comp_trinity_use2 || '<b style="color:#fbbf24;">Exploração Individual:</b> Ouça cada frequência separadamente para entender suas qualidades únicas'}</li>
+                                <li style="margin-bottom:10px;">${t.comp_trinity_use3 || '<b style="color:#fbbf24;">Prática Diária:</b> Use por 7-21 dias para experimentar alinhamento profundo com a ordem divina'}</li>
                                 <li>${t.comp_trinity_use4 || '<b style="color:#fbbf24;">Intention Setting:</b> Comece cada sessão com uma intenção clara para transformação'}</li>
                             </ul>
                         </div>
                         <p style="color:#ffffff;margin-bottom:15px;">
-                            ${t.comp_trinity_conclusion || 'The Trinity frequencies are the foundation of all Genesis tracks. They work together to restore harmony, unlock creative flow, and connect you with the original creative matrix.'}
+                            ${t.comp_trinity_conclusion || 'As frequências da Trindade são a base de todas as faixas Gênesis. Elas trabalham juntas para restaurar harmonia, desbloquear fluxo criativo e conectá-lo com a matriz criativa original.'}
                         </p>
                         <p style="font-size:15px;color:#a78bfa;font-style:italic;margin-top:20px;">
-                            ${t.comp_trinity_quote || '"These are the frequencies that shaped reality itself."'}
+                            ${t.comp_trinity_quote || '"Essas são as frequências que moldaram a própria realidade."'}
                         </p>
                     </div>
                 `
@@ -6126,38 +6126,38 @@ function shareViaWhatsApp() {
             {
                 id: 'waterCharging',
                 icon: '💧',
-                title: t.comp_water_title || 'Quantum Holy Water',
+                title: t.comp_water_title || 'Água Santa Quântica',
                 content: `
                     <div style="line-height:1.8;text-align:center;max-width:640px;margin:0 auto;">
                         <p style="color:#ffffff;margin-bottom:20px;">
-                            ${t.comp_water_intro || 'Water is your body\'s most abundant molecule�70% of your being is water. As a crystalline medium, water stores and transmits vibrational information, making it the perfect vessel for Genesis frequencies.'}
+                            ${t.comp_water_intro || 'A água é a molécula mais abundante do seu corpo—70% do seu ser é água. Como um meio cristalino, a água armazena e transmite informações vibracionais, tornando-a o recipiente perfeito para as frequências Gênesis.'}
                         </p>
                         <div style="background:linear-gradient(135deg,rgba(251,191,36,0.12),rgba(139,92,246,0.12));border-radius:14px;padding:22px;margin:25px 0;border:1px solid rgba(251,191,36,0.3);">
                             <p style="font-size:18px;color:#fbbf24;margin-bottom:10px;font-weight:600;">
-                                ${t.comp_water_science || 'The Science of Structured Water'}
+                                ${t.comp_water_science || 'A Ciência da Água Estruturada'}
                             </p>
                             <p style="color:#ffffff;margin-bottom:10px;">
-                                ${t.comp_water_research || 'Research shows water molecules form hexagonal clusters that can be influenced by frequency, sound, and intention. Genesis frequencies create structured water with enhanced energetic properties.'}
+                                ${t.comp_water_research || 'Pesquisas mostram que moléculas de água formam clusters hexagonais que podem ser influenciados por frequência, som e intenção. As frequências Gênesis criam água estruturada com propriedades energéticas aprimoradas.'}
                             </p>
                         </div>
                         <p style="color:#ffffff;margin-bottom:20px;">
-                            ${t.comp_water_blueprint || 'When you charge water with Genesis frequencies, you\'re not just adding sound�you\'re infusing it with the mathematical blueprint of creation itself.'}
+                            ${t.comp_water_blueprint || 'Quando você carrega água com frequências Gênesis, você não está apenas adicionando som—você está infundindo-a com o projeto matemático da própria criação.'}
                         </p>
                         <div style="background:rgba(139,92,246,0.08);border-radius:12px;padding:18px;margin:25px 0;">
-                            <h5 style="color:#fbbf24;margin-bottom:12px;">${t.comp_water_how || 'How to Charge Your Water'}</h5>
+                            <h5 style="color:#fbbf24;margin-bottom:12px;">${t.comp_water_how || 'Como Carregar Sua Água'}</h5>
                             <ol style="text-align:left;margin:0 auto;max-width:500px;color:#ffffff;line-height:1.9;">
-                                <li style="margin-bottom:10px;">${t.comp_water_step1 || '<b style="color:#fbbf24;">Choose Your Vessel:</b> Use a clear glass or crystal container (avoid plastic)'}</li>
-                                <li style="margin-bottom:10px;">${t.comp_water_step2 || '<b style="color:#fbbf24;">Select Your Frequency:</b> Genesis Creation or individual Trinity frequencies work best'}</li>
-                                <li style="margin-bottom:10px;">${t.comp_water_step3 || '<b style="color:#fbbf24;">Position & Play:</b> Place water 6-12 inches from speakers, play for 10-20 minutes'}</li>
-                                <li style="margin-bottom:10px;">${t.comp_water_step4 || '<b style="color:#fbbf24;">Set Intention:</b> Hold the intention of divine blessing and energetic infusion'}</li>
-                                <li>${t.comp_water_step5 || '<b style="color:#fbbf24;">Drink Mindfully:</b> Sip slowly, feeling the frequencies integrate with your being'}</li>
+                                <li style="margin-bottom:10px;">${t.comp_water_step1 || '<b style="color:#fbbf24;">Escolha Seu Recipiente:</b> Use um recipiente de vidro ou cristal transparente (evite plástico)'}</li>
+                                <li style="margin-bottom:10px;">${t.comp_water_step2 || '<b style="color:#fbbf24;">Selecione Sua Frequência:</b> Criação Gênesis ou frequências individuais da Trindade funcionam melhor'}</li>
+                                <li style="margin-bottom:10px;">${t.comp_water_step3 || '<b style="color:#fbbf24;">Posicione e Toque:</b> Coloque a água a 15-30 cm dos alto-falantes, toque por 10-20 minutos'}</li>
+                                <li style="margin-bottom:10px;">${t.comp_water_step4 || '<b style="color:#fbbf24;">Defina Intenção:</b> Mantenha a intenção de bênção divina e infusão energética'}</li>
+                                <li>${t.comp_water_step5 || '<b style="color:#fbbf24;">Beba Conscientemente:</b> Beba devagar, sentindo as frequências se integrarem ao seu ser'}</li>
                             </ol>
                         </div>
                         <p style="font-size:13px;color:#9ca3af;margin-top:15px;">
-                            ${t.comp_water_tip || 'Pro tip: Charge water for multiple sessions and store in a cool, dark place. The structured information remains stable for 24-48 hours.'}
+                            ${t.comp_water_tip || 'Dica pro: Carregue água para múltiplas sessões e armazene em local fresco e escuro. A informação estruturada permanece estável por 24-48 horas.'}
                         </p>
                         <p style="font-size:15px;color:#a78bfa;font-style:italic;margin-top:20px;">
-                            ${t.comp_water_quote || '"Drink from the wellspring of creation itself."'}
+                            ${t.comp_water_quote || '"Beba da fonte da própria criação."'}
                         </p>
                     </div>
                 `
@@ -6165,39 +6165,39 @@ function shareViaWhatsApp() {
             {
                 id: 'crystalCharging',
                 icon: '💎',
-                title: 'Crystal Charging with Clear Quartz',
+                title: 'Carregamento de Cristal com Quartzo Transparente',
                 content: `
                     <div style="line-height:1.8;text-align:center;max-width:640px;margin:0 auto;">
                         <p style="color:#ffffff;margin-bottom:20px;">
-                            Clear Quartz is known as the "Master Healer" crystal�a pure silicon dioxide structure that resonates with Genesis frequencies and amplifies their energetic properties.
+                            O Quartzo Transparente é conhecido como o cristal "Mestre Curador"—uma estrutura pura de dióxido de silício que ressoa com as frequências Gênesis e amplifica suas propriedades energéticas.
                         </p>
                         <div style="background:linear-gradient(135deg,rgba(251,191,36,0.12),rgba(139,92,246,0.12));border-radius:14px;padding:22px;margin:25px 0;border:1px solid rgba(251,191,36,0.3);">
                             <p style="font-size:18px;color:#fbbf24;margin-bottom:10px;font-weight:600;">
-                                Why Clear Quartz?
+                                Por Que Quartzo Transparente?
                             </p>
                             <p style="color:#ffffff;margin-bottom:10px;">
-                                Clear Quartz has a crystalline matrix that vibrates at the same fundamental frequency as Earth's natural resonance. When charged with Genesis frequencies, it becomes a portable frequency generator you can carry with you throughout the day.
+                                O Quartzo Transparente tem uma matriz cristalina que vibra na mesma frequência fundamental que a ressonância natural da Terra. Quando carregado com frequências Gênesis, torna-se um gerador de frequência portátil que você pode carregar consigo durante todo o dia.
                             </p>
                         </div>
                         <p style="color:#ffffff;margin-bottom:20px;">
-                            When you charge Clear Quartz with Genesis frequencies, you're programming it with the mathematical blueprint of creation itself�turning it into a personal energy amplifier.
+                            Quando você carrega o Quartzo Transparente com frequências Gênesis, você está programando-o com o projeto matemático da própria criação—transformando-o em um amplificador de energia pessoal.
                         </p>
                         <div style="background:rgba(139,92,246,0.08);border-radius:12px;padding:18px;margin:25px 0;">
-                            <h5 style="color:#fbbf24;margin-bottom:12px;">How to Charge Your Clear Quartz</h5>
+                            <h5 style="color:#fbbf24;margin-bottom:12px;">Como Carregar Seu Quartzo Transparente</h5>
                             <ol style="text-align:left;margin:0 auto;max-width:500px;color:#ffffff;line-height:1.9;">
-                                <li style="margin-bottom:10px;"><b style="color:#fbbf24;">Choose Your Crystal:</b> Raw or polished Clear Quartz works equally well�follow your intuition</li>
-                                <li style="margin-bottom:10px;"><b style="color:#fbbf24;">Clear First:</b> Leave your quartz in direct sunlight for 2-4 hours to clear previous energies</li>
-                                <li style="margin-bottom:10px;"><b style="color:#fbbf24;">Select Your Frequency:</b> Genesis Creation or your chosen Trinity frequency</li>
-                                <li style="margin-bottom:10px;"><b style="color:#fbbf24;">Position & Play:</b> Place crystal 6-12 inches from speakers, play for 20-30 minutes</li>
-                                <li style="margin-bottom:10px;"><b style="color:#fbbf24;">Set Intention:</b> Hold your crystal and visualize it absorbing the sacred frequencies</li>
-                                <li><b style="color:#fbbf24;">Carry Daily:</b> Keep it in your pocket, wear as jewelry, or place on your desk</li>
+                                <li style="margin-bottom:10px;"><b style="color:#fbbf24;">Escolha Seu Cristal:</b> Quartzo Transparente bruto ou polido funciona igualmente bem—siga sua intuição</li>
+                                <li style="margin-bottom:10px;"><b style="color:#fbbf24;">Limpe Primeiro:</b> Deixe seu quartzo sob luz solar direta por 2-4 horas para limpar energias anteriores</li>
+                                <li style="margin-bottom:10px;"><b style="color:#fbbf24;">Selecione Sua Frequência:</b> Criação Gênesis ou sua frequência da Trindade escolhida</li>
+                                <li style="margin-bottom:10px;"><b style="color:#fbbf24;">Posicione e Toque:</b> Coloque o cristal a 15-30 cm dos alto-falantes, toque por 20-30 minutos</li>
+                                <li style="margin-bottom:10px;"><b style="color:#fbbf24;">Defina Intenção:</b> Segure seu cristal e visualize-o absorvendo as frequências sagradas</li>
+                                <li><b style="color:#fbbf24;">Carregue Diariamente:</b> Mantenha no bolso, use como jóia ou coloque na sua mesa</li>
                             </ol>
                         </div>
                         <p style="font-size:13px;color:#9ca3af;margin-top:15px;">
-                            Pro tip: Recharge your Clear Quartz weekly with Genesis frequencies and clear monthly with sunlight to maintain its energetic potency.
+                            Dica pro: Recarregue seu Quartzo Transparente semanalmente com frequências Gênesis e limpe mensalmente com luz solar para manter sua potência energética.
                         </p>
                         <p style="font-size:15px;color:#a78bfa;font-style:italic;margin-top:20px;">
-                            "Carry the frequencies of creation wherever you go."
+                            "Carregue as frequências da criação para onde quer que vá."
                         </p>
                     </div>
                 `
@@ -6205,29 +6205,29 @@ function shareViaWhatsApp() {
             {
                 id: 'progress',
                 icon: '📊',
-                title: t.comp_progress_title || 'Your Spiritual Journey',
+                title: t.comp_progress_title || 'Sua Jornada Espiritual',
                 getContent: function() {
                     return `
                     <div style="text-align:center;max-width:800px;margin:0 auto;">
-                        <h4 style="color:#fbbf24;font-size:20px;margin-bottom:15px;">${t.comp_progress_title || 'Your Spiritual Journey'}</h4>
+                        <h4 style="color:#fbbf24;font-size:20px;margin-bottom:15px;">${t.comp_progress_title || 'Sua Jornada Espiritual'}</h4>
                         <p style="color:#ffffff;margin-bottom:20px;">
-                            ${t.comp_progress_intro || 'Track your transformation with Genesis frequencies through achievements, levels, and daily challenges.'}
+                            ${t.comp_progress_intro || 'Acompanhe sua transformação com frequências Gênesis através de conquistas, níveis e desafios diários.'}
                         </p>
                         
-                        ${window.GenesisAchievements && typeof window.GenesisAchievements.renderProgressDashboard === 'function' ? window.GenesisAchievements.renderProgressDashboard() : '<p>' + (t.comp_progress_loading || 'Loading progress...') + '</p>'}
+                        ${window.GenesisAchievements && typeof window.GenesisAchievements.renderProgressDashboard === 'function' ? window.GenesisAchievements.renderProgressDashboard() : '<p>' + (t.comp_progress_loading || 'Carregando progresso...') + '</p>'}
                         
                         <div style="margin: 30px 0;">
-                            <h5 style="color:#fbbf24;margin-bottom:15px;">${t.comp_progress_challenge || "Today's Sacred Challenge"}</h5>
-                            ${window.GenesisAchievements && typeof window.GenesisAchievements.renderDailyChallenge === 'function' ? window.GenesisAchievements.renderDailyChallenge() : '<p>' + (t.comp_progress_loading_challenge || 'Loading challenge...') + '</p>'}
+                            <h5 style="color:#fbbf24;margin-bottom:15px;">${t.comp_progress_challenge || "Desafio Sagrado de Hoje"}</h5>
+                            ${window.GenesisAchievements && typeof window.GenesisAchievements.renderDailyChallenge === 'function' ? window.GenesisAchievements.renderDailyChallenge() : '<p>' + (t.comp_progress_loading_challenge || 'Carregando desafio...') + '</p>'}
                         </div>
                         
                         <div style="background:rgba(139,92,246,0.08);border-radius:12px;padding:18px;margin:25px 0;">
-                            <h5 style="color:#fbbf24;margin-bottom:12px;">${t.comp_progress_wisdom || 'Ancient Wisdom for Modern Practice'}</h5>
+                            <h5 style="color:#fbbf24;margin-bottom:12px;">${t.comp_progress_wisdom || 'Sabedoria Antiga para Prática Moderna'}</h5>
                             <p style="color:#ffffff;margin-bottom:10px;">
-                                ${t.comp_progress_wisdom_desc || 'The sacred numbers (3, 7, 11, 37, 73, 108) that form the foundation of Genesis frequencies appear throughout spiritual traditions worldwide. Your journey follows this same mathematical harmony.'}
+                                ${t.comp_progress_wisdom_desc || 'Os números sagrados (3, 7, 11, 37, 73, 108) que formam a base das frequências Gênesis aparecem em tradições espirituais em todo o mundo. Sua jornada segue essa mesma harmonia matemática.'}
                             </p>
                             <p style="color:#a78bfa;font-style:italic;">
-                                "${t.comp_progress_quote || 'As above, so below. As within, so without.'}"
+                                "${t.comp_progress_quote || 'Assim como é em cima, é embaixo. Assim como é dentro, é fora.'}"
                             </p>
                         </div>
                     </div>
@@ -6237,48 +6237,48 @@ function shareViaWhatsApp() {
             {
                 id: 'usageTips',
                 icon: '💡',
-                title: t.comp_tips_title || 'How to Get the Best Results',
+                title: t.comp_tips_title || 'Como Obter os Melhores Resultados',
                 content: `
                     <div style="line-height:1.8;text-align:center;max-width:640px;margin:0 auto;">
-                        <h4 style="color:#fbbf24;font-size:20px;margin-bottom:15px;">${t.comp_tips_title || 'How to Get the Best Results'}</h4>
+                        <h4 style="color:#fbbf24;font-size:20px;margin-bottom:15px;">${t.comp_tips_title || 'Como Obter os Melhores Resultados'}</h4>
                         <p style="color:#ffffff;margin-bottom:15px;">
-                            ${t.comp_tips_intro || 'Genesis frequencies work through <b>consistent, mindful listening</b>. The key is not just hearing the sounds, but <b>allowing them to resonate through your entire being</b>.'}
+                            ${t.comp_tips_intro || 'As frequências Gênesis funcionam através de <b>audição consistente e consciente</b>. A chave não é apenas ouvir os sons, mas <b>permitir que eles ressoem por todo o seu ser</b>.'}
                         </p>
                         <div style="background:linear-gradient(135deg,rgba(251,191,36,0.12),rgba(139,92,246,0.12));border-radius:14px;padding:22px;margin:25px 0;border:1px solid rgba(251,191,36,0.3);">
                             <p style="font-size:18px;color:#fbbf24;margin-bottom:10px;font-weight:600;">
-                                ${t.comp_tips_protocol || 'The 21-Day Immersion Protocol'}
+                                ${t.comp_tips_protocol || 'O Protocolo de Imersão de 21 Dias'}
                             </p>
                             <p style="font-size:16px;color:#ffffff;margin-bottom:10px;">
-                                ${t.comp_tips_protocol_desc || 'For maximum transformation, commit to a 21-day practice. This aligns with the sacred geometry of the Trinity (3�7) and allows the frequencies to work deeply.'}
+                                ${t.comp_tips_protocol_desc || 'Para máxima transformação, comprometa-se com uma prática de 21 dias. Isso se alinha com a geometria sagrada da Trindade (3×7) e permite que as frequências trabalhem profundamente.'}
                             </p>
                         </div>
                         <p style="color:#ffffff;margin-bottom:15px;">
-                            <b>${t.comp_tips_week1 || 'Days 1-7: Foundation building. Listen to Genesis Creation daily, focusing on presence and breath.'}</b><br>
-                            <b>${t.comp_tips_week2 || 'Days 8-14: Deepening. Explore individual Trinity frequencies, noting personal resonances.'}</b><br>
-                            <b>${t.comp_tips_week3 || 'Days 15-21: Integration. Combine frequencies with specific intentions for manifestation.'}</b>
+                            <b>${t.comp_tips_week1 || 'Dias 1-7: Construção da base. Ouça Criação Gênesis diariamente, focando na presença e respiração.'}</b><br>
+                            <b>${t.comp_tips_week2 || 'Dias 8-14: Aprofundamento. Explore frequências individuais da Trindade, notando ressonâncias pessoais.'}</b><br>
+                            <b>${t.comp_tips_week3 || 'Dias 15-21: Integração. Combine frequências com intenções específicas para manifestação.'}</b>
                         </p>
                         <div style="background:rgba(139,92,246,0.08);border-radius:12px;padding:18px;margin:25px 0;">
-                            <h5 style="color:#fbbf24;margin-bottom:12px;">${t.comp_tips_daily || 'Daily Listening Practices'}</h5>
+                            <h5 style="color:#fbbf24;margin-bottom:12px;">${t.comp_tips_daily || 'Práticas Diárias de Audição'}</h5>
                             <ul style="text-align:left;margin:0 auto;max-width:500px;color:#ffffff;line-height:1.9;">
                                 <li style="margin-bottom:10px;">
-                                    <b style="color:#fbbf24;">${t.comp_tips_morning || 'Morning Alignment:'}</b> ${t.comp_tips_morning_desc || 'Start your day with 10-15 minutes of Genesis Creation to set divine intention'}
+                                    <b style="color:#fbbf24;">${t.comp_tips_morning || 'Alinhamento Matinal:'}</b> ${t.comp_tips_morning_desc || 'Comece seu dia com 10-15 minutos de Criação Gênesis para definir a intenção divina'}
                                 </li>
                                 <li style="margin-bottom:10px;">
-                                    <b style="color:#fbbf24;">${t.comp_tips_evening || 'Evening Integration:'}</b> ${t.comp_tips_evening_desc || 'End your day with frequencies that support restful sleep and subconscious processing'}
+                                    <b style="color:#fbbf24;">${t.comp_tips_evening || 'Integração Noturna:'}</b> ${t.comp_tips_evening_desc || 'Termine seu dia com frequências que apoiam sono repousante e processamento subconsciente'}
                                 </li>
                                 <li style="margin-bottom:10px;">
-                                    <b style="color:#fbbf24;">${t.comp_tips_midday || 'Midday Renewal:'}</b> ${t.comp_tips_midday_desc || 'Use during breaks for mental clarity and stress relief'}
+                                    <b style="color:#fbbf24;">${t.comp_tips_midday || 'Renovação do Meio-dia:'}</b> ${t.comp_tips_midday_desc || 'Use durante pausas para clareza mental e alívio do estresse'}
                                 </li>
                                 <li style="margin-bottom:10px;">
-                                    <b style="color:#fbbf24;">${t.comp_tips_creative || 'Creative Sessions:'}</b> ${t.comp_tips_creative_desc || 'Play frequencies during artistic or problem-solving work'}
+                                    <b style="color:#fbbf24;">${t.comp_tips_creative || 'Sessões Criativas:'}</b> ${t.comp_tips_creative_desc || 'Toque frequências durante trabalho artístico ou resolução de problemas'}
                                 </li>
                                 <li>
-                                    <b style="color:#fbbf24;">${t.comp_tips_meditation || 'Meditation Enhancement:'}</b> ${t.comp_tips_meditation_desc || 'Use as background during traditional meditation practices'}
+                                    <b style="color:#fbbf24;">${t.comp_tips_meditation || 'Aprimoramento da Meditação:'}</b> ${t.comp_tips_meditation_desc || 'Use como fundo durante práticas tradicionais de meditação'}
                                 </li>
                             </ul>
                         </div>
                         <p style="font-size:14px;color:#a78bfa;font-style:italic;margin-top:20px;">
-                            "${t.comp_tips_quote || 'The transformation happens in the space between the notes.'}"
+                            "${t.comp_tips_quote || 'A transformação acontece no espaço entre as notas.'}"
                         </p>
                     </div>
                 `
@@ -6286,39 +6286,39 @@ function shareViaWhatsApp() {
             {
                 id: 'faq',
                 icon: '❓',
-                title: t.comp_faq_title || 'FAQ & Troubleshooting',
+                title: t.comp_faq_title || 'FAQ e Solução de Problemas',
                 content: `
                     <div style="line-height:1.8;text-align:left;max-width:640px;margin:0 auto;">
-                        <h4 style="color:#fbbf24;text-align:center;font-size:20px;margin-bottom:15px;">${t.comp_faq_title || 'FAQ & Troubleshooting'}</h4>
+                        <h4 style="color:#fbbf24;text-align:center;font-size:20px;margin-bottom:15px;">${t.comp_faq_title || 'FAQ e Solução de Problemas'}</h4>
                         <div style="background:linear-gradient(135deg,rgba(251,191,36,0.08),rgba(139,92,246,0.08));border-radius:14px;padding:20px;margin:20px 0;">
-                            <h5 style="color:#fbbf24;margin-bottom:15px;">❓ ${t.comp_faq_about || 'About the Frequencies'}</h5>
+                            <h5 style="color:#fbbf24;margin-bottom:15px;">❓ ${t.comp_faq_about || 'Sobre as Frequências'}</h5>
                             <div style="margin-bottom:15px;">
-                                <b style="color:#fbbf24;">${t.comp_faq_q1 || 'Q: How long should I listen?'}</b><br>
-                                <span style="color:#ffffff;">${t.comp_faq_a1 || 'A: Start with 5-10 minutes and work up to 20-30 minutes. Quality of attention matters more than duration.'}</span>
+                                <b style="color:#fbbf24;">${t.comp_faq_q1 || 'P: Por quanto tempo devo ouvir?'}</b><br>
+                                <span style="color:#ffffff;">${t.comp_faq_a1 || 'R: Comece com 5-10 minutos e aumente para 20-30 minutos. A qualidade da atenção importa mais que a duração.'}</span>
                             </div>
                             <div style="margin-bottom:15px;">
-                                <b style="color:#fbbf24;">${t.comp_faq_q2 || 'Q: Do I need headphones?'}</b><br>
-                                <span style="color:#ffffff;">${t.comp_faq_a2 || 'A: Headphones provide the best experience, especially for binaural effects. Speakers work for ambient sessions.'}</span>
+                                <b style="color:#fbbf24;">${t.comp_faq_q2 || 'P: Preciso de fones de ouvido?'}</b><br>
+                                <span style="color:#ffffff;">${t.comp_faq_a2 || 'R: Fones de ouvido proporcionam a melhor experiência, especialmente para efeitos binaurais. Alto-falantes funcionam para sessões ambientes.'}</span>
                             </div>
                             <div style="margin-bottom:15px;">
-                                <b style="color:#fbbf24;">${t.comp_faq_q3 || 'Q: How often should I listen?'}</b><br>
-                                <span style="color:#ffffff;">${t.comp_faq_a3 || 'A: Daily practice creates the best results. Even 5 minutes a day builds cumulative benefits.'}</span>
+                                <b style="color:#fbbf24;">${t.comp_faq_q3 || 'P: Com que frequência devo ouvir?'}</b><br>
+                                <span style="color:#ffffff;">${t.comp_faq_a3 || 'R: Prática diária cria os melhores resultados. Mesmo 5 minutos por dia constroem benefícios cumulativos.'}</span>
                             </div>
                             <div style="margin-bottom:15px;">
-                                <b style="color:#fbbf24;">${t.comp_faq_q4 || 'Q: Can I listen while sleeping?'}</b><br>
-                                <span style="color:#ffffff;">${t.comp_faq_a4 || 'A: Yes! Sleep tracks are designed for overnight use. Keep volume low and use comfortable headphones.'}</span>
+                                <b style="color:#fbbf24;">${t.comp_faq_q4 || 'P: Posso ouvir enquanto durmo?'}</b><br>
+                                <span style="color:#ffffff;">${t.comp_faq_a4 || 'R: Sim! Faixas de sono são projetadas para uso durante a noite. Mantenha o volume baixo e use fones confortáveis.'}</span>
                             </div>
                             <div style="margin-bottom:15px;">
-                                <b style="color:#fbbf24;">${t.comp_faq_q5 || 'Q: Why can\'t I hear any sound on my iPhone?'}</b><br>
-                                <span style="color:#ffffff;">${t.comp_faq_a5 || 'A: If your iPhone is in Silent Mode (check the physical switch on the left side), frequencies cannot play. Turn off Silent Mode, plug in headphones, or connect to a Bluetooth speaker.'}</span>
+                                <b style="color:#fbbf24;">${t.comp_faq_q5 || 'P: Por que não consigo ouvir som no meu iPhone?'}</b><br>
+                                <span style="color:#ffffff;">${t.comp_faq_a5 || 'R: Se seu iPhone está no Modo Silencioso (verifique a chave física no lado esquerdo), as frequências não podem tocar. Desligue o Modo Silencioso, conecte fones de ouvido ou conecte a um alto-falante Bluetooth.'}</span>
                             </div>
                             <div>
-                                <b style="color:#fbbf24;">${t.comp_faq_q6 || 'Q: Are these frequencies safe?'}</b><br>
-                                <span style="color:#ffffff;">${t.comp_faq_a6 || 'A: Yes, these are gentle frequencies for meditation and relaxation. They are not a substitute for medical treatment.'}</span>
+                                <b style="color:#fbbf24;">${t.comp_faq_q6 || 'P: Essas frequências são seguras?'}</b><br>
+                                <span style="color:#ffffff;">${t.comp_faq_a6 || 'R: Sim, estas são frequências suaves para meditação e relaxamento. Não são substituto para tratamento médico.'}</span>
                             </div>
                         </div>
                         <p style="text-align:center;color:#a78bfa;font-style:italic;margin-top:20px;">
-                            ${t.comp_faq_ending || 'Still have questions? Your journey with Genesis frequencies is unique�trust your intuition and explore mindfully.'}
+                            ${t.comp_faq_ending || 'Ainda tem dúvidas? Sua jornada com frequências Gênesis é única—confie em sua intuição e explore conscientemente.'}
                         </p>
                     </div>
                 `
@@ -6326,46 +6326,46 @@ function shareViaWhatsApp() {
             {
                 id: 'share',
                 icon: '📤',
-                title: t.comp_share_title || 'Share & Connect',
+                title: t.comp_share_title || 'Compartilhar e Conectar',
                 content: `
                     <div style="line-height:1.8;text-align:center;max-width:640px;margin:0 auto;">
-                        <h4 style="color:#fbbf24;font-size:20px;margin-bottom:15px;">${t.comp_share_title || 'Share & Connect'}</h4>
+                        <h4 style="color:#fbbf24;font-size:20px;margin-bottom:15px;">${t.comp_share_title || 'Compartilhar e Conectar'}</h4>
                         <p style="color:#ffffff;margin-bottom:15px;">
-                            ${t.comp_share_intro || 'Know someone who would benefit from these frequencies? Share the gift of divine vibration.'}
+                            ${t.comp_share_intro || 'Conhece alguém que se beneficiaria dessas frequências? Compartilhe o presente da vibração divina.'}
                         </p>
                         <div style="background:linear-gradient(135deg,rgba(251,191,36,0.12),rgba(139,92,246,0.12));border-radius:14px;padding:22px;margin:25px 0;border:1px solid rgba(251,191,36,0.3);">
                             <p style="font-size:18px;color:#fbbf24;margin-bottom:10px;font-weight:600;">
-                                ${t.comp_share_ripple || 'The Ripple Effect'}
+                                ${t.comp_share_ripple || 'O Efeito Ondulatório'}
                             </p>
                             <p style="font-size:16px;color:#ffffff;margin-bottom:10px;">
-                                ${t.comp_share_ripple_desc || 'Every time you share your experience, you create a ripple that touches lives far beyond your own. Your story becomes a beacon for those still searching.'}
+                                ${t.comp_share_ripple_desc || 'Cada vez que você compartilha sua experiência, você cria uma onda que toca vidas muito além da sua. Sua história se torna um farol para aqueles que ainda estão buscando.'}
                             </p>
                         </div>
                         <p style="color:#ffffff;margin-bottom:15px;">
-                            ${t.comp_share_authentic || 'Share authentically�from the heart. Whether it\'s a profound insight, a subtle shift, or a miraculous change, your truth has the power to awaken others.'}
+                            ${t.comp_share_authentic || 'Compartilhe autenticamente—do coração. Seja um insight profundo, uma mudança sutil ou uma transformação milagrosa, sua verdade tem o poder de despertar outros.'}
                         </p>
                         <div style="background:rgba(139,92,246,0.08);border-radius:12px;padding:18px;margin:25px 0;">
-                            <h5 style="color:#fbbf24;margin-bottom:12px;">${t.comp_share_ways || 'Ways to Share'}</h5>
+                            <h5 style="color:#fbbf24;margin-bottom:12px;">${t.comp_share_ways || 'Formas de Compartilhar'}</h5>
                             <ul style="text-align:left;margin:0 auto;max-width:500px;color:#ffffff;line-height:1.9;">
                                 <li style="margin-bottom:10px;">
-                                    <b style="color:#fbbf24;">${t.comp_share_social || 'Social Media:'}</b> ${t.comp_share_social_desc || 'Post your experiences with #GenesisFrequencies and #DivineFrequencies'}
+                                    <b style="color:#fbbf24;">${t.comp_share_social || 'Redes Sociais:'}</b> ${t.comp_share_social_desc || 'Poste suas experiências com #FrequenciasGenesis e #FrequenciasDivinas'}
                                 </li>
                                 <li style="margin-bottom:10px;">
-                                    <b style="color:#fbbf24;">${t.comp_share_personal || 'Personal Circles:'}</b> ${t.comp_share_personal_desc || 'Share with friends, family, and loved ones who might benefit'}
+                                    <b style="color:#fbbf24;">${t.comp_share_personal || 'Círculos Pessoais:'}</b> ${t.comp_share_personal_desc || 'Compartilhe com amigos, família e pessoas queridas que podem se beneficiar'}
                                 </li>
                                 <li style="margin-bottom:10px;">
-                                    <b style="color:#fbbf24;">${t.comp_share_communities || 'Online Communities:'}</b> ${t.comp_share_communities_desc || 'Join frequency healing and spiritual growth forums'}
+                                    <b style="color:#fbbf24;">${t.comp_share_communities || 'Comunidades Online:'}</b> ${t.comp_share_communities_desc || 'Participe de fóruns de cura por frequência e crescimento espiritual'}
                                 </li>
                                 <li style="margin-bottom:10px;">
-                                    <b style="color:#fbbf24;">${t.comp_share_testimonials || 'Testimonials:'}</b> ${t.comp_share_testimonials_desc || 'Leave reviews and encourage others on their path'}
+                                    <b style="color:#fbbf24;">${t.comp_share_testimonials || 'Depoimentos:'}</b> ${t.comp_share_testimonials_desc || 'Deixe avaliações e encoraje outros em seu caminho'}
                                 </li>
                                 <li>
-                                    <b style="color:#fbbf24;">${t.comp_share_oneonone || 'One-on-One:'}</b> ${t.comp_share_oneonone_desc || 'Have meaningful conversations about transformation and healing'}
+                                    <b style="color:#fbbf24;">${t.comp_share_oneonone || 'Individual:'}</b> ${t.comp_share_oneonone_desc || 'Tenha conversas significativas sobre transformação e cura'}
                                 </li>
                             </ul>
                         </div>
                         <p style="font-size:14px;color:#a78bfa;font-style:italic;margin-top:20px;">
-                            "${t.comp_share_quote || 'Together, we are creating a symphony of divine resonance.'}"
+                            "${t.comp_share_quote || 'Juntos, estamos criando uma sinfonia de ressonância divina.'}"
                         </p>
                     </div>
                 `
@@ -6373,10 +6373,10 @@ function shareViaWhatsApp() {
             {
                 id: 'credits',
                 icon: '📜',
-                title: t.comp_credits_title || 'Credits & Sources',
+                title: t.comp_credits_title || 'Créditos e Fontes',
                 content: `
                     <div style="line-height:1.8;text-align:left;max-width:640px;margin:0 auto;">
-                        <h4 style="color:#fbbf24;text-align:center;font-size:20px;margin-bottom:15px;">${t.comp_credits_title || 'Credits & Sources'}</h4>
+                        <h4 style="color:#fbbf24;text-align:center;font-size:20px;margin-bottom:15px;">${t.comp_credits_title || 'Créditos e Fontes'}</h4>
                         <div style="background:linear-gradient(135deg,rgba(251,191,36,0.08),rgba(139,92,246,0.08));border-radius:14px;padding:20px;margin:20px 0;">
                             <h5 style="color:#fbbf24;margin-bottom:15px;">📚 ${t.comp_credits_research_title || 'Research & Inspiration'}</h5>
                             <div style="margin-bottom:15px;">
@@ -7630,14 +7630,14 @@ function shareViaWhatsApp() {
 
         function showAllAchievements() {
             const categories = {
-                'awakening': { name: 'Awakening', icon: '🌅' },
-                'sessions': { name: 'Session Milestones', icon: '🎯' },
-                'time': { name: 'Time Milestones', icon: '⏰' },
-                'streaks': { name: 'Streak Achievements', icon: '🔥' },
-                'exploration': { name: 'Frequency Exploration', icon: '🎵' },
-                'special': { name: 'Special Actions', icon: '⭐' },
-                'synchronicity': { name: 'Synchronicities', icon: '✨' },
-                'mastery': { name: 'Mastery', icon: '🏆' }
+                'awakening': { name: 'Despertar', icon: '🌅' },
+                'sessions': { name: 'Marcos de Sessões', icon: '🎯' },
+                'time': { name: 'Marcos de Tempo', icon: '⏰' },
+                'streaks': { name: 'Conquistas de Sequência', icon: '🔥' },
+                'exploration': { name: 'Exploração de Frequências', icon: '🎵' },
+                'special': { name: 'Ações Especiais', icon: '⭐' },
+                'synchronicity': { name: 'Sincronicidades', icon: '✨' },
+                'mastery': { name: 'Maestria', icon: '🏆' }
             };
 
             let html = `
@@ -8695,7 +8695,7 @@ function shareViaWhatsApp() {
                                 margin-top: 10px;
                                 font-weight: 500;
                             ">
-                                Click to see more 👉
+                                Clique para ver mais 👉
                             </div>
                         </div>
                     ` : `
@@ -9529,7 +9529,7 @@ function shareViaWhatsApp() {
                             font-weight: 700;
                             cursor: pointer;
                             box-shadow: 0 4px 15px rgba(139,92,246,0.4);
-                        ">${t.returnToTracks || '← Return to Tracks'}</button>
+                        ">${t.returnToTracks || '← Voltar para Faixas'}</button>
                     </div>
                     
                     ${dashboardContent}
@@ -9546,7 +9546,7 @@ function shareViaWhatsApp() {
                             font-weight: 700;
                             cursor: pointer;
                             box-shadow: 0 4px 15px rgba(139,92,246,0.4);
-                        ">${t.returnToTracks || '← Return to Tracks'}</button>
+                        ">${t.returnToTracks || '← Voltar para Faixas'}</button>
                     </div>
                 </div>
             `;
@@ -9559,7 +9559,7 @@ function shareViaWhatsApp() {
             document.body.appendChild(modal);
             } catch (error) {
                 console.error('Error showing achievements:', error);
-                alert('Unable to load achievements. Please refresh the page and try again.');
+                alert('Não foi possível carregar conquistas. Por favor, atualize a página e tente novamente.');
             }
         }
 
@@ -10320,25 +10320,25 @@ function shareViaWhatsApp() {
             statsContainer.innerHTML = `
                 <div style="text-align: center; padding: 10px 15px; background: rgba(139,92,246,0.15); border-radius: 10px; min-width: 80px;">
                     <div style="font-size: 22px; font-weight: 700; color: #fbbf24;">${totalSessions}</div>
-                    <div style="font-size: 11px; color: #c4b5fd;">${t.statSessions || 'Sessions'}</div>
+                    <div style="font-size: 11px; color: #c4b5fd;">${t.statSessions || 'Sessões'}</div>
                 </div>
                 <div style="text-align: center; padding: 10px 15px; background: rgba(139,92,246,0.15); border-radius: 10px; min-width: 80px;">
                     <div style="font-size: 22px; font-weight: 700; color: #fbbf24;">${totalMinutes}</div>
-                    <div style="font-size: 11px; color: #c4b5fd;">${t.statMinutes || 'Minutes'}</div>
+                    <div style="font-size: 11px; color: #c4b5fd;">${t.statMinutes || 'Minutos'}</div>
                 </div>
                 <div style="text-align: center; padding: 10px 15px; background: rgba(139,92,246,0.15); border-radius: 10px; min-width: 80px;">
                     <div style="font-size: 22px; font-weight: 700; color: #fbbf24;">${userProgress.frequenciesUsed ? userProgress.frequenciesUsed.size || 0 : 0}</div>
-                    <div style="font-size: 11px; color: #c4b5fd;">${t.statFrequencies || 'Frequencies'}</div>
+                    <div style="font-size: 11px; color: #c4b5fd;">${t.statFrequencies || 'Frequências'}</div>
                 </div>
             `;
 
             // Quick action buttons (removed Start Session - user can use main PLAY button)
             actionsContainer.innerHTML = `
                 <button onclick="showDailyChallengeModal();" style="background: linear-gradient(90deg, #fbbf24, #f59e0b); color: #1a0033; border: none; border-radius: 20px; padding: 10px 18px; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px;">
-                    <span>🎯</span> ${t.btnDailyChallenge || 'Daily Challenge'}
+                    <span>🎯</span> ${t.btnDailyChallenge || 'Desafio Diário'}
                 </button>
                 <button onclick="if(typeof showFullAchievements === 'function') showFullAchievements();" style="background: linear-gradient(90deg, #8b5cf6, #6b46c1); color: #fff; border: none; border-radius: 20px; padding: 10px 18px; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px;">
-                    <span>🏆</span> ${t.btnAchievements || 'Achievements'}
+                    <span>🏆</span> ${t.btnAchievements || 'Conquistas'}
                 </button>
                 </button>
             `;
@@ -10421,12 +10421,12 @@ function shareViaWhatsApp() {
             const t = translations.en;
             modal.innerHTML = `
                 <div style="background: linear-gradient(135deg, rgba(26,0,51,0.98), rgba(139,92,246,0.3)); border-radius: 18px; padding: 30px; max-width: 500px; width: 100%; position: relative; z-index: 2000001; color: #fff; text-align: center; border: 2px solid rgba(251,191,36,0.3);">
-                    <h2 style="font-size: 24px; color: #fbbf24; font-weight: 800; margin-bottom: 20px;">🌟 ${t.todaysSacredChallenge || "Today's Sacred Challenge"}</h2>
+                    <h2 style="font-size: 24px; color: #fbbf24; font-weight: 800; margin-bottom: 20px;">🌟 ${t.todaysSacredChallenge || "Desafio Sagrado de Hoje"}</h2>
                     <div style="line-height: 1.6;">
                         ${challenge}
                     </div>
                     <button onclick="window.closeDailyChallengeModal();" style="margin-top: 25px; background: linear-gradient(90deg, #8b5cf6, #6b46c1); color: #fff; border: none; border-radius: 25px; padding: 15px 35px; font-size: 18px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 15px rgba(139,92,246,0.4);">
-                        ${t.returnToTracks || '← Return to Tracks'}
+                        ${t.returnToTracks || '← Voltar para Faixas'}
                     </button>
                 </div>
             `;
@@ -10439,7 +10439,7 @@ function shareViaWhatsApp() {
             document.body.appendChild(modal);
             } catch (error) {
                 console.error('Error showing daily challenge:', error);
-                alert('Unable to load daily challenge. Please refresh the page and try again.');
+                alert('Não foi possível carregar o desafio diário. Por favor, atualize a página e tente novamente.');
             }
         }
 
@@ -10477,7 +10477,7 @@ function shareViaWhatsApp() {
                     { id: 'progress', icon: '📊', title: instructionsSections.find(s => s.id === 'progress')?.title || 'Your Journey', content: instructionsSections.find(s => s.id === 'progress')?.content || instructionsSections.find(s => s.id === 'progress')?.getContent?.() || '' }
                 ],
                 [catTheStory]: [
-                    { id: 'welcome', icon: '✨', title: instructionsSections.find(s => s.id === 'welcome')?.title || 'About Genesis Frequencies', content: instructionsSections.find(s => s.id === 'welcome')?.content || instructionsSections.find(s => s.id === 'welcome')?.getContent?.() || '' },
+                    { id: 'welcome', icon: '✨', title: instructionsSections.find(s => s.id === 'welcome')?.title || 'Sobre Frequências Gênesis', content: instructionsSections.find(s => s.id === 'welcome')?.content || instructionsSections.find(s => s.id === 'welcome')?.getContent?.() || '' },
                     { id: 'myJourney', icon: '📖', title: instructionsSections.find(s => s.id === 'myJourney')?.title || 'The Discovery', content: instructionsSections.find(s => s.id === 'myJourney')?.content || instructionsSections.find(s => s.id === 'myJourney')?.getContent?.() || '' }
                 ],
                 [catHelp]: [
@@ -11006,7 +11006,7 @@ function shareViaWhatsApp() {
                 });
                 
                 this.selectedRecipe = recipe;
-                this.updateStatus(`? Selected: ${recipe.name} (Auto-balanced volumes)`);
+                this.updateStatus(`? Selecionado: ${recipe.name} (Volumes auto-balanceados)`);
             }
 
             attachEventListeners() {
@@ -11085,7 +11085,7 @@ function shareViaWhatsApp() {
                         }
                         
                         this.elements.duration.value = time;
-                        this.updateStatus(`⏱️ Duration set to ${time}`);
+                        this.updateStatus(`⏱️ Duração definida para ${time}`);
                         
                         // Remove active class from all duration buttons
                         document.querySelectorAll('.duration-btn').forEach(b => b.classList.remove('active'));
@@ -11206,7 +11206,7 @@ function shareViaWhatsApp() {
                     ].filter(freq => freq > 0);
                     
                     if (frequencies.length === 0) {
-                        this.updateStatus('⚠️ Please enter at least one frequency');
+                        this.updateStatus('⚠️ Por favor, insira pelo menos uma frequência');
                         return;
                     }
                     
@@ -11327,7 +11327,7 @@ function shareViaWhatsApp() {
                     
                 } catch (error) {
                     console.error('Playback error:', error);
-                    this.updateStatus('⚠️ Playback error - please try again');
+                    this.updateStatus('⚠️ Erro de reprodução - por favor tente novamente');
                 }
             }
 
@@ -11390,7 +11390,7 @@ function shareViaWhatsApp() {
                 }
                 
                 this.elements.playBtn.textContent = '▶ PLAY';
-                this.updateStatus('⏹ Stopped - Ready to Generate');
+                this.updateStatus('⏹ Parado - Pronto para Gerar');
                 
                 // Hide Now Playing bar
                 const nowPlayingBar = document.getElementById('nowPlayingBar');
@@ -11428,7 +11428,7 @@ function shareViaWhatsApp() {
                         parseFloat(this.elements.freq3.value)
                     ].filter(freq => freq > 0);
                     
-                    this.updateStatus(`🎵 Playing ${frequencies.join(' Hz + ')} Hz | ⏱️ ${timeStr} remaining`);
+                    this.updateStatus(`🎵 Tocando ${frequencies.join(' Hz + ')} Hz | ⏱️ ${timeStr} restante`);
                     
                     if (remaining <= 0) {
                         clearInterval(this.countdownInterval);
@@ -11659,7 +11659,7 @@ function shareViaWhatsApp() {
                 ].filter(freq => freq > 0);
                 
                 if (frequencies.length === 0) {
-                    this.updateStatus('⚠️ Please enter frequencies first');
+                    this.updateStatus('⚠️ Por favor, insira as frequências primeiro');
                     return;
                 }
                 
@@ -11734,7 +11734,7 @@ function shareViaWhatsApp() {
                     window.GenesisAchievements.checkAllAchievements();
                 }
 
-                this.updateStatus(`? Exported: ${frequencies.join(' + ')} Hz`);
+                this.updateStatus(`? Exportado: ${frequencies.join(' + ')} Hz`);
             }
 
             reset() {
@@ -11758,7 +11758,7 @@ function shareViaWhatsApp() {
                 });
                 
                 this.selectedRecipe = null;
-                this.updateStatus('🔄 Reset to Trinity Foundation');
+                this.updateStatus('🔄 Redefinido para Fundação Trindade');
             }
 
             updateStatus(message) {
@@ -12111,7 +12111,7 @@ async function activateLicense() {
     
     // Validate input
     if (!rawInput) {
-        errorEl.textContent = 'Please paste your license key';
+        errorEl.textContent = 'Por favor, cole sua chave de licença';
         errorEl.style.display = 'block';
         return;
     }
@@ -12127,14 +12127,14 @@ async function activateLicense() {
     // Validate format: QMFG-XXXX-XXXX-XXXX
     const parts = fullLicenseKey.split('-');
     if (parts.length !== 4 || parts[0] !== 'QMFG' || parts[1].length !== 4 || parts[2].length !== 4 || parts[3].length !== 4) {
-        errorEl.textContent = 'Invalid key format. Expected: QMFG-XXXX-XXXX-XXXX';
+        errorEl.textContent = 'Formato de chave inválido. Esperado: QMFG-XXXX-XXXX-XXXX';
         errorEl.style.display = 'block';
         return;
     }
     
     // Check if already has premium
     if (hasPremiumAccess()) {
-        errorEl.textContent = 'You already have Premium access! All features are unlocked.';
+        errorEl.textContent = 'Você já tem acesso Premium! Todos os recursos estão desbloqueados.';
         errorEl.style.display = 'block';
         return;
     }
@@ -12241,7 +12241,7 @@ async function activateLicense() {
                 location.reload();
             }, 2500);
         } else {
-            errorEl.textContent = 'Connection error. Please check your internet and try again.';
+            errorEl.textContent = 'Erro de conexão. Por favor, verifique sua internet e tente novamente.';
             errorEl.style.display = 'block';
             activateBtn.disabled = false;
             activateBtn.innerHTML = '🔑 Activate License';
@@ -12955,7 +12955,7 @@ async function submitAffiliateInterest() {
     const email = document.getElementById('affiliateEmail').value.trim();
     
     if (!email || !email.includes('@')) {
-        alert('Please enter a valid email address');
+        alert('Por favor, insira um endereço de email válido');
         return;
     }
     
